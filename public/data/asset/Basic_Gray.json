@@ -1,0 +1,68 @@
+{
+  "name": "Basic Gray",
+  "path": "",
+  "type": "material",
+  "collisionDetection": true,
+  "material": {
+    "type": "standard",
+    "params": {
+      "metalness": 0,
+      "opacity": 1,
+      "color": "#a3a3a3"
+    },
+    "shaderParams": {
+      "color": {
+        "type": 10,
+        "value": "#d9d9d9"
+      },
+      "roughness": {
+        "type": 1
+      },
+      "metalness": {
+        "type": 1
+      },
+      "map": {},
+      "lightMap": {},
+      "lightMapIntensity": {
+        "type": 1
+      },
+      "aoMap": {},
+      "aoMapIntensity": {
+        "type": 1
+      },
+      "emissive": {
+        "type": 10
+      },
+      "emissiveIntensity": {
+        "type": 1
+      },
+      "emissiveMap": {},
+      "bumpMap": {},
+      "bumpScale": {
+        "type": 1
+      },
+      "normalMap": {},
+      "normalScale": {
+        "type": 6
+      },
+      "displacementMap": {},
+      "displacementScale": {
+        "type": 1
+      },
+      "displacementBias": {
+        "type": 1
+      },
+      "roughnessMap": {},
+      "metalnessMap": {},
+      "alphaMap": {},
+      "envMap": {},
+      "envMapIntensity": {
+        "type": 1
+      },
+      "refractionRatio": {
+        "type": 1
+      }
+    }
+  },
+  "id": "hahbj5tm3t"
+}
