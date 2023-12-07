@@ -1,8 +1,7 @@
 import {
   Actor, AnimationState,
   AnimationStateMachine, attach, BaseActor,
-  inject,
-  RootMotionClip, ViewController
+  RootMotionClip
 } from "@hology/core/gameplay";
 import {
   CharacterAnimationComponent,
@@ -20,8 +19,6 @@ import ShootingComponent from "./shooting-component";
 
 @Actor()
 class CharacterActor extends BaseActor {
-  private viewController = inject(ViewController)
-
   private shooting = attach(ShootingComponent)
   private animation = attach(CharacterAnimationComponent)
   public movement = attach(CharacterMovementComponent, {
@@ -39,6 +36,8 @@ class CharacterActor extends BaseActor {
   public shootAction = new ActionInput()
 
   private muzzleObject: Object3D
+  private characterMesh: Object3D
+  private spineBone: Bone
 
   async onInit(): Promise<void> {
     this.shooting.camera = this.thirdPartyCamera.camera.instance
@@ -50,12 +49,12 @@ class CharacterActor extends BaseActor {
     const glbLoader = new GLTFLoader()
 
     const characterMeshPath = 'assets/X Bot.fbx'
-    const characterMesh = await loader.loadAsync(characterMeshPath)
+    this.characterMesh = await loader.loadAsync(characterMeshPath)
 
     const weaponMesh = (await glbLoader.loadAsync('assets/weapon.glb')).scene
     weaponMesh.scale.multiplyScalar(20)
 
-    const handBone = findBone(characterMesh, 'mixamorigRightHand')
+    const handBone = findBone(this.characterMesh, 'mixamorigRightHand')
     handBone.add(weaponMesh)
 
     // Get a reference to an object in the loaded weapon mesh that 
@@ -65,34 +64,34 @@ class CharacterActor extends BaseActor {
 
     // Replace the material of the character mesh
     const characterMaterial = new MeshStandardMaterial({color: 0x999999})
-    characterMesh.traverse(o => {
+    this.characterMesh.traverse(o => {
       if (o instanceof Mesh) {
         o.material = characterMaterial
         o.castShadow = true
       }
     })
 
-    const sm = await this.createStateMachine(loader, characterMesh)
+    const sm = await this.createStateMachine(loader, this.characterMesh)
     this.animation.playStateMachine(sm)
-    this.animation.setup(characterMesh, [findBone(characterMesh, "mixamorigSpine2")])
+    this.animation.setup(this.characterMesh, [findBone(this.characterMesh, "mixamorigSpine2")])
     
-    const spineBone = findBone(characterMesh, "mixamorigSpine1")
+    this.spineBone = findBone(this.characterMesh, "mixamorigSpine1")
 
-    this.viewController.onUpdate(this).subscribe(deltaTime => {
+    const meshRescaleFactor = 1/50
+    this.characterMesh.scale.multiplyScalar(meshRescaleFactor)
+    this.object.add(this.characterMesh)
+  }
+
+  override onLateUpdate(deltaTime: number) {
       // In order to syncronise the walking animation with the speed of the character,
       // we can pass the movement speed from the movement component to the animation component.
       // Because we are also scaling our mesh, we need to factor this in. 
-      this.animation.movementSpeed = this.movement.horizontalSpeed / characterMesh.scale.x
+      this.animation.movementSpeed = this.movement.horizontalSpeed / this.characterMesh.scale.x
 
       if (this.movement.mode !== CharacterMovementMode.falling) {
         // Rotate one spine bone so the character looks in the direction the player is aiming at
-        rotateSpineByLookRotation(this, spineBone, this.thirdPartyCamera.rotationInput.rotation)
+        rotateSpineByLookRotation(this, this.spineBone, this.thirdPartyCamera.rotationInput.rotation)
       }
-    })
-
-    const meshRescaleFactor = 1/50
-    characterMesh.scale.multiplyScalar(meshRescaleFactor)
-    this.container.add(characterMesh)
   }
 
   private async createStateMachine(loader: Loader, characterMesh: Object3D): Promise<AnimationStateMachine> {
@@ -192,7 +191,7 @@ const _spineRotationAxis = new Vector3()
 const _actorWorldRotation = new THREE.Quaternion()
 const _spineBoneWorldRotation = new THREE.Quaternion()
 function rotateSpineByLookRotation(actor: BaseActor, spineBone: Bone, inputRotation: THREE.Euler) {
-  const meshWorldRotation = actor.container.getWorldQuaternion(_actorWorldRotation)
+  const meshWorldRotation = actor.object.getWorldQuaternion(_actorWorldRotation)
   const worldRotation = spineBone.getWorldQuaternion(_spineBoneWorldRotation)
   _spineRotationAxis.set(-1,0,0)
   _spineRotationAxis.applyQuaternion(worldRotation.invert().multiply(meshWorldRotation))

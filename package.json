@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@dimforge/rapier3d-compat": "^0.10.0",
-    "@hology/core": "^0.0.20",
+    "@hology/core": "^0.0.21",
     "@plumier/reflect": "^1.1.1",
     "@types/three": "^0.139.0",
     "fflate": "^0.7.4",
