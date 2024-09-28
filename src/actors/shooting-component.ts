@@ -8,6 +8,8 @@ import {
 } from "@hology/core/gameplay"
 import {
   Camera,
+  Euler,
+  Quaternion,
   Raycaster,
   Vector2,
   Vector3
@@ -45,8 +47,24 @@ class ShootingComponent extends ActorComponent {
   }
 
   private async spawnBall(start: Vector3, direction: Vector3) {
-    ballOriginVec.addVectors(start, direction.clone().normalize().multiplyScalar(1))
+    ballOriginVec.addVectors(start, direction.clone().normalize())
     const ball = await this.actorFactory.create(BallActor)
+/*
+// I Don't think I should be using the rotation of the projectile
+// to determine the direction of particles. 
+
+Velocity is currently independent of the direction of the emitter
+Maybe should be relative to the direction of the 
+
+
+    const quaternion = new Quaternion();
+    const up = new Vector3(0, 1, 0); // Default 'up' direction (Y axis)
+    quaternion.setFromUnitVectors(up, direction);
+
+    const euler = new Euler();
+    euler.setFromQuaternion(quaternion);
+    */
+
     this.world.addActor(ball, ballOriginVec)
   
     ball.moveTo(ballOriginVec)
