@@ -30,7 +30,9 @@ class CharacterActor extends BaseActor {
     fallingReorientation: true,
     fallingMovementControl: 0.2
   })
-  public thirdPartyCamera: ThirdPartyCameraComponent = attach(ThirdPartyCameraComponent)
+  public thirdPartyCamera: ThirdPartyCameraComponent = attach(ThirdPartyCameraComponent, {
+
+  })
 
 
   public shootAction = new ActionInput()

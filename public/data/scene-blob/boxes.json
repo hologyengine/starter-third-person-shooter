@@ -3062,6 +3062,54 @@
         "restitution": 0.5,
         "mass": 1
       }
+    },
+    {
+      "id": "5573f76e-c899-467c-a821-9a27ca4b3997",
+      "name": "Sphere",
+      "position": [
+        7.034191586870738,
+        -1.7763568394002505e-15,
+        15.067539317719103
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ],
+      "type": "shape_mesh",
+      "materialAssignments": [
+        {
+          "color": "#aaaaaa",
+          "materialId": "9d1e2548-0338-4a69-8110-02a0e7ab78aa"
+        }
+      ],
+      "castShadow": true,
+      "receiveShadow": true,
+      "collisionDetection": true,
+      "shape": "sphere",
+      "shapeParams": {
+        "withSegments": {
+          "value": 12,
+          "type": 1
+        },
+        "heightSegments": {
+          "value": 12,
+          "type": 1
+        }
+      },
+      "physics": {
+        "type": 2,
+        "friction": 0.5,
+        "density": 1,
+        "restitution": 0.5,
+        "mass": 1
+      }
     }
   ]
 }

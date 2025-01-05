@@ -1,0 +1,286 @@
+{
+  "name": "Stretched sprites",
+  "type": "vfx",
+  "vfx": {
+    "emitters": [
+      {
+        "id": "2xcibyg1g",
+        "name": "Smoke",
+        "rate": {
+          "type": "continuous",
+          "count": 5,
+          "time": 1,
+          "delay": 0
+        },
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "initializers": [
+          {
+            "id": "4xnf5tjzq",
+            "type": "lifetime",
+            "params": {
+              "duration": {
+                "type": 1,
+                "value": 1
+              }
+            }
+          },
+          {
+            "id": "l8am5iu6q",
+            "type": "velocity",
+            "params": {
+              "velocity": {
+                "value": [
+                  0,
+                  19.6,
+                  0
+                ],
+                "type": 8
+              }
+            }
+          },
+          {
+            "id": "s8gofsswe",
+            "type": "positionSphere",
+            "params": {
+              "position": {
+                "value": [
+                  0,
+                  0,
+                  0
+                ],
+                "type": 8
+              },
+              "radius": {
+                "value": 1,
+                "type": 1
+              }
+            }
+          },
+          {
+            "id": "8h1u09v9a",
+            "type": "scale",
+            "params": {
+              "scale": {
+                "value": 1,
+                "type": 1
+              }
+            }
+          }
+        ],
+        "behaviours": [
+          {
+            "id": "n27fzpcfl",
+            "type": "changeOpacity",
+            "params": {
+              "a": {
+                "value": "0",
+                "type": 1
+              },
+              "b": {
+                "value": "1",
+                "type": 1
+              },
+              "ease": {
+                "value": "InQuad",
+                "type": 12
+              }
+            }
+          },
+          {
+            "id": "h5obtsa7b",
+            "type": "changeColor",
+            "params": {
+              "a": {
+                "value": "#108457",
+                "type": 10
+              },
+              "b": {
+                "value": "#1ce3d6",
+                "type": 10
+              },
+              "ease": {
+                "value": "Linear",
+                "type": 12
+              }
+            }
+          },
+          {
+            "id": "2jgsmsny7",
+            "type": "repulsion",
+            "params": {
+              "target": {
+                "value": [
+                  0,
+                  0,
+                  0
+                ],
+                "type": 8
+              },
+              "force": {
+                "value": 1.4,
+                "type": 1
+              },
+              "radius": {
+                "value": "5",
+                "type": 1
+              },
+              "easing": {
+                "value": "Linear",
+                "type": 12
+              }
+            }
+          },
+          {
+            "id": "khgcrlpqt",
+            "type": "scale",
+            "params": {
+              "a": {
+                "value": 1,
+                "type": 1
+              },
+              "b": {
+                "value": "0",
+                "type": 1
+              },
+              "ease": {
+                "value": "Linear",
+                "type": 12
+              }
+            }
+          },
+          {
+            "id": "sy56mk0cq",
+            "type": "gravity",
+            "params": {
+              "gravity": {
+                "value": 0.7,
+                "type": 1
+              },
+              "easing": {
+                "value": "Linear",
+                "type": 12
+              }
+            }
+          }
+        ],
+        "children": [
+          {
+            "id": "mp1gvkuy8",
+            "name": "Emitter",
+            "rate": {
+              "type": "once",
+              "count": 1,
+              "time": 0.5,
+              "delay": 0
+            },
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "initializers": [
+              {
+                "id": "kzinl275s",
+                "type": "lifetime",
+                "params": {
+                  "duration": {
+                    "type": 1,
+                    "value": 1
+                  }
+                }
+              },
+              {
+                "id": "j6q607wpf",
+                "type": "velocity",
+                "params": {
+                  "velocity": {
+                    "value": [
+                      0,
+                      0,
+                      0
+                    ],
+                    "type": 8
+                  }
+                }
+              },
+              {
+                "id": "dsp1533yh",
+                "type": "randomDirection",
+                "params": {
+                  "speed": {
+                    "value": 1,
+                    "type": 1
+                  }
+                }
+              }
+            ],
+            "behaviours": [
+              {
+                "id": "5wr3xlb2b",
+                "type": "changeColor",
+                "params": {
+                  "a": {
+                    "value": "#ffffff",
+                    "type": 10
+                  },
+                  "b": {
+                    "value": "#ffffff",
+                    "type": 10
+                  },
+                  "ease": {
+                    "value": "Linear",
+                    "type": 12
+                  }
+                }
+              },
+              {
+                "id": "47zlgl111",
+                "type": "followParent",
+                "params": {
+                  "speed": {
+                    "value": 1,
+                    "type": 1
+                  }
+                }
+              }
+            ],
+            "children": [],
+            "output": {
+              "type": "stretchedSprite",
+              "texture": null,
+              "color": "#ffffff",
+              "blendingMode": "normal",
+              "space": "world",
+              "softness": 0,
+              "scale": 1
+            }
+          }
+        ],
+        "output": {
+          "type": "stretchedSprite",
+          "texture": null,
+          "color": "#000000",
+          "blendingMode": "normal",
+          "space": "world",
+          "softness": 0,
+          "scale": 0.2
+        }
+      }
+    ]
+  },
+  "id": "9d22bfad-7e5e-47a3-9a4b-dd789cd64355"
+}

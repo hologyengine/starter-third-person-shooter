@@ -1,0 +1,151 @@
+{
+  "name": "Soft particles",
+  "type": "vfx",
+  "vfx": {
+    "emitters": [
+      {
+        "id": "2xcibyg1g",
+        "name": "Smoke",
+        "rate": {
+          "type": "continuous",
+          "count": 2,
+          "time": 0.06,
+          "delay": 0
+        },
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "initializers": [
+          {
+            "id": "4xnf5tjzq",
+            "type": "lifetime",
+            "params": {
+              "duration": {
+                "type": 1,
+                "value": 1
+              }
+            }
+          },
+          {
+            "id": "gjujl0oeo",
+            "type": "positionSphere",
+            "params": {
+              "position": {
+                "value": [
+                  0,
+                  0,
+                  0
+                ],
+                "type": 8
+              },
+              "radius": {
+                "value": 0.55,
+                "type": 1
+              }
+            }
+          }
+        ],
+        "behaviours": [
+          {
+            "id": "n27fzpcfl",
+            "type": "changeOpacity",
+            "params": {
+              "a": {
+                "value": 0.9,
+                "type": 1
+              },
+              "b": {
+                "value": "0",
+                "type": 1
+              },
+              "ease": {
+                "value": "OutQuad",
+                "type": 12
+              }
+            }
+          },
+          {
+            "id": "2wy0vmmp8",
+            "type": "scale",
+            "params": {
+              "a": {
+                "value": 0.22,
+                "type": 1
+              },
+              "b": {
+                "value": 0.25,
+                "type": 1
+              },
+              "ease": {
+                "value": "InExpo",
+                "type": 12
+              }
+            }
+          },
+          {
+            "id": "h5obtsa7b",
+            "type": "changeColor",
+            "params": {
+              "a": {
+                "value": "#6691f5",
+                "type": 10
+              },
+              "b": {
+                "value": "#f236e2",
+                "type": 10
+              },
+              "ease": {
+                "value": "Linear",
+                "type": 12
+              }
+            }
+          },
+          {
+            "id": "7b5ke7do7",
+            "type": "followParent",
+            "params": {
+              "amount": {
+                "value": "0.01",
+                "type": 1
+              }
+            }
+          },
+          {
+            "id": "1oxd6sljt",
+            "type": "disperse",
+            "params": {
+              "distance": {
+                "value": "0",
+                "type": 1
+              },
+              "axis": {
+                "value": "XYZ",
+                "type": 12
+              },
+              "ease": {
+                "value": "Linear",
+                "type": 12
+              }
+            }
+          }
+        ],
+        "children": [],
+        "output": {
+          "type": "sprite",
+          "texture": null,
+          "color": "#000000",
+          "blendingMode": "normal",
+          "space": "world"
+        }
+      }
+    ]
+  },
+  "id": "9d20be2c-5336-4d37-a873-64dc25a32910"
+}

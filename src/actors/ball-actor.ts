@@ -84,6 +84,9 @@ class BallActor extends BaseActor {
     this.vfxActor = vfx
     // TODO Destroy the vfx actor on collision
     // Need to have a way to reuse Vfx actors and all this. 
+
+
+    
     
 
   }
@@ -92,7 +95,7 @@ class BallActor extends BaseActor {
     // Not sure if this should filter stuff?
     // Like maybe should not be in contact with any other projectiles or trigger volumes 
     // Probably should not collide with sensors by default.
-    this.physicsSystem.onBeginContact(this).pipe(take(1)).subscribe((contactId) => {
+    this.physicsSystem.onBeginContact(this).pipe(take(1)).subscribe(async (contactId) => {
       // The contact id is not clear what it is or why I would use it ?
       // TODO Add vector utils like Vectors3.up, Vectors3.zero
 
@@ -125,6 +128,20 @@ class BallActor extends BaseActor {
       this.physicsSystem.applyRadiusImpulse(this.position, 4, 100)
 
       this.world.removeActor(this.vfxActor)
+      
+      const projectileAsset = await this.assetLoader.getAsset('9d1e2654-548e-4c3d-8162-8e04d9fddf5a')
+      // Position seems off when in local space
+      projectileAsset.vfx.localSpace = true
+      const vfx = await this.world.spawnActor(VfxActor)
+      this.object.add(vfx.object)
+      this.world.scene.add(this.object)
+      await vfx.fromAsset(projectileAsset as any)
+
+      // I don't like having to use await in game play code
+      // Ideally this hsould be done in a loading phase. 
+
+      vfx.restart()
+      vfx.play()
     })
   }
 

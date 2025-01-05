@@ -1,0 +1,9 @@
+{
+  "name": "sparks",
+  "type": "texture",
+  "collisionDetection": true,
+  "id": "9d1e241a-3120-49cb-bfa0-eb1433e0f8e9",
+  "fileKey": "sparks.png",
+  "fileFormat": "png",
+  "sourceFile": "C:\\Users\\adamr\\Downloads\\sparks.png"
+}

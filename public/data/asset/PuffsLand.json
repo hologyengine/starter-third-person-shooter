@@ -1,0 +1,195 @@
+{
+  "name": "PuffsLand",
+  "type": "vfx",
+  "vfx": {
+    "emitters": [
+      {
+        "id": "namfbc917",
+        "name": "Emitter",
+        "rate": {
+          "type": "continuous",
+          "count": 1,
+          "time": 0.5,
+          "delay": 0
+        },
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "initializers": [
+          {
+            "id": "wtajg2fhj",
+            "type": "lifetime",
+            "params": {
+              "duration": {
+                "type": 1,
+                "value": 1
+              }
+            }
+          },
+          {
+            "id": "f1wwqvwo8",
+            "type": "velocity",
+            "params": {
+              "velocity": {
+                "value": [
+                  0,
+                  1.7,
+                  0
+                ],
+                "type": 8
+              }
+            }
+          },
+          {
+            "id": "05p8e81pl",
+            "type": "randomDirection",
+            "params": {
+              "speed": {
+                "value": 1,
+                "type": 1
+              }
+            }
+          },
+          {
+            "id": "leugzfetz",
+            "type": "positionSphere",
+            "params": {
+              "position": {
+                "value": [
+                  0,
+                  0,
+                  0
+                ],
+                "type": 8
+              },
+              "radius": {
+                "value": 1.4,
+                "type": 1
+              }
+            }
+          }
+        ],
+        "behaviours": [
+          {
+            "id": "2w7x8ild5",
+            "type": "scale",
+            "params": {
+              "a": {
+                "value": ".0001",
+                "type": 1
+              },
+              "b": {
+                "value": "0",
+                "type": 1
+              },
+              "ease": {
+                "value": "Linear",
+                "type": 12
+              }
+            }
+          },
+          {
+            "id": "bfpkcy13q",
+            "type": "changeOpacity",
+            "params": {
+              "a": {
+                "value": 1,
+                "type": 1
+              },
+              "b": {
+                "value": 0,
+                "type": 1
+              },
+              "ease": {
+                "value": "Linear",
+                "type": 12
+              }
+            }
+          }
+        ],
+        "children": [
+          {
+            "id": "9b2jsc9f2",
+            "name": "Emitter",
+            "rate": {
+              "type": "once",
+              "count": 3,
+              "time": 0,
+              "delay": 0
+            },
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "initializers": [
+              {
+                "id": "1a9iewhbl",
+                "type": "lifetime",
+                "params": {
+                  "duration": {
+                    "type": 1,
+                    "value": 1
+                  }
+                }
+              },
+              {
+                "id": "uza3rzcyg",
+                "type": "positionSphere",
+                "params": {
+                  "position": {
+                    "value": [
+                      0,
+                      0,
+                      0
+                    ],
+                    "type": 8
+                  },
+                  "radius": {
+                    "value": 0.9,
+                    "type": 1
+                  }
+                }
+              }
+            ],
+            "behaviours": [],
+            "children": [],
+            "output": {
+              "type": "shape",
+              "texture": null,
+              "color": "#ffffff",
+              "blendingMode": "normal",
+              "space": "world",
+              "softness": 0,
+              "shape": "sphere",
+              "material": "hahbj5tm3t"
+            }
+          }
+        ],
+        "output": {
+          "type": "shape",
+          "texture": null,
+          "color": "#ffffff",
+          "blendingMode": "normal",
+          "space": "world",
+          "softness": 0,
+          "shape": "sphere",
+          "material": "hahbj5tm3t"
+        }
+      }
+    ]
+  },
+  "id": "9d388045-fc9e-412b-bda8-928bec89b1e5"
+}

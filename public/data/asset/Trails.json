@@ -1,0 +1,126 @@
+{
+  "name": "Trails",
+  "type": "vfx",
+  "vfx": {
+    "emitters": [
+      {
+        "id": "uhawjf29g",
+        "name": "Trails",
+        "rate": {
+          "type": "continuous",
+          "count": 4,
+          "time": 0.3,
+          "delay": 0
+        },
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "initializers": [
+          {
+            "id": "gqin3dpnd",
+            "type": "lifetime",
+            "params": {
+              "duration": {
+                "type": 1,
+                "value": 1.35
+              }
+            }
+          },
+          {
+            "id": "11mk2iux5",
+            "type": "velocity",
+            "params": {
+              "velocity": {
+                "value": [
+                  0,
+                  10.6,
+                  0
+                ],
+                "type": 8
+              }
+            }
+          },
+          {
+            "id": "gba200qoz",
+            "type": "positionSphere",
+            "params": {
+              "position": {
+                "value": [
+                  0,
+                  0,
+                  0
+                ],
+                "type": 8
+              },
+              "radius": {
+                "value": 23.7,
+                "type": 1
+              }
+            }
+          }
+        ],
+        "behaviours": [
+          {
+            "id": "nevar6hxs",
+            "type": "vortex",
+            "params": {
+              "axis": {
+                "value": [
+                  0,
+                  1,
+                  0
+                ],
+                "type": 8
+              },
+              "amount": {
+                "value": 4.2,
+                "type": 1
+              }
+            }
+          },
+          {
+            "id": "7h493v6tw",
+            "type": "changeOpacity",
+            "params": {
+              "a": {
+                "value": 0.1,
+                "type": 1
+              },
+              "b": {
+                "value": 1,
+                "type": 1
+              },
+              "ease": {
+                "value": "Linear",
+                "type": 12
+              }
+            }
+          }
+        ],
+        "children": [],
+        "output": {
+          "type": "trail",
+          "texture": null,
+          "color": "#f9db15",
+          "blendingMode": "normal",
+          "space": "world",
+          "softness": 0,
+          "colorEnd": "#b52626",
+          "taper": true,
+          "length": 11,
+          "opacityStart": 1,
+          "opacityEnd": 1,
+          "bloom": true
+        }
+      }
+    ]
+  },
+  "id": "9d2eb694-50a2-42fd-9e1d-5a12da5a82e0"
+}

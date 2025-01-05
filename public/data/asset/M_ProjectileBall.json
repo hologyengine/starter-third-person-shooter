@@ -1,0 +1,21 @@
+{
+  "name": "M_ProjectileBall",
+  "type": "material",
+  "material": {
+    "type": "shader",
+    "params": {
+      "metalness": 0,
+      "opacity": 1
+    },
+    "side": 0,
+    "shaderParams": {
+      "color": {
+        "type": 10,
+        "value": "#7276ee"
+      }
+    },
+    "shader": "ProjectileBallShader",
+    "bloom": true
+  },
+  "id": "9d1e2548-0338-4a69-8110-02a0e7ab78aa"
+}

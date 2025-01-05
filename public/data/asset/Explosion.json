@@ -1,11 +1,11 @@
 {
-  "name": "Projectile",
+  "name": "Explosion",
   "type": "vfx",
   "vfx": {
     "emitters": [
       {
         "id": "6xrofx12y",
-        "name": "Sphere",
+        "name": "Sparks",
         "rate": {
           "type": "once",
           "count": 1,
@@ -28,7 +28,7 @@
             "type": "lifetime",
             "params": {
               "duration": {
-                "value": 3,
+                "value": ".3",
                 "type": 1
               }
             }
@@ -44,143 +44,36 @@
             }
           }
         ],
-        "behaviours": [],
-        "children": [],
-        "output": {
-          "type": "shape",
-          "texture": null,
-          "color": "#ffffff",
-          "blendingMode": "normal",
-          "shape": "sphere",
-          "material": "9d1e2548-0338-4a69-8110-02a0e7ab78aa",
-          "space": "local"
-        }
-      },
-      {
-        "id": "2xcibyg1g",
-        "name": "Smoke",
-        "rate": {
-          "type": "continuous",
-          "count": 2,
-          "time": 0.06,
-          "delay": 0
-        },
-        "position": [
-          0,
-          0,
-          0
-        ],
-        "rotation": [
-          0,
-          0,
-          0
-        ],
-        "initializers": [
-          {
-            "id": "4xnf5tjzq",
-            "type": "lifetime",
-            "params": {
-              "duration": {
-                "type": 1,
-                "value": 1
-              }
-            }
-          },
-          {
-            "id": "gjujl0oeo",
-            "type": "positionSphere",
-            "params": {
-              "position": {
-                "value": [
-                  0,
-                  0,
-                  0
-                ],
-                "type": 8
-              },
-              "radius": {
-                "value": 0.55,
-                "type": 1
-              }
-            }
-          }
-        ],
         "behaviours": [
           {
-            "id": "n27fzpcfl",
-            "type": "changeOpacity",
-            "params": {
-              "a": {
-                "value": 0.9,
-                "type": 1
-              },
-              "b": {
-                "value": "0",
-                "type": 1
-              },
-              "ease": {
-                "value": "OutQuad",
-                "type": 12
-              }
-            }
-          },
-          {
-            "id": "2wy0vmmp8",
+            "id": "kq0ugu3id",
             "type": "scale",
             "params": {
               "a": {
-                "value": 0.22,
+                "value": 0.05,
                 "type": 1
               },
               "b": {
-                "value": 0.25,
+                "value": 3.75,
                 "type": 1
               },
               "ease": {
-                "value": "InExpo",
+                "value": "OutExpo",
                 "type": 12
               }
             }
           },
           {
-            "id": "h5obtsa7b",
-            "type": "changeColor",
+            "id": "b89blwaua",
+            "type": "changeOpacity",
             "params": {
               "a": {
-                "value": "#6691f5",
-                "type": 10
+                "value": 1,
+                "type": 1
               },
               "b": {
-                "value": "#f236e2",
-                "type": 10
-              },
-              "ease": {
-                "value": "Linear",
-                "type": 12
-              }
-            }
-          },
-          {
-            "id": "7b5ke7do7",
-            "type": "followParent",
-            "params": {
-              "amount": {
-                "value": "0.01",
+                "value": 0,
                 "type": 1
-              }
-            }
-          },
-          {
-            "id": "1oxd6sljt",
-            "type": "disperse",
-            "params": {
-              "distance": {
-                "value": "0",
-                "type": 1
-              },
-              "axis": {
-                "value": "XYZ",
-                "type": 12
               },
               "ease": {
                 "value": "Linear",
@@ -191,16 +84,19 @@
         ],
         "children": [],
         "output": {
-          "type": "sprite",
-          "texture": null,
-          "color": "#000000",
+          "type": "shape",
+          "texture": "9d1e29c6-aa68-4a6e-9f88-aba1eb90386d",
+          "color": "#94a0ff",
           "blendingMode": "normal",
-          "space": "world"
+          "shape": "sphere",
+          "material": "9d1e2548-0338-4a69-8110-02a0e7ab78aa",
+          "space": "local",
+          "assetId": null
         }
       },
       {
-        "id": "fjx9jtsmv",
-        "name": "Sparks",
+        "id": "151crfqvi",
+        "name": "Ball",
         "rate": {
           "type": "once",
           "count": 1,
@@ -219,21 +115,21 @@
         ],
         "initializers": [
           {
-            "id": "dz1exfp2b",
+            "id": "8c0gqglcm",
             "type": "lifetime",
             "params": {
               "duration": {
-                "type": 1,
-                "value": 4
+                "value": ".16",
+                "type": 1
               }
             }
           },
           {
-            "id": "i5k47aeys",
+            "id": "1vevi1ypy",
             "type": "scale",
             "params": {
               "scale": {
-                "value": 0.2,
+                "value": 0.15,
                 "type": 1
               }
             }
@@ -241,7 +137,25 @@
         ],
         "behaviours": [
           {
-            "id": "0q93stpdx",
+            "id": "kq0ugu3id",
+            "type": "scale",
+            "params": {
+              "a": {
+                "value": 0.1,
+                "type": 1
+              },
+              "b": {
+                "value": 0.6,
+                "type": 1
+              },
+              "ease": {
+                "value": "OutExpo",
+                "type": 12
+              }
+            }
+          },
+          {
+            "id": "b89blwaua",
             "type": "changeOpacity",
             "params": {
               "a": {
@@ -249,7 +163,7 @@
                 "type": 1
               },
               "b": {
-                "value": 0.6,
+                "value": 0,
                 "type": 1
               },
               "ease": {
@@ -263,13 +177,93 @@
         "output": {
           "type": "sprite",
           "texture": "9d1e241a-3120-49cb-bfa0-eb1433e0f8e9",
-          "color": "#8063f2",
+          "color": "#918dce",
           "blendingMode": "normal",
+          "shape": "sphere",
+          "material": "9d1e2548-0338-4a69-8110-02a0e7ab78aa",
           "space": "local"
         }
       },
       {
-        "id": "seksp4v1k",
+        "id": "506j9hs1a",
+        "name": "Inner",
+        "rate": {
+          "type": "once",
+          "count": 3,
+          "time": 0.5,
+          "delay": 0
+        },
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "initializers": [
+          {
+            "id": "ymf26rqyu",
+            "type": "lifetime",
+            "params": {
+              "duration": {
+                "type": 1,
+                "value": ".3"
+              }
+            }
+          }
+        ],
+        "behaviours": [
+          {
+            "id": "9ugovsbpo",
+            "type": "scale",
+            "params": {
+              "a": {
+                "value": 0.21,
+                "type": 1
+              },
+              "b": {
+                "value": 0.3,
+                "type": 1
+              },
+              "ease": {
+                "value": "OutExpo",
+                "type": 12
+              }
+            }
+          },
+          {
+            "id": "93klvm8q2",
+            "type": "changeOpacity",
+            "params": {
+              "a": {
+                "value": 1,
+                "type": 1
+              },
+              "b": {
+                "value": 0,
+                "type": 1
+              },
+              "ease": {
+                "value": "InExpo",
+                "type": 12
+              }
+            }
+          }
+        ],
+        "children": [],
+        "output": {
+          "type": "sprite",
+          "texture": null,
+          "color": "#aadbdf",
+          "blendingMode": "additive",
+          "space": "local"
+        }
+      },
+      {
+        "id": "oz40mq2z1",
         "name": "Emitter",
         "rate": {
           "type": "once",
@@ -289,12 +283,22 @@
         ],
         "initializers": [
           {
-            "id": "gj507smn0",
+            "id": "i8qsq6kbw",
             "type": "lifetime",
             "params": {
               "duration": {
                 "type": 1,
-                "value": 220
+                "value": 1
+              }
+            }
+          },
+          {
+            "id": "bwfgcpfa0",
+            "type": "scale",
+            "params": {
+              "scale": {
+                "value": 7.95,
+                "type": 1
               }
             }
           }
@@ -307,11 +311,10 @@
           "color": "#ffffff",
           "blendingMode": "normal",
           "space": "world",
-          "soft": true,
-          "shape": "sphere"
+          "shape": "plane"
         }
       }
     ]
   },
-  "id": "9d1c8333-0ee0-4241-8332-d54e79d5ea2a"
+  "id": "9d1e2654-548e-4c3d-8162-8e04d9fddf5a"
 }

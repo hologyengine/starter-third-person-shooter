@@ -14,10 +14,10 @@
     "@hology/core": "file:../../Documents/code/hology/packages/core/hology-core-0.0.54.tgz",
     "@hology/react": "^0.0.11",
     "@preact/signals-react": "^2.1.0",
-    "@types/three": "^0.166.0",
+    "@types/three": "^0.169.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "three": "^0.166.1"
+    "three": "^0.169.0"
   },
   "devDependencies": {
     "@babel/plugin-proposal-decorators": "^7.24.7",
