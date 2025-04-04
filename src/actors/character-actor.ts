@@ -40,7 +40,7 @@ class CharacterActor extends BaseActor {
   private spineBone: Bone
 
   async onInit(): Promise<void> {
-    this.shooting.camera = this.thirdPartyCamera.camera.instance
+    this.shooting.camera = this.thirdPartyCamera.camera
     this.shootAction.onStart(() => {
       this.shoot()
     })

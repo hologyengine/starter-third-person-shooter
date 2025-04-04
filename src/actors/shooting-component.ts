@@ -28,7 +28,7 @@ class ShootingComponent extends ActorComponent {
   public camera: Camera
   private world = inject(World)
   private actorFactory = inject(ActorFactory)
-  private shootingStrength = 5
+  private shootingStrength = 7
   public muzzlePosition: Vector3
 
   public trigger() {
