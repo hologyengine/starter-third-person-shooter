@@ -19,6 +19,7 @@ class BoxActor extends BaseActor {
       )
     ),
     mass: 10,
+    restitution: 0.01,
     bodyType: PhysicsBodyType.dynamic,
   })
 
