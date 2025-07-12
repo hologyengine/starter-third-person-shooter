@@ -1,28 +1,15 @@
-import {
-  initiateGame
-} from "@hology/core/gameplay"
-import { createRef, useEffect } from "react"
+import 'reflect-metadata'
+import './App.css';
+import { HologyScene } from '@hology/react'
+import shaders from './shaders'
 import actors from './actors'
-import "./App.css"
-import Game from "./services/game"
-import shaders from "./shaders"
+import Game from './services/game'
 
 function App() {
-  const containerRef = createRef<HTMLDivElement>()
-  useEffect(() => {
-    initiateGame(Game, {
-      element: containerRef.current as HTMLElement,
-      sceneName: "boxes",
-      dataDir: "data",
-      shaders,
-      actors,
-    })
-  }, [containerRef])
   return (
-    <div className="App">
-      <div ref={containerRef}></div>
-    </div>
-  )
+    <HologyScene gameClass={Game} sceneName='boxes' dataDir='data' shaders={shaders} actors={actors}>
+    </HologyScene>
+  );
 }
 
-export default App
+export default App;
