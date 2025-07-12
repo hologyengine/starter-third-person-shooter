@@ -1,0 +1,6 @@
+.hology-overlay {
+  pointer-events: none
+}
+.hology-overlay * {
+ pointer-events: auto; 
+}
