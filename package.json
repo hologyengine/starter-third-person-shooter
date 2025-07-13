@@ -9,8 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@dimforge/rapier3d-compat": "^0.13.1",
-    "@hology/core": "^0.0.92",
+    "@hology/core": "^0.0.111",
     "@hology/react": "^0.0.16",
     "@preact/signals-react": "^2.1.0",
     "@types/three": "^0.169.0",
@@ -20,7 +19,7 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-decorators": "^7.24.7",
-    "@hology/vite-plugin": "^0.0.1",
+    "@hology/vite-plugin": "^0.0.3",
     "@preact/signals-react-transform": "^0.3.2",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
@@ -31,6 +30,6 @@
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-refresh": "^0.4.7",
     "typescript": "^5.2.2",
-    "vite": "^5.3.4"
+    "vite": "^5.4.10"
   }
 }
