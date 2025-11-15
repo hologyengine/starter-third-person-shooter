@@ -7,7 +7,7 @@ import Game from './services/game'
 
 function App() {
   return (
-    <HologyScene gameClass={Game} sceneName='boxes' dataDir='data' shaders={shaders} actors={actors}>
+    <HologyScene gameClass={Game} sceneName='main' dataDir='data' shaders={shaders} actors={actors}>
     </HologyScene>
   );
 }

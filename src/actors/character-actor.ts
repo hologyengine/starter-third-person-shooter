@@ -1,13 +1,17 @@
 import {
   Actor, AnimationState,
   AnimationStateMachine, attach, BaseActor,
+  inject,
+  PhysicsSystem,
   RootMotionClip
 } from "@hology/core/gameplay";
 import {
   CharacterAnimationComponent,
   CharacterMovementComponent,
   CharacterMovementMode,
-  ThirdPartyCameraComponent
+  MeshComponent,
+  ThirdPartyCameraComponent,
+  ThirdPersonCameraComponent
 } from "@hology/core/gameplay/actors";
 import { ActionInput } from "@hology/core/gameplay/input";
 import * as THREE from 'three';
@@ -30,8 +34,8 @@ class CharacterActor extends BaseActor {
     fallingReorientation: true,
     fallingMovementControl: 0.2
   })
-  public thirdPartyCamera: ThirdPartyCameraComponent = attach(ThirdPartyCameraComponent)
-
+  public thirdPersonCamera: ThirdPersonCameraComponent = attach(ThirdPersonCameraComponent)
+  private physics = inject(PhysicsSystem)
 
   public shootAction = new ActionInput()
 
@@ -40,15 +44,46 @@ class CharacterActor extends BaseActor {
   private spineBone: Bone
 
   async onInit(): Promise<void> {
-    this.shooting.camera = this.thirdPartyCamera.camera
+    this.shooting.camera = this.thirdPersonCamera.camera
     this.shootAction.onStart(() => {
       this.shoot()
     })
 
+
+    this.physics.showDebug = false
+    const worldDirection = new Vector3()
+    const down = new Vector3(0, -1, 0)
+    const hitMesh = new Mesh(new THREE.BoxGeometry(.1,.1,.1), new MeshStandardMaterial({color: 'red'}))
+    setInterval(() => {
+      this.object.getWorldDirection(worldDirection)
+      const result = this.physics.castActorShape(this, worldDirection, 3)
+      hitMesh.position.copy(result.hitPoint)
+      this.object.parent.add(hitMesh)
+
+      
+      
+
+      if (result.hasHit) {
+        console.log("Has hit", result)
+        console.log(this.position)
+        console.log(Math.abs(this.position.y - result.hitPoint.y))
+
+        
+
+        {
+          const arrow = new THREE.ArrowHelper(result.normal, result.hitPoint, 1)
+          this.object.parent.add(arrow)
+        }
+
+      }
+
+    
+    }, 1000)
+
     const loader = new FBXLoader()
     const glbLoader = new GLTFLoader()
 
-    const characterMeshPath = 'assets/X Bot.fbx'
+    const characterMeshPath = '/assets/X Bot.fbx'
     this.characterMesh = await loader.loadAsync(characterMeshPath)
 
     const weaponMesh = (await glbLoader.loadAsync('assets/weapon.glb')).scene
@@ -90,7 +125,7 @@ class CharacterActor extends BaseActor {
 
       if (this.movement.mode !== CharacterMovementMode.falling) {
         // Rotate one spine bone so the character looks in the direction the player is aiming at
-        rotateSpineByLookRotation(this, this.spineBone, this.thirdPartyCamera.rotationInput.rotation)
+        rotateSpineByLookRotation(this, this.spineBone, this.thirdPersonCamera.rotationInput.rotation)
       }
   }
 
@@ -163,6 +198,9 @@ const muzzleWorldPosition = new Vector3()
 
 async function getClip(file: string, loader: Loader, name?: string) {
   const group = await loader.loadAsync(file)
+  if (group == null || !(group instanceof Object3D)) {
+    throw new Error(`Failed to load animation clip from ${file}`)
+  }
   const clips = group.animations as AnimationClip[]
   if (name != null) {
     return clips.find(c => c.name === 'name')

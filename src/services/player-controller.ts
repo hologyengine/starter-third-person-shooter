@@ -70,11 +70,11 @@ class PlayerController {
     )
     this.inputService.bindDelta(
       InputAction.rotateCamera,
-      this.character.thirdPartyCamera.rotationInput.rotateX
+      this.character.thirdPersonCamera.rotationInput.rotateX
     )
     this.inputService.bindDelta(
       InputAction.zoomCamera,
-      this.character.thirdPartyCamera.zoomInput.increment
+      this.character.thirdPersonCamera.zoomInput.increment
     )
     this.inputService.bindToggle(InputAction.shoot, this.character.shootAction.toggle)
 
