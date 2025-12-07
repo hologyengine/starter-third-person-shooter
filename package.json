@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@hology/core": "^0.0.169",
+    "@hology/core": "^0.0.170",
     "@hology/react": "^0.0.16",
     "@preact/signals-react": "^2.1.0",
     "@types/three": "^0.169.0",
