@@ -49,37 +49,6 @@ class CharacterActor extends BaseActor {
       this.shoot()
     })
 
-
-    this.physics.showDebug = false
-    const worldDirection = new Vector3()
-    const down = new Vector3(0, -1, 0)
-    const hitMesh = new Mesh(new THREE.BoxGeometry(.1,.1,.1), new MeshStandardMaterial({color: 'red'}))
-    setInterval(() => {
-      this.object.getWorldDirection(worldDirection)
-      const result = this.physics.castActorShape(this, worldDirection, 3)
-      hitMesh.position.copy(result.hitPoint)
-      this.object.parent.add(hitMesh)
-
-      
-      
-
-      if (result.hasHit) {
-        console.log("Has hit", result)
-        console.log(this.position)
-        console.log(Math.abs(this.position.y - result.hitPoint.y))
-
-        
-
-        {
-          const arrow = new THREE.ArrowHelper(result.normal, result.hitPoint, 1)
-          this.object.parent.add(arrow)
-        }
-
-      }
-
-    
-    }, 1000)
-
     const loader = new FBXLoader()
     const glbLoader = new GLTFLoader()
 
