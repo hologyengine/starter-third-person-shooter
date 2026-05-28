@@ -10,3 +10,10 @@ This starter example demonstrates how one can create basic character with a shoo
 * Switch to first person: V
 * Sprint: Shift
 * Jump: Space
+
+
+### Run the game
+
+```
+npm run dev
+```
