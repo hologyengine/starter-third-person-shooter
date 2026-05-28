@@ -21,6 +21,7 @@ const screenCenter = new Vector2()
 // This is a good practice to reduce the need for garbage colleciton, making the game perform better.
 const ballForceVec = new Vector3()
 const ballOriginVec = new Vector3()
+const ballDirectionVec = new Vector3()
 
 @Component()
 class ShootingComponent extends ActorComponent {
@@ -44,13 +45,18 @@ class ShootingComponent extends ActorComponent {
     this.spawnBall(ballFrom, raycaster.ray.direction.normalize())
   }
 
+  public triggerFromRay(origin: Vector3, direction: Vector3) {
+    this.spawnBall(origin, direction)
+  }
+
   private async spawnBall(start: Vector3, direction: Vector3) {
-    ballOriginVec.addVectors(start, direction.clone().normalize().multiplyScalar(1))
+    ballDirectionVec.copy(direction).normalize()
+    ballOriginVec.addVectors(start, ballDirectionVec)
     const ball = await this.actorFactory.create(BallActor)
     this.world.addActor(ball, ballOriginVec)
   
     ball.moveTo(ballOriginVec)
-    ballForceVec.copy(direction).multiplyScalar(this.shootingStrength)
+    ballForceVec.copy(ballDirectionVec).multiplyScalar(this.shootingStrength)
     this.physics.applyImpulse(
       ball,
       ballForceVec

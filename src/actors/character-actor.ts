@@ -9,8 +9,7 @@ import {
   CharacterAnimationComponent,
   CharacterMovementComponent,
   CharacterMovementMode,
-  MeshComponent,
-  ThirdPartyCameraComponent,
+  FirstPersonCameraComponent,
   ThirdPersonCameraComponent
 } from "@hology/core/gameplay/actors";
 import { ActionInput } from "@hology/core/gameplay/input";
@@ -20,6 +19,7 @@ import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import ShootingComponent from "./shooting-component";
 
+type CharacterCameraMode = 'third' | 'first'
 
 @Actor()
 class CharacterActor extends BaseActor {
@@ -35,9 +35,15 @@ class CharacterActor extends BaseActor {
     fallingMovementControl: 0.2
   })
   public thirdPersonCamera: ThirdPersonCameraComponent = attach(ThirdPersonCameraComponent)
+  public firstPersonCamera: FirstPersonCameraComponent = attach(FirstPersonCameraComponent, {
+    autoActivate: false,
+    eyeHeight: 1.7,
+  })
   private physics = inject(PhysicsSystem)
 
   public shootAction = new ActionInput()
+  public toggleCameraAction = new ActionInput()
+  private cameraMode: CharacterCameraMode = null
 
   private muzzleObject: Object3D
   private characterMesh: Object3D
@@ -47,6 +53,9 @@ class CharacterActor extends BaseActor {
     this.shooting.camera = this.thirdPersonCamera.camera
     this.shootAction.onStart(() => {
       this.shoot()
+    })
+    this.toggleCameraAction.onStart(() => {
+      this.toggleCameraMode()
     })
 
     const loader = new FBXLoader()
@@ -84,6 +93,7 @@ class CharacterActor extends BaseActor {
     const meshRescaleFactor = 1/50
     this.characterMesh.scale.multiplyScalar(meshRescaleFactor)
     this.object.add(this.characterMesh)
+    this.setCameraMode('third')
   }
 
   override onLateUpdate(deltaTime: number) {
@@ -94,8 +104,64 @@ class CharacterActor extends BaseActor {
 
       if (this.movement.mode !== CharacterMovementMode.falling) {
         // Rotate one spine bone so the character looks in the direction the player is aiming at
-        rotateSpineByLookRotation(this, this.spineBone, this.thirdPersonCamera.rotationInput.rotation)
+        rotateSpineByLookRotation(this, this.spineBone, this.getActiveCameraRotation())
       }
+  }
+
+  public getCameraMode() {
+    return this.cameraMode
+  }
+
+  public toggleCameraMode() {
+    this.setCameraMode(this.cameraMode === 'first' ? 'third' : 'first')
+  }
+
+  public setCameraMode(mode: CharacterCameraMode) {
+    if (mode === 'first') {
+      this.syncCameraPitch(this.thirdPersonCamera, this.firstPersonCamera)
+      this.thirdPersonCamera.deactivate()
+      this.firstPersonCamera.activate()
+      this.shooting.camera = this.firstPersonCamera.camera
+      if (this.characterMesh != null) {
+        this.firstPersonCamera.hideObjects(this.characterMesh)
+      }
+    } else {
+      this.syncCameraPitch(this.firstPersonCamera, this.thirdPersonCamera)
+      this.firstPersonCamera.restoreHiddenObjects()
+      this.firstPersonCamera.deactivate()
+      this.thirdPersonCamera.activate()
+      this.shooting.camera = this.thirdPersonCamera.camera
+    }
+
+    this.cameraMode = mode
+  }
+
+  public rotateActiveCameraPitch(delta: number) {
+    if (this.cameraMode === 'first') {
+      this.firstPersonCamera.rotationInput.rotateX(delta)
+    } else {
+      this.thirdPersonCamera.rotationInput.rotateX(delta)
+    }
+  }
+
+  public zoomActiveCamera(delta: number) {
+    if (this.cameraMode === 'third') {
+      this.thirdPersonCamera.zoomInput.increment(delta)
+    }
+  }
+
+  private getActiveCameraRotation() {
+    return this.cameraMode === 'first'
+      ? this.firstPersonCamera.rotationInput.rotation
+      : this.thirdPersonCamera.rotationInput.rotation
+  }
+
+  private syncCameraPitch(
+    from: FirstPersonCameraComponent | ThirdPersonCameraComponent,
+    to: FirstPersonCameraComponent | ThirdPersonCameraComponent
+  ) {
+    to.rotationInput.rotation.x = 0
+    to.rotationInput.rotateX(from.rotationInput.rotation.x)
   }
 
   private async createStateMachine(loader: Loader, characterMesh: Object3D): Promise<AnimationStateMachine> {
@@ -154,6 +220,13 @@ class CharacterActor extends BaseActor {
   }
 
   shoot() {
+    if (this.cameraMode === 'first') {
+      this.firstPersonCamera.getAimOrigin(firstPersonAimOrigin)
+      this.firstPersonCamera.getAimDirection(firstPersonAimDirection)
+      this.shooting.triggerFromRay(firstPersonAimOrigin, firstPersonAimDirection)
+      return
+    }
+
     this.muzzleObject.getWorldPosition(muzzleWorldPosition)
     this.shooting.muzzlePosition = muzzleWorldPosition
     this.shooting.trigger()
@@ -164,6 +237,8 @@ class CharacterActor extends BaseActor {
 export default CharacterActor
 
 const muzzleWorldPosition = new Vector3()
+const firstPersonAimOrigin = new Vector3()
+const firstPersonAimDirection = new Vector3()
 
 async function getClip(file: string, loader: Loader, name?: string) {
   const group = await loader.loadAsync(file)

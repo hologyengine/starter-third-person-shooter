@@ -8,8 +8,14 @@ import Game from './services/game'
 
 function App() {
   return (
-    <HologyScene gameClass={Game} sceneName='main' dataDir='data' shaders={shaders} actors={actors} components={components}>
-    </HologyScene>
+    <div className="app-shell">
+      <HologyScene gameClass={Game} sceneName='main' dataDir='data' shaders={shaders} actors={actors} components={components}>
+      </HologyScene>
+      <div className="reticle" aria-hidden="true">
+        <span />
+        <span />
+      </div>
+    </div>
   );
 }
 

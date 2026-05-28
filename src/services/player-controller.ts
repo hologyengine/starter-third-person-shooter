@@ -19,6 +19,7 @@ enum InputAction {
   rotateCamera,
   zoomCamera,
   shoot,
+  toggleCamera,
 }
 
 @Service()
@@ -35,7 +36,7 @@ class PlayerController {
     this.inputService.setKeybind(InputAction.moveRight, new Keybind("d"))
     this.inputService.setMousebind(
       InputAction.rotate,
-      new Mousebind(0.01, true, "x")
+      new Mousebind(0.003, true, "x")
     )
     this.inputService.setMousebind(
       InputAction.rotateCamera,
@@ -46,6 +47,7 @@ class PlayerController {
       new Wheelbind(0.0003, false)
     )
     this.inputService.setKeybind(InputAction.shoot, new Keybind('MouseLeft'))
+    this.inputService.setKeybind(InputAction.toggleCamera, new Keybind('v'))
   }
 
   public setup(character: CharacterActor) {
@@ -70,13 +72,14 @@ class PlayerController {
     )
     this.inputService.bindDelta(
       InputAction.rotateCamera,
-      this.character.thirdPersonCamera.rotationInput.rotateX
+      delta => this.character.rotateActiveCameraPitch(delta)
     )
     this.inputService.bindDelta(
       InputAction.zoomCamera,
-      this.character.thirdPersonCamera.zoomInput.increment
+      delta => this.character.zoomActiveCamera(delta)
     )
     this.inputService.bindToggle(InputAction.shoot, this.character.shootAction.toggle)
+    this.inputService.bindToggle(InputAction.toggleCamera, this.character.toggleCameraAction.toggle)
 
   }
 }
