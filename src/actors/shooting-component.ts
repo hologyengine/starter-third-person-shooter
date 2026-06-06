@@ -13,7 +13,7 @@ import {
   Vector3
 } from "three"
 import BallActor from "./ball-actor"
-import { RunOnAll, RunOnServer } from "@hology/core/gameplay/net"
+import { Replicated, RunOnAll, RunOnServer } from "@hology/core/gameplay/net"
 
 const raycaster = new Raycaster()
 const screenCenter = new Vector2()
@@ -32,6 +32,9 @@ class ShootingComponent extends ActorComponent {
   private actorFactory = inject(ActorFactory)
   private shootingStrength = 7
   public muzzlePosition: Vector3
+
+  @Replicated()
+  public ammo = 10
 
   public trigger() {
     if (this.camera == null) {
@@ -52,6 +55,8 @@ class ShootingComponent extends ActorComponent {
 
   @RunOnServer()
   private async serverSpawnBall(start: Vector3, direction: Vector3) {
+    if (this.ammo <= 0) return
+    this.ammo--
     this.spawnBall(start, direction)
   }
 
