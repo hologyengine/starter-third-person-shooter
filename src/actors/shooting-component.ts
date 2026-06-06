@@ -13,6 +13,7 @@ import {
   Vector3
 } from "three"
 import BallActor from "./ball-actor"
+import { RunOnServer } from "@hology/core/gameplay/net"
 
 const raycaster = new Raycaster()
 const screenCenter = new Vector2()
@@ -49,6 +50,7 @@ class ShootingComponent extends ActorComponent {
     this.spawnBall(origin, direction)
   }
 
+  @RunOnServer()
   private async spawnBall(start: Vector3, direction: Vector3) {
     ballDirectionVec.copy(direction).normalize()
     ballOriginVec.addVectors(start, ballDirectionVec)
