@@ -19,7 +19,7 @@ import { AnimationClip, Bone, Loader, Mesh, MeshStandardMaterial, Object3D, Vect
 import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import ShootingComponent from "./shooting-component";
-import { NetActorRole, RunOnAll, RunOnServer } from "@hology/core/gameplay/net";
+import { NetActorRole, RunOnAll, RunOnNotOwner, RunOnServer } from "@hology/core/gameplay/net";
 
 type CharacterCameraMode = 'third' | 'first'
 
@@ -133,13 +133,21 @@ class CharacterActor extends BaseActor {
 
   @RunOnServer()
   private serverRotateSpine(rotation: THREE.Euler) {
-    this.nextSpineRotation = rotation
+    this.notOwnerRotateSpine(rotation)
   }
 
   @RunOnAll()
   private allRotateSpine(rotation: THREE.Euler) {
     this.nextSpineRotation = rotation
   }
+
+  // This is because we can't simply call run on all from clients
+  // Even though we practically are. 
+  @RunOnNotOwner()
+  private notOwnerRotateSpine(rotation: THREE.Euler) {
+    this.nextSpineRotation = rotation
+  }
+
 
   public getCameraMode() {
     return this.cameraMode
