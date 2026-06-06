@@ -1,7 +1,7 @@
 import { BoxCollisionShape, PhysicalShapeMesh } from "@hology/core"
 import { Actor, BaseActor, inject, PhysicsBodyType, PhysicsSystem } from "@hology/core/gameplay"
 import { MeshComponent } from "@hology/core/gameplay/actors"
-import { NetActorRole, RunOnAll } from "@hology/core/gameplay/net"
+import { NetRole, RunOnAll } from "@hology/core/gameplay/net"
 import { Parameter } from "@hology/core/shader/parameter"
 import { Color, MeshStandardMaterial, Quaternion, Vector3 } from "three"
 import { RoundedBoxGeometry } from "three/examples/jsm/geometries/RoundedBoxGeometry"
@@ -37,7 +37,7 @@ class BoxActor extends BaseActor {
   }
 
   onLateUpdate(deltaTime: number): void {
-    if (this.netRole === NetActorRole.authority) {
+    if (this.netRole === NetRole.authority) {
       this.clientSyncTransform(this.position, this.quaternion)
     } else if (this.hasSyncedUpdate) {
       this.position.lerp(this.latestPosition, 0.2)

@@ -6,7 +6,7 @@ import actors from './actors'
 import components from './components';
 import Game from './services/game'
 import { useEffect, useState } from 'react';
-import { NetRole } from '@hology/core/gameplay';
+import { NetMode } from '@hology/core/gameplay';
 import { BrowserNetSession } from '@hology/core/gameplay/net/browser';
 
 function App() {
@@ -54,7 +54,7 @@ function createSession(): BrowserNetSession {
   const urlParams = new URLSearchParams(window.location.search);
   const sessionId = urlParams.get('sessionId') ?? 'test1'
   const localId = Number.parseInt(urlParams.get('localId') ?? (Math.round(Math.random() * 9999)).toString())
-  const role = Number.parseInt(urlParams.get('role') ?? '1') as NetRole
+  const mode = Number.parseInt(urlParams.get('mode') ?? '1') as NetMode
 
   /*
   Maybe if you are server, your create a new session with an id greater than what exists
@@ -62,9 +62,9 @@ function createSession(): BrowserNetSession {
   To restart, alwasy refresh server and then clients to join the same
   */
 
-  console.log(`Connecting as role ${role} with local id ${localId}`)
+  console.log(`Connecting as mode ${mode} with local id ${localId}`)
 
-  const s = new BrowserNetSession(role, sessionId, localId)
+  const s = new BrowserNetSession(mode, sessionId, localId)
   s.connect()
   return s
 }

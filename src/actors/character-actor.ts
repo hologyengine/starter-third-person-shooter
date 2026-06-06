@@ -19,7 +19,7 @@ import { AnimationClip, Bone, Loader, Mesh, MeshStandardMaterial, Object3D, Vect
 import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import ShootingComponent from "./shooting-component";
-import { NetActorRole, RunOnAll, RunOnNotOwner, RunOnServer } from "@hology/core/gameplay/net";
+import { NetRole, RunOnAll, RunOnNotOwner, RunOnServer } from "@hology/core/gameplay/net";
 
 type CharacterCameraMode = 'third' | 'first'
 
@@ -111,13 +111,13 @@ class CharacterActor extends BaseActor {
       if (this.movement.mode !== CharacterMovementMode.falling) {
         // Rotate one spine bone so the character looks in the direction the player is aiming at
         
-        if (this.netRole === NetActorRole.autonomousProxy) {
+        if (this.netRole === NetRole.autonomousProxy) {
           const rotation = this.getActiveCameraRotation()
           this.serverRotateSpine(rotation)
           rotateSpineByLookRotation(this, this.spineBone, rotation)
         }
         // This check feels kinda hacky. Not sure what a better system is
-        if (this.netRole === NetActorRole.authority && (this.owner instanceof BasePlayerController && this.owner.isLocallyControlled)) {
+        if (this.netRole === NetRole.authority && (this.owner instanceof BasePlayerController && this.owner.isLocallyControlled)) {
           const rotation = this.getActiveCameraRotation()
           this.allRotateSpine(rotation)
         }
