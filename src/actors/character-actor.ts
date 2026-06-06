@@ -10,7 +10,8 @@ import {
   NetCharacterMovementComponent,
   CharacterMovementMode,
   FirstPersonCameraComponent,
-  ThirdPersonCameraComponent
+  ThirdPersonCameraComponent,
+  BasePlayerController
 } from "@hology/core/gameplay/actors";
 import { ActionInput } from "@hology/core/gameplay/input";
 import * as THREE from 'three';
@@ -18,6 +19,7 @@ import { AnimationClip, Bone, Loader, Mesh, MeshStandardMaterial, Object3D, Vect
 import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import ShootingComponent from "./shooting-component";
+import { NetActorRole, RunOnAll, RunOnServer } from "@hology/core/gameplay/net";
 
 type CharacterCameraMode = 'third' | 'first'
 
@@ -108,10 +110,35 @@ class CharacterActor extends BaseActor {
 
       if (this.movement.mode !== CharacterMovementMode.falling) {
         // Rotate one spine bone so the character looks in the direction the player is aiming at
-        rotateSpineByLookRotation(this, this.spineBone, this.getActiveCameraRotation())
+        
+        if (this.netRole === NetActorRole.autonomousProxy) {
+          const rotation = this.getActiveCameraRotation()
+          this.serverRotateSpine(rotation)
+          rotateSpineByLookRotation(this, this.spineBone, rotation)
+        }
+        // This check feels kinda hacky. Not sure what a better system is
+        if (this.netRole === NetActorRole.authority && (this.owner instanceof BasePlayerController && this.owner.isLocallyControlled)) {
+          const rotation = this.getActiveCameraRotation()
+          this.allRotateSpine(rotation)
+        }
+        if (this.nextSpineRotation != null) {
+          rotateSpineByLookRotation(this, this.spineBone, this.nextSpineRotation)
+        }
       }
 
       applyVisualSmoothingOffset(this, this.characterMesh, this.characterMeshBasePosition)
+  }
+
+  private nextSpineRotation: THREE.Euler
+
+  @RunOnServer()
+  private serverRotateSpine(rotation: THREE.Euler) {
+    this.nextSpineRotation = rotation
+  }
+
+  @RunOnAll()
+  private allRotateSpine(rotation: THREE.Euler) {
+    this.nextSpineRotation = rotation
   }
 
   public getCameraMode() {
