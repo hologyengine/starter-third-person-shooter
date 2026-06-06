@@ -50,6 +50,7 @@ class CharacterActor extends BaseActor {
   private muzzleObject: Object3D
   private characterMesh: Object3D
   private spineBone: Bone
+  private characterMeshBasePosition = new Vector3()
 
   async onInit(): Promise<void> {
     this.shooting.camera = this.thirdPersonCamera.camera
@@ -94,6 +95,7 @@ class CharacterActor extends BaseActor {
 
     const meshRescaleFactor = 1/50
     this.characterMesh.scale.multiplyScalar(meshRescaleFactor)
+    this.characterMeshBasePosition.copy(this.characterMesh.position)
     this.object.add(this.characterMesh)
     this.cameraMode = 'third'
   }
@@ -108,6 +110,8 @@ class CharacterActor extends BaseActor {
         // Rotate one spine bone so the character looks in the direction the player is aiming at
         rotateSpineByLookRotation(this, this.spineBone, this.getActiveCameraRotation())
       }
+
+      applyVisualSmoothingOffset(this, this.characterMesh, this.characterMeshBasePosition)
   }
 
   public getCameraMode() {
@@ -189,33 +193,40 @@ class CharacterActor extends BaseActor {
     }
 
     const grounded = new AnimationState(clips.idle)
-    const groundMovement = grounded.createChild(null, () => this.movement.horizontalSpeed > 0 && this.movement.mode == CharacterMovementMode.walking)
-    const [sprint, walk] = groundMovement.split(() => this.movement.isSprinting)      
+    const groundMovement = grounded.createChild(null, () => this.movement.horizontalSpeed > movementSpeedDeadZone && this.movement.mode == CharacterMovementMode.walking)
+    const [sprint, walk] = groundMovement.split(() => this.movement.horizontalSpeed > this.movement.maxSpeed + movementSpeedDeadZone)      
 
-    const walkForward = walk.createChild(RootMotionClip.fromClip(clips.walking, true), () => this.movement.directionInput.vertical > 0)
-    walkForward.createChild(RootMotionClip.fromClip(clips.walkForwardLeft, true), () => this.movement.directionInput.horizontal < 0)
-    walkForward.createChild(RootMotionClip.fromClip(clips.walkForwardRight, true), () => this.movement.directionInput.horizontal > 0)
+    const movingForward = () => getLocalMovementDirection(this).z > movementDirectionDeadZone
+    const movingBackwards = () => getLocalMovementDirection(this).z < -movementDirectionDeadZone
+    const movingLeft = () => getLocalMovementDirection(this).x > movementDirectionDeadZone
+    const movingRight = () => getLocalMovementDirection(this).x < -movementDirectionDeadZone
+    const movingSideways = () => Math.abs(getLocalMovementDirection(this).z) <= movementDirectionDeadZone
+    const isMoving = () => this.movement.horizontalSpeed > movementSpeedDeadZone
 
-    walk.createChild(RootMotionClip.fromClip(clips.walkingBackwards, true), () => this.movement.directionInput.vertical < 0)
+    const walkForward = walk.createChild(RootMotionClip.fromClip(clips.walking, true), movingForward)
+    walkForward.createChild(RootMotionClip.fromClip(clips.walkForwardLeft, true), movingLeft)
+    walkForward.createChild(RootMotionClip.fromClip(clips.walkForwardRight, true), movingRight)
 
-    const strafe = walk.createChild(null, () => this.movement.directionInput.vertical == 0)
-    strafe.createChild(RootMotionClip.fromClip(clips.strafeLeft, true), () => this.movement.directionInput.horizontal < 0)
-    strafe.createChild(RootMotionClip.fromClip(clips.strafeRight, true), () => this.movement.directionInput.horizontal > 0)
+    walk.createChild(RootMotionClip.fromClip(clips.walkingBackwards, true), movingBackwards)
+
+    const strafe = walk.createChild(null, movingSideways)
+    strafe.createChild(RootMotionClip.fromClip(clips.strafeLeft, true), movingLeft)
+    strafe.createChild(RootMotionClip.fromClip(clips.strafeRight, true), movingRight)
     
     const fall = new AnimationState(clips.falling)
     grounded.transitionsTo(fall, () => this.movement.mode === CharacterMovementMode.falling)
 
     const land = new AnimationState(clips.land)
 
-    fall.transitionsTo(grounded, () => this.movement.mode !== CharacterMovementMode.falling && this.movement.directionInput.vector.length() > 0)
-    fall.transitionsTo(land, () => this.movement.mode !== CharacterMovementMode.falling && this.movement.directionInput.vector.length() == 0)
+    fall.transitionsTo(grounded, () => this.movement.mode !== CharacterMovementMode.falling && isMoving())
+    fall.transitionsTo(land, () => this.movement.mode !== CharacterMovementMode.falling && !isMoving())
     land.transitionsOnComplete(grounded, () => 
-      this.movement.mode === CharacterMovementMode.falling || this.movement.directionInput.vector.length() > 0)
+      this.movement.mode === CharacterMovementMode.falling || isMoving())
 
-    const runForward = sprint.createChild(RootMotionClip.fromClip(clips.run, true), () => this.movement.directionInput.vertical > 0)
-    runForward.createChild(RootMotionClip.fromClip(clips.walkForwardLeft, true), () => this.movement.directionInput.horizontal < 0)
-    runForward.createChild(RootMotionClip.fromClip(clips.walkForwardRight, true), () => this.movement.directionInput.horizontal > 0)
-    sprint.createChild(RootMotionClip.fromClip(clips.walkingBackwards, true), () => this.movement.directionInput.vertical < 0)
+    const runForward = sprint.createChild(RootMotionClip.fromClip(clips.run, true), movingForward)
+    runForward.createChild(RootMotionClip.fromClip(clips.walkForwardLeft, true), movingLeft)
+    runForward.createChild(RootMotionClip.fromClip(clips.walkForwardRight, true), movingRight)
+    sprint.createChild(RootMotionClip.fromClip(clips.walkingBackwards, true), movingBackwards)
     sprint.transitionsTo(strafe)
 
     return new AnimationStateMachine(grounded)
@@ -241,6 +252,12 @@ export default CharacterActor
 const muzzleWorldPosition = new Vector3()
 const firstPersonAimOrigin = new Vector3()
 const firstPersonAimDirection = new Vector3()
+const movementDirectionDeadZone = 0.1
+const movementSpeedDeadZone = 0.01
+const localMovementDirection = new Vector3()
+const movementWorldRotation = new THREE.Quaternion()
+const visualSmoothingLocalOffset = new Vector3()
+const visualSmoothingWorldRotation = new THREE.Quaternion()
 
 async function getClip(file: string, loader: Loader, name?: string) {
   const group = await loader.loadAsync(file)
@@ -269,6 +286,26 @@ function findBone(object: Object3D, name: string): Bone {
     }
   })
   return found
+}
+
+function getLocalMovementDirection(actor: CharacterActor): Vector3 {
+  localMovementDirection.copy(actor.movement.velocity)
+  localMovementDirection.y = 0
+  if (actor.movement.horizontalSpeed <= movementSpeedDeadZone || localMovementDirection.lengthSq() <= movementSpeedDeadZone * movementSpeedDeadZone) {
+    return localMovementDirection.set(0, 0, 0)
+  }
+  actor.object.getWorldQuaternion(movementWorldRotation)
+  localMovementDirection.applyQuaternion(movementWorldRotation.invert()).normalize()
+  return localMovementDirection
+}
+
+function applyVisualSmoothingOffset(actor: CharacterActor, mesh: Object3D, basePosition: Vector3) {
+  visualSmoothingLocalOffset.copy(actor.movement.visualSmoothingOffset)
+  if (visualSmoothingLocalOffset.lengthSq() > 0) {
+    actor.object.getWorldQuaternion(visualSmoothingWorldRotation)
+    visualSmoothingLocalOffset.applyQuaternion(visualSmoothingWorldRotation.invert())
+  }
+  mesh.position.copy(basePosition).add(visualSmoothingLocalOffset)
 }
 
 const _spineRotationAxis = new Vector3()
