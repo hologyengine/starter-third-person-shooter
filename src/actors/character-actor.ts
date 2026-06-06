@@ -7,7 +7,7 @@ import {
 } from "@hology/core/gameplay";
 import {
   CharacterAnimationComponent,
-  CharacterMovementComponent,
+  NetCharacterMovementComponent,
   CharacterMovementMode,
   FirstPersonCameraComponent,
   ThirdPersonCameraComponent
@@ -21,11 +21,11 @@ import ShootingComponent from "./shooting-component";
 
 type CharacterCameraMode = 'third' | 'first'
 
-@Actor()
+@Actor({replicate: true})
 class CharacterActor extends BaseActor {
   private shooting = attach(ShootingComponent)
   private animation = attach(CharacterAnimationComponent)
-  public movement = attach(CharacterMovementComponent, {
+  public movement = attach(NetCharacterMovementComponent, {
     maxSpeed: 6,
     maxSpeedSprint: 14,
     maxSpeedBackwards: 4,
@@ -34,7 +34,9 @@ class CharacterActor extends BaseActor {
     fallingReorientation: true,
     fallingMovementControl: 0.2
   })
-  public thirdPersonCamera: ThirdPersonCameraComponent = attach(ThirdPersonCameraComponent)
+  public thirdPersonCamera: ThirdPersonCameraComponent = attach(ThirdPersonCameraComponent, {
+    autoActivate: false,
+  })
   public firstPersonCamera: FirstPersonCameraComponent = attach(FirstPersonCameraComponent, {
     autoActivate: false,
     eyeHeight: 1.7,
@@ -93,7 +95,7 @@ class CharacterActor extends BaseActor {
     const meshRescaleFactor = 1/50
     this.characterMesh.scale.multiplyScalar(meshRescaleFactor)
     this.object.add(this.characterMesh)
-    this.setCameraMode('third')
+    this.cameraMode = 'third'
   }
 
   override onLateUpdate(deltaTime: number) {
