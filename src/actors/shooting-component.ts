@@ -13,7 +13,7 @@ import {
   Vector3
 } from "three"
 import BallActor from "./ball-actor"
-import { RunOnServer } from "@hology/core/gameplay/net"
+import { RunOnAll, RunOnServer } from "@hology/core/gameplay/net"
 
 const raycaster = new Raycaster()
 const screenCenter = new Vector2()
@@ -43,7 +43,7 @@ class ShootingComponent extends ActorComponent {
 
     // If no muzzle position is set, spawn the baall at the center of the screen
     const ballFrom = this.muzzlePosition ?? raycaster.ray.origin
-    this.spawnBall(ballFrom, raycaster.ray.direction.normalize())
+    this.serverSpawnBall(ballFrom, raycaster.ray.direction.normalize())
   }
 
   public triggerFromRay(origin: Vector3, direction: Vector3) {
@@ -51,6 +51,11 @@ class ShootingComponent extends ActorComponent {
   }
 
   @RunOnServer()
+  private async serverSpawnBall(start: Vector3, direction: Vector3) {
+    this.spawnBall(start, direction)
+  }
+
+  @RunOnAll()
   private async spawnBall(start: Vector3, direction: Vector3) {
     ballDirectionVec.copy(direction).normalize()
     ballOriginVec.addVectors(start, ballDirectionVec)
