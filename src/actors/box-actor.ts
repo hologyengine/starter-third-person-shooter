@@ -3,7 +3,7 @@ import { Actor, BaseActor, inject, PhysicsBodyType, PhysicsSystem } from "@holog
 import { MeshComponent } from "@hology/core/gameplay/actors"
 import { NetRole, RunOnAll } from "@hology/core/gameplay/net"
 import { Parameter } from "@hology/core/shader/parameter"
-import { Color, MeshStandardMaterial, Quaternion, Vector3 } from "three"
+import { Color, Euler, MeshStandardMaterial, Quaternion, Vector3 } from "three"
 import { RoundedBoxGeometry } from "three/examples/jsm/geometries/RoundedBoxGeometry"
 
 @Actor({replicate: true})
@@ -38,6 +38,11 @@ class BoxActor extends BaseActor {
 
   onLateUpdate(deltaTime: number): void {
     if (this.netRole === NetRole.authority) {
+      if (this.hasSyncedUpdate) {
+        if (this.position.equals(this.latestPosition) && this.quaternion.equals(this.latestRotation)) {
+          return
+        }
+      }
       this.clientSyncTransform(this.position, this.quaternion)
     } else if (this.hasSyncedUpdate) {
       this.position.lerp(this.latestPosition, 0.2)
@@ -46,11 +51,41 @@ class BoxActor extends BaseActor {
     }
   }
 
+  clientSyncTransform(position: Vector3, quaternion: Quaternion) {
+    const payload = new Uint8Array(6 * 4);
+    const view = new DataView(payload.buffer);
+    view.setFloat32(0, position.x)
+    view.setFloat32(4, position.y)
+    view.setFloat32(8, position.z)
+
+    tmpEuler.setFromQuaternion(quaternion)
+    view.setFloat32(12, tmpEuler.x)
+    view.setFloat32(16, tmpEuler.y)
+    view.setFloat32(20, tmpEuler.z)
+
+    this.clientSyncTransformPacked(payload)
+  }
+
   // wish there was a 
   @RunOnAll(false)
-  clientSyncTransform(position: Vector3, quaternion: Quaternion) {
-    this.latestPosition.copy(position)
-    this.latestRotation.copy(quaternion)
+  clientSyncTransformPacked(payload: Uint8Array) {
+
+    const view = new DataView(payload.buffer, payload.byteOffset, payload.byteLength);
+    this.latestPosition.set(
+      view.getFloat32(0),
+      view.getFloat32(4),
+      view.getFloat32(8)
+    )
+
+    tmpEuler.set(
+      view.getFloat32(12),
+      view.getFloat32(16),
+      view.getFloat32(20)
+    )
+    this.latestRotation.setFromEuler(tmpEuler)
+
+    // this.latestPosition.copy(position)
+    // this.latestRotation.copy(quaternion)
     this.hasSyncedUpdate = true
   }
 
@@ -60,3 +95,6 @@ class BoxActor extends BaseActor {
 }
 
 export default BoxActor
+
+
+const tmpEuler = new Euler()
