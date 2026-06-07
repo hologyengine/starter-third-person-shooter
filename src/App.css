@@ -41,3 +41,66 @@ html {
   width: 2px;
   height: 18px;
 }
+
+.network-stats {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 10;
+  min-width: 214px;
+  padding: 10px 12px;
+  color: rgba(238, 245, 241, 0.94);
+  background: rgba(7, 11, 13, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 6px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.28);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 12px;
+  line-height: 1.35;
+  pointer-events: none;
+  backdrop-filter: blur(8px);
+}
+
+.network-stats__header {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 7px;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.network-stats dl {
+  display: grid;
+  gap: 3px;
+  margin: 0;
+}
+
+.network-stats dl > div {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 10px;
+  align-items: baseline;
+}
+
+.network-stats dt {
+  color: rgba(178, 210, 202, 0.88);
+}
+
+.network-stats dd {
+  margin: 0;
+  text-align: right;
+  white-space: nowrap;
+}
+
+@media (max-width: 520px) {
+  .network-stats {
+    min-width: 188px;
+    max-width: calc(100vw - 24px);
+    font-size: 11px;
+  }
+
+  .network-stats dl > div {
+    grid-template-columns: 42px 1fr;
+  }
+}
