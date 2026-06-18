@@ -4,6 +4,7 @@ import { HologyScene } from '@hology/react'
 import shaders from './shaders'
 import actors from './actors'
 import components from './components';
+import dataDefinitions from './data';
 import Game from './services/game'
 import { useEffect, useState } from 'react';
 import { NetMode } from '@hology/core/gameplay';
@@ -53,6 +54,7 @@ function App() {
         shaders={shaders} 
         actors={actors} 
         components={components}
+        dataDefinitions={dataDefinitions}
         xr={{enabled: true}}
         multi={{session: appSession.session}}
       >
