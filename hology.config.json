@@ -2,5 +2,6 @@
   "dataPath": "public/data",
   "shadersPath": "src/shaders",
   "actorsPath": "src/actors",
-  "componentsPath": "src/components"
+  "componentsPath": "src/components",
+  "dataDefinitionsPath": "src/data"
 }
