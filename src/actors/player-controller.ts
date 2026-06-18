@@ -82,6 +82,7 @@ export class PlayerController extends BasePlayerController {
   setupLocally() {
     this.inputService.setKeybind(InputAction.jump, new Keybind(" "))
     this.inputService.setKeybind(InputAction.sprint, new Keybind("Shift"))
+    this.inputService.setKeybind(InputAction.crouch, new Keybind("c"))
     this.inputService.setKeybind(InputAction.moveForward, new Keybind("w"))
     this.inputService.setKeybind(InputAction.moveBackward, new Keybind("s"))
     this.inputService.setKeybind(InputAction.moveLeft, new Keybind("a"))
@@ -104,9 +105,11 @@ export class PlayerController extends BasePlayerController {
     const playerMove = this.character.movement.directionInput
     const playerJump = this.character.movement.jumpInput
     const playerSprint = this.character.movement.sprintInput
+    const playerCrouch = this.character.movement.crouchInput
 
     this.inputService.bindToggle(InputAction.jump, playerJump.toggle)
     this.inputService.bindToggle(InputAction.sprint, playerSprint.toggle)
+    this.inputService.bindToggle(InputAction.crouch, playerCrouch.toggle)
     this.inputService.bindToggle(InputAction.moveForward, playerMove.togglePositiveY)
     this.inputService.bindToggle(InputAction.moveBackward, playerMove.toggleNegativeY)
     this.inputService.bindToggle(InputAction.moveLeft, playerMove.toggleNegativeX)

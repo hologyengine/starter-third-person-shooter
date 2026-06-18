@@ -7,7 +7,7 @@ import {
 } from "@hology/core/gameplay";
 import {
   CharacterAnimationComponent,
-  NetCharacterMovementComponent,
+  CharacterMovementComponent,
   CharacterMovementMode,
   FirstPersonCameraComponent,
   ThirdPersonCameraComponent,
@@ -27,7 +27,7 @@ type CharacterCameraMode = 'third' | 'first'
 class CharacterActor extends BaseActor {
   private shooting = attach(ShootingComponent)
   private animation = attach(CharacterAnimationComponent)
-  public movement = attach(NetCharacterMovementComponent, {
+  public movement = attach(CharacterMovementComponent, {
     maxSpeed: 6,
     maxSpeedSprint: 14,
     maxSpeedBackwards: 4,
