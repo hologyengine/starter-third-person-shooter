@@ -59,8 +59,12 @@ class CharacterActor extends BaseActor {
   private spineBone: Bone
   private characterMeshBasePosition = new Vector3()
   private characterMeshBaseRotation = new THREE.Quaternion()
+  private standingThirdPersonCameraHeight: number
+  private standingThirdPersonCameraOffsetY: number
 
   async onInit(): Promise<void> {
+    this.standingThirdPersonCameraHeight = this.thirdPersonCamera.height
+    this.standingThirdPersonCameraOffsetY = this.thirdPersonCamera.offsetY
     this.shooting.camera = this.thirdPersonCamera.camera
     this.shootAction.onStart(() => {
       this.shoot()
@@ -110,6 +114,15 @@ class CharacterActor extends BaseActor {
   }
 
   override onLateUpdate(deltaTime: number) {
+      updateThirdPersonCameraHeight(
+        this.thirdPersonCamera,
+        this.movement.isCrouching,
+        this.movement.isSliding,
+        this.standingThirdPersonCameraHeight,
+        this.standingThirdPersonCameraOffsetY,
+        deltaTime
+      )
+
       // In order to syncronise the walking animation with the speed of the character,
       // we can pass the movement speed from the movement component to the animation component.
       // Because we are also scaling our mesh, we need to factor this in. 
@@ -318,6 +331,9 @@ const slideVisualBasis = new THREE.Matrix4()
 const slideVisualSlopeRotation = new THREE.Quaternion()
 const slideVisualTargetRotation = new THREE.Quaternion()
 const slideVisualRotationSpeed = 12
+const crouchCameraVerticalOffset = -0.75
+const slideCameraVerticalOffset = -1.25
+const cameraHeightTransitionSpeed = 10
 
 type AnimationClipAdjustment = {
   endTimeRatio?: number
@@ -397,6 +413,24 @@ function applyVisualSmoothingOffset(actor: CharacterActor, mesh: Object3D, baseP
     visualSmoothingLocalOffset.applyQuaternion(visualSmoothingWorldRotation.invert())
   }
   mesh.position.copy(basePosition).add(visualSmoothingLocalOffset)
+}
+
+function updateThirdPersonCameraHeight(
+  camera: ThirdPersonCameraComponent,
+  isCrouching: boolean,
+  isSliding: boolean,
+  standingHeight: number,
+  standingOffsetY: number,
+  deltaTime: number
+) {
+  const postureOffset = isSliding
+    ? slideCameraVerticalOffset
+    : isCrouching
+      ? crouchCameraVerticalOffset
+      : 0
+  const blend = 1 - Math.exp(-cameraHeightTransitionSpeed * Math.max(0, deltaTime))
+  camera.height = THREE.MathUtils.lerp(camera.height, standingHeight + postureOffset, blend)
+  camera.offsetY = THREE.MathUtils.lerp(camera.offsetY, standingOffsetY + postureOffset, blend)
 }
 
 function applySlideVisualRotation(
