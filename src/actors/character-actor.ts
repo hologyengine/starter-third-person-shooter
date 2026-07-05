@@ -58,6 +58,7 @@ class CharacterActor extends BaseActor {
   private characterMesh: Object3D
   private spineBone: Bone
   private characterMeshBasePosition = new Vector3()
+  private characterMeshBaseRotation = new THREE.Quaternion()
 
   async onInit(): Promise<void> {
     this.shooting.camera = this.thirdPersonCamera.camera
@@ -103,6 +104,7 @@ class CharacterActor extends BaseActor {
     const meshRescaleFactor = 1/50
     this.characterMesh.scale.multiplyScalar(meshRescaleFactor)
     this.characterMeshBasePosition.copy(this.characterMesh.position)
+    this.characterMeshBaseRotation.copy(this.characterMesh.quaternion)
     this.object.add(this.characterMesh)
     this.cameraMode = 'third'
   }
@@ -131,6 +133,7 @@ class CharacterActor extends BaseActor {
         }
       }
 
+      applySlideVisualRotation(this, this.characterMesh, this.characterMeshBaseRotation, deltaTime)
       applyVisualSmoothingOffset(this, this.characterMesh, this.characterMeshBasePosition)
   }
 
@@ -306,6 +309,15 @@ const localMovementDirection = new Vector3()
 const movementWorldRotation = new THREE.Quaternion()
 const visualSmoothingLocalOffset = new Vector3()
 const visualSmoothingWorldRotation = new THREE.Quaternion()
+const slideVisualActorWorldRotation = new THREE.Quaternion()
+const slideVisualInverseActorRotation = new THREE.Quaternion()
+const slideVisualUp = new Vector3()
+const slideVisualForward = new Vector3()
+const slideVisualRight = new Vector3()
+const slideVisualBasis = new THREE.Matrix4()
+const slideVisualSlopeRotation = new THREE.Quaternion()
+const slideVisualTargetRotation = new THREE.Quaternion()
+const slideVisualRotationSpeed = 12
 
 type AnimationClipAdjustment = {
   endTimeRatio?: number
@@ -385,6 +397,42 @@ function applyVisualSmoothingOffset(actor: CharacterActor, mesh: Object3D, baseP
     visualSmoothingLocalOffset.applyQuaternion(visualSmoothingWorldRotation.invert())
   }
   mesh.position.copy(basePosition).add(visualSmoothingLocalOffset)
+}
+
+function applySlideVisualRotation(
+  actor: CharacterActor,
+  mesh: Object3D,
+  baseRotation: THREE.Quaternion,
+  deltaTime: number
+) {
+  slideVisualTargetRotation.copy(baseRotation)
+  if (actor.movement.isSliding) {
+    actor.object.getWorldQuaternion(slideVisualActorWorldRotation)
+    slideVisualInverseActorRotation.copy(slideVisualActorWorldRotation).invert()
+
+    slideVisualUp
+      .copy(actor.movement.slideSurfaceNormal)
+      .applyQuaternion(slideVisualInverseActorRotation)
+      .normalize()
+    slideVisualForward
+      .copy(actor.movement.slideDirection)
+      .applyQuaternion(slideVisualInverseActorRotation)
+      .projectOnPlane(slideVisualUp)
+
+    if (slideVisualForward.lengthSq() <= 1e-8) {
+      slideVisualForward.set(0, 0, 1).projectOnPlane(slideVisualUp)
+    }
+    slideVisualForward.normalize()
+    slideVisualRight.crossVectors(slideVisualUp, slideVisualForward).normalize()
+    slideVisualForward.crossVectors(slideVisualRight, slideVisualUp).normalize()
+
+    slideVisualBasis.makeBasis(slideVisualRight, slideVisualUp, slideVisualForward)
+    slideVisualSlopeRotation.setFromRotationMatrix(slideVisualBasis)
+    slideVisualTargetRotation.copy(slideVisualSlopeRotation).multiply(baseRotation)
+  }
+
+  const blend = 1 - Math.exp(-slideVisualRotationSpeed * Math.max(0, deltaTime))
+  mesh.quaternion.slerp(slideVisualTargetRotation, blend)
 }
 
 const _spineRotationAxis = new Vector3()
