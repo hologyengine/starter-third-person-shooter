@@ -2,5 +2,4610 @@
   "id": "9a64e4a0-8ba4-410e-ac17-ae7abef350a8",
   "name": "main",
   "sceneId": "9a64e4a0-8ba4-410e-ac17-ae7abef350a8",
-  "data": "[{\"id\":\"auto-global-fog\",\"name\":\"Global fog\",\"type\":\"global_fog\",\"position\":[0,0,0],\"scale\":[1,1,1],\"rotation\":[0,0,0],\"collisionDetection\":false,\"fog\":{\"type\":\"density\",\"color\":\"#b8f8ff\",\"density\":0.005,\"near\":100,\"far\":1000}},{\"id\":\"6263cf90-4a13-4d18-bbaf-db6cb9da02e2\",\"name\":\"landscape\",\"position\":[0,0,0],\"scale\":[1,1,1],\"rotation\":[0,0,0,\"XYZ\"],\"type\":\"shape_mesh\",\"collisionDetection\":true,\"shape\":\"landscape\",\"landscape\":{\"options\":{\"sectionSize\":100,\"sections\":{\"x\":4,\"y\":4},\"density\":40},\"heightMaps\":[]},\"grass\":{\"layers\":[]}},{\"id\":\"e7db0c75-9766-41e1-9c06-d9557cb8a382\",\"name\":\"box\",\"position\":[-13.645636310645598,1.9070056939549915,-80.27409732801172],\"scale\":[1.932291072726399,1.9322910727263982,1.932291072726399],\"rotation\":[3.141592653589793,-1.1423859120411362,3.141592653589793,\"XYZ\"],\"type\":\"actor\",\"actor\":{\"type\":\"box\",\"innerParams\":[{\"path\":[\"mesh\"],\"params\":{\"mesh\":{\"type\":15},\"position\":{\"type\":8,\"value\":[0,0,0]},\"rotation\":{\"type\":14},\"mass\":{\"type\":1,\"value\":3},\"friction\":{\"type\":1,\"value\":1},\"bodyType\":{\"type\":1,\"value\":1},\"continousCollisionDetection\":{\"type\":4,\"value\":false}}}],\"params\":{\"color\":{\"type\":10,\"value\":\"#13599a\"}}}},{\"id\":\"bde11fc4-7aa2-43ab-9f99-2a51ca2893e4\",\"name\":\"box\",\"position\":[-12.355391130849501,-8.881784197001252e-16,-79.80860806245772],\"scale\":[1.9322910727264004,1.9322910727263989,1.9322910727264004],\"rotation\":[-3.141592653589793,-0.9186106810140315,-3.141592653589793,\"XYZ\"],\"type\":\"actor\",\"actor\":{\"type\":\"box\",\"innerParams\":[{\"path\":[\"mesh\"],\"params\":{\"mesh\":{\"type\":15},\"position\":{\"type\":8,\"value\":[0,0,0]},\"rotation\":{\"type\":14},\"mass\":{\"type\":1,\"value\":3},\"friction\":{\"type\":1,\"value\":1},\"bodyType\":{\"type\":1,\"value\":1},\"continousCollisionDetection\":{\"type\":4,\"value\":false}}}],\"params\":{\"color\":{\"type\":10,\"value\":\"#13599a\"}}}},{\"id\":\"c380ccda-ac33-4546-b671-baf1ceebaa51\",\"name\":\"box\",\"position\":[-14.314158439769413,-8.881784197001252e-16,-81.11254082194088],\"scale\":[1.9322910727263989,1.9322910727263989,1.9322910727263989],\"rotation\":[3.141592653589793,-1.1741490557211076,3.141592653589793,\"XYZ\"],\"type\":\"actor\",\"actor\":{\"type\":\"box\",\"innerParams\":[{\"path\":[\"mesh\"],\"params\":{\"mesh\":{\"type\":15},\"position\":{\"type\":8,\"value\":[0,0,0]},\"rotation\":{\"type\":14},\"mass\":{\"type\":1,\"value\":3},\"friction\":{\"type\":1,\"value\":1},\"bodyType\":{\"type\":1,\"value\":1},\"continousCollisionDetection\":{\"type\":4,\"value\":false}}}],\"params\":{\"color\":{\"type\":10,\"value\":\"#13599a\"}}}},{\"id\":\"abcb60fc-8978-4533-a026-91a91a12d7b8\",\"name\":\"SpawnPoint\",\"position\":[-5.791362376577393,0.08766495279468689,-92.71897053788558],\"scale\":[1,1,1],\"rotation\":[0,0,0,\"XYZ\"],\"type\":\"actor\",\"actor\":{\"type\":\"SpawnPoint\",\"innerParams\":[{\"path\":[\"mesh\"],\"params\":{}}],\"params\":{}}},{\"id\":\"38550339-3224-4312-838b-18d71e2051d4\",\"name\":\"box\",\"position\":[6.97673048166993,0,-83.81929530885596],\"scale\":[1.9322910727263993,1.9322910727263989,1.9322910727263993],\"rotation\":[0,-0.8357469425219028,0,\"XYZ\"],\"type\":\"actor\",\"actor\":{\"type\":\"box\",\"innerParams\":[{\"path\":[\"mesh\"],\"params\":{\"mesh\":{\"type\":15},\"position\":{\"type\":8,\"value\":[0,0,0]},\"rotation\":{\"type\":14},\"mass\":{\"type\":1,\"value\":3},\"friction\":{\"type\":1,\"value\":1},\"bodyType\":{\"type\":1,\"value\":1},\"continousCollisionDetection\":{\"type\":4,\"value\":false}}}],\"params\":{\"color\":{\"type\":10,\"value\":\"#13599a\"}}}},{\"id\":\"277e861d-d7ff-45c5-8022-16da27e89a01\",\"name\":\"box\",\"position\":[6.283550214308844,1.9070056939549924,-82.63569318091167],\"scale\":[1.9322910727263989,1.9322910727263982,1.9322910727263989],\"rotation\":[0,-0.6119717114948191,0,\"XYZ\"],\"type\":\"actor\",\"actor\":{\"type\":\"box\",\"innerParams\":[{\"path\":[\"mesh\"],\"params\":{\"mesh\":{\"type\":15},\"position\":{\"type\":8,\"value\":[0,0,0]},\"rotation\":{\"type\":14},\"mass\":{\"type\":1,\"value\":3},\"friction\":{\"type\":1,\"value\":1},\"bodyType\":{\"type\":1,\"value\":1},\"continousCollisionDetection\":{\"type\":4,\"value\":false}}}],\"params\":{\"color\":{\"type\":10,\"value\":\"#13599a\"}}}},{\"id\":\"c33a6977-7f65-48ef-91ef-2565658e7d11\",\"name\":\"box\",\"position\":[5.337165865253423,0,-82.13144523247426],\"scale\":[1.932291072726399,1.9322910727263989,1.932291072726399],\"rotation\":[0,-0.5802085678148503,0,\"XYZ\"],\"type\":\"actor\",\"actor\":{\"type\":\"box\",\"innerParams\":[{\"path\":[\"mesh\"],\"params\":{\"mesh\":{\"type\":15},\"position\":{\"type\":8,\"value\":[0,0,0]},\"rotation\":{\"type\":14},\"mass\":{\"type\":1,\"value\":3},\"friction\":{\"type\":1,\"value\":1},\"bodyType\":{\"type\":1,\"value\":1},\"continousCollisionDetection\":{\"type\":4,\"value\":false}}}],\"params\":{\"color\":{\"type\":10,\"value\":\"#13599a\"}}}},{\"id\":\"c1da2cea-6c55-45e9-bb15-28cb7ecc1d5c\",\"name\":\"box\",\"position\":[2.7203177448127676,-1.7763568394002505e-15,-104.11407077601208],\"scale\":[1.9322910727264,1.9322910727263989,1.9322910727264],\"rotation\":[0,0.746949405122333,0,\"XYZ\"],\"type\":\"actor\",\"actor\":{\"type\":\"box\",\"innerParams\":[{\"path\":[\"mesh\"],\"params\":{\"mesh\":{\"type\":15},\"position\":{\"type\":8,\"value\":[0,0,0]},\"rotation\":{\"type\":14},\"mass\":{\"type\":1,\"value\":3},\"friction\":{\"type\":1,\"value\":1},\"bodyType\":{\"type\":1,\"value\":1},\"continousCollisionDetection\":{\"type\":4,\"value\":false}}}],\"params\":{\"color\":{\"type\":10,\"value\":\"#13599a\"}}}},{\"id\":\"8bacbb1d-a231-478b-ab4c-d9be7e23581a\",\"name\":\"box\",\"position\":[3.912084733451512,1.9070056939549906,-103.43502414644679],\"scale\":[1.9322910727263996,1.9322910727263982,1.9322910727263996],\"rotation\":[-2.657137852770258e-18,0.9707246361494194,2.4711309009646233e-16,\"XYZ\"],\"type\":\"actor\",\"actor\":{\"type\":\"box\",\"innerParams\":[{\"path\":[\"mesh\"],\"params\":{\"mesh\":{\"type\":15},\"position\":{\"type\":8,\"value\":[0,0,0]},\"rotation\":{\"type\":14},\"mass\":{\"type\":1,\"value\":3},\"friction\":{\"type\":1,\"value\":1},\"bodyType\":{\"type\":1,\"value\":1},\"continousCollisionDetection\":{\"type\":4,\"value\":false}}}],\"params\":{\"color\":{\"type\":10,\"value\":\"#13599a\"}}}},{\"id\":\"431d8234-5c70-419e-82ec-cd11ca2117b1\",\"name\":\"box\",\"position\":[4.427558706593529,-1.7763568394002505e-15,-102.49470722505617],\"scale\":[1.9322910727263987,1.9322910727263989,1.9322910727263987],\"rotation\":[-1.0012222192812957e-17,1.0024877798293883,2.532491739212563e-16,\"XYZ\"],\"type\":\"actor\",\"actor\":{\"type\":\"box\",\"innerParams\":[{\"path\":[\"mesh\"],\"params\":{\"mesh\":{\"type\":15},\"position\":{\"type\":8,\"value\":[0,0,0]},\"rotation\":{\"type\":14},\"mass\":{\"type\":1,\"value\":3},\"friction\":{\"type\":1,\"value\":1},\"bodyType\":{\"type\":1,\"value\":1},\"continousCollisionDetection\":{\"type\":4,\"value\":false}}}],\"params\":{\"color\":{\"type\":10,\"value\":\"#13599a\"}}}},{\"id\":\"6bc1a357-c2dc-4b78-8e7a-1744fb6cd91d\",\"name\":\"box\",\"position\":[-14.830340308042105,1.9070056939549906,-106.20506753155301],\"scale\":[1.9322910727263996,1.9322910727263982,1.9322910727263996],\"rotation\":[-3.141592653589793,0.7571838877587822,-3.141592653589793,\"XYZ\"],\"type\":\"actor\",\"actor\":{\"type\":\"box\",\"innerParams\":[{\"path\":[\"mesh\"],\"params\":{\"mesh\":{\"type\":15},\"position\":{\"type\":8,\"value\":[0,0,0]},\"rotation\":{\"type\":14},\"mass\":{\"type\":1,\"value\":3},\"friction\":{\"type\":1,\"value\":1},\"bodyType\":{\"type\":1,\"value\":1},\"continousCollisionDetection\":{\"type\":4,\"value\":false}}}],\"params\":{\"color\":{\"type\":10,\"value\":\"#13599a\"}}}},{\"id\":\"a520acd9-e825-4674-8135-9726eb3ca36e\",\"name\":\"box\",\"position\":[-15.687495049862177,-1.7763568394002505e-15,-105.13422738059285],\"scale\":[1.9322910727264,1.9322910727263989,1.9322910727264],\"rotation\":[-3.141592653589793,0.9809591187858682,-3.141592653589793,\"XYZ\"],\"type\":\"actor\",\"actor\":{\"type\":\"box\",\"innerParams\":[{\"path\":[\"mesh\"],\"params\":{\"mesh\":{\"type\":15},\"position\":{\"type\":8,\"value\":[0,0,0]},\"rotation\":{\"type\":14},\"mass\":{\"type\":1,\"value\":3},\"friction\":{\"type\":1,\"value\":1},\"bodyType\":{\"type\":1,\"value\":1},\"continousCollisionDetection\":{\"type\":4,\"value\":false}}}],\"params\":{\"color\":{\"type\":10,\"value\":\"#13599a\"}}}},{\"id\":\"5be86226-6f9d-4768-ba4d-64dfddd01a45\",\"name\":\"box\",\"position\":[-13.820950564333982,-1.7763568394002505e-15,-106.56706432012606],\"scale\":[1.9322910727263987,1.9322910727263989,1.9322910727263987],\"rotation\":[-3.141592653589793,0.7254207440788136,-3.141592653589793,\"XYZ\"],\"type\":\"actor\",\"actor\":{\"type\":\"box\",\"innerParams\":[{\"path\":[\"mesh\"],\"params\":{\"mesh\":{\"type\":15},\"position\":{\"type\":8,\"value\":[0,0,0]},\"rotation\":{\"type\":14},\"mass\":{\"type\":1,\"value\":3},\"friction\":{\"type\":1,\"value\":1},\"bodyType\":{\"type\":1,\"value\":1},\"continousCollisionDetection\":{\"type\":4,\"value\":false}}}],\"params\":{\"color\":{\"type\":10,\"value\":\"#13599a\"}}}},{\"id\":\"10ce52ae-3964-468b-a98a-c6eee4698f5a\",\"name\":\"box\",\"position\":[2.105871522775338,-3.552713678800501e-15,-59.918231947768504],\"scale\":[1.932291072726399,1.9322910727263987,1.932291072726399],\"rotation\":[3.1415926535897922,-1.5303332612640295,3.1415926535897922,\"XYZ\"],\"type\":\"actor\",\"actor\":{\"type\":\"box\",\"innerParams\":[{\"path\":[\"mesh\"],\"params\":{\"mesh\":{\"type\":15},\"position\":{\"type\":8,\"value\":[0,0,0]},\"rotation\":{\"type\":14},\"mass\":{\"type\":1,\"value\":3},\"friction\":{\"type\":1,\"value\":1},\"bodyType\":{\"type\":1,\"value\":1},\"continousCollisionDetection\":{\"type\":4,\"value\":false}}}],\"params\":{\"color\":{\"type\":10,\"value\":\"#13599a\"}}}},{\"id\":\"1e3c5550-0e69-4c35-9950-2d3127e89591\",\"name\":\"box\",\"position\":[-0.20175683142142287,-3.552713678800502e-15,-59.91823194776851],\"scale\":[1.9322910727263993,1.932291072726399,1.9322910727263993],\"rotation\":[3.1415926535897922,-1.5303332612640266,3.1415926535897922,\"XYZ\"],\"type\":\"actor\",\"actor\":{\"type\":\"box\",\"innerParams\":[{\"path\":[\"mesh\"],\"params\":{\"mesh\":{\"type\":15},\"position\":{\"type\":8,\"value\":[0,0,0]},\"rotation\":{\"type\":14},\"mass\":{\"type\":1,\"value\":3},\"friction\":{\"type\":1,\"value\":1},\"bodyType\":{\"type\":1,\"value\":1},\"continousCollisionDetection\":{\"type\":4,\"value\":false}}}],\"params\":{\"color\":{\"type\":10,\"value\":\"#13599a\"}}}},{\"id\":\"416f7476-ab5b-480e-830d-7f3823a5a457\",\"name\":\"box\",\"position\":[-2.559557508695759,-3.552713678800502e-15,-59.91823194776852],\"scale\":[1.9322910727263993,1.932291072726399,1.9322910727263993],\"rotation\":[3.1415926535897922,-1.5303332612640266,3.1415926535897922,\"XYZ\"],\"type\":\"actor\",\"actor\":{\"type\":\"box\",\"innerParams\":[{\"path\":[\"mesh\"],\"params\":{\"mesh\":{\"type\":15},\"position\":{\"type\":8,\"value\":[0,0,0]},\"rotation\":{\"type\":14},\"mass\":{\"type\":1,\"value\":3},\"friction\":{\"type\":1,\"value\":1},\"bodyType\":{\"type\":1,\"value\":1},\"continousCollisionDetection\":{\"type\":4,\"value\":false}}}],\"params\":{\"color\":{\"type\":10,\"value\":\"#13599a\"}}}},{\"id\":\"bc22a9cd-846e-478e-8c87-19590ec1e192\",\"name\":\"box\",\"position\":[-4.945595313936807,-3.552713678800502e-15,-59.91823194776852],\"scale\":[1.9322910727263993,1.932291072726399,1.9322910727263993],\"rotation\":[3.1415926535897922,-1.5303332612640266,3.1415926535897922,\"XYZ\"],\"type\":\"actor\",\"actor\":{\"type\":\"box\",\"innerParams\":[{\"path\":[\"mesh\"],\"params\":{\"mesh\":{\"type\":15},\"position\":{\"type\":8,\"value\":[0,0,0]},\"rotation\":{\"type\":14},\"mass\":{\"type\":1,\"value\":3},\"friction\":{\"type\":1,\"value\":1},\"bodyType\":{\"type\":1,\"value\":1},\"continousCollisionDetection\":{\"type\":4,\"value\":false}}}],\"params\":{\"color\":{\"type\":10,\"value\":\"#13599a\"}}}},{\"id\":\"5c6b7ab6-29e8-4568-8411-1cb56f86be8f\",\"name\":\"box\",\"position\":[-7.282574684742021,-3.552713678800502e-15,-59.918231947768525],\"scale\":[1.9322910727263993,1.932291072726399,1.9322910727263993],\"rotation\":[3.1415926535897922,-1.5303332612640266,3.1415926535897922,\"XYZ\"],\"type\":\"actor\",\"actor\":{\"type\":\"box\",\"innerParams\":[{\"path\":[\"mesh\"],\"params\":{\"mesh\":{\"type\":15},\"position\":{\"type\":8,\"value\":[0,0,0]},\"rotation\":{\"type\":14},\"mass\":{\"type\":1,\"value\":3},\"friction\":{\"type\":1,\"value\":1},\"bodyType\":{\"type\":1,\"value\":1},\"continousCollisionDetection\":{\"type\":4,\"value\":false}}}],\"params\":{\"color\":{\"type\":10,\"value\":\"#13599a\"}}}},{\"id\":\"bbc3861e-9519-4928-9ee4-fb3caf04ec2c\",\"name\":\"box\",\"position\":[-9.659880150001305,-3.552713678800502e-15,-59.918231947768525],\"scale\":[1.9322910727263993,1.932291072726399,1.9322910727263993],\"rotation\":[3.1415926535897922,-1.5303332612640266,3.1415926535897922,\"XYZ\"],\"type\":\"actor\",\"actor\":{\"type\":\"box\",\"innerParams\":[{\"path\":[\"mesh\"],\"params\":{\"mesh\":{\"type\":15},\"position\":{\"type\":8,\"value\":[0,0,0]},\"rotation\":{\"type\":14},\"mass\":{\"type\":1,\"value\":3},\"friction\":{\"type\":1,\"value\":1},\"bodyType\":{\"type\":1,\"value\":1},\"continousCollisionDetection\":{\"type\":4,\"value\":false}}}],\"params\":{\"color\":{\"type\":10,\"value\":\"#13599a\"}}}},{\"id\":\"14e20a4b-00ad-4dc3-a32e-00d6f0abfd3e\",\"name\":\"box\",\"position\":[-11.945835502442689,-3.552713678800502e-15,-59.91823194776853],\"scale\":[1.9322910727263993,1.932291072726399,1.9322910727263993],\"rotation\":[3.1415926535897922,-1.5303332612640266,3.1415926535897922,\"XYZ\"],\"type\":\"actor\",\"actor\":{\"type\":\"box\",\"innerParams\":[{\"path\":[\"mesh\"],\"params\":{\"mesh\":{\"type\":15},\"position\":{\"type\":8,\"value\":[0,0,0]},\"rotation\":{\"type\":14},\"mass\":{\"type\":1,\"value\":3},\"friction\":{\"type\":1,\"value\":1},\"bodyType\":{\"type\":1,\"value\":1},\"continousCollisionDetection\":{\"type\":4,\"value\":false}}}],\"params\":{\"color\":{\"type\":10,\"value\":\"#13599a\"}}}},{\"id\":\"f2bb9f29-68bf-4510-be2c-fe8d43cf6b81\",\"name\":\"box\",\"position\":[-14.250603714662008,-3.552713678800502e-15,-59.91823194776853],\"scale\":[1.9322910727263993,1.932291072726399,1.9322910727263993],\"rotation\":[3.1415926535897922,-1.5303332612640266,3.1415926535897922,\"XYZ\"],\"type\":\"actor\",\"actor\":{\"type\":\"box\",\"innerParams\":[{\"path\":[\"mesh\"],\"params\":{\"mesh\":{\"type\":15},\"position\":{\"type\":8,\"value\":[0,0,0]},\"rotation\":{\"type\":14},\"mass\":{\"type\":1,\"value\":3},\"friction\":{\"type\":1,\"value\":1},\"bodyType\":{\"type\":1,\"value\":1},\"continousCollisionDetection\":{\"type\":4,\"value\":false}}}],\"params\":{\"color\":{\"type\":10,\"value\":\"#13599a\"}}}},{\"id\":\"2893b1cb-fc2b-42de-8f10-8c8f25946815\",\"name\":\"box\",\"position\":[-13.326702284193738,2.0670823981256436,-59.91823194776853],\"scale\":[1.9322910727263993,1.932291072726399,1.9322910727263993],\"rotation\":[3.1415926535897922,-1.5303332612640266,3.1415926535897922,\"XYZ\"],\"type\":\"actor\",\"actor\":{\"type\":\"box\",\"innerParams\":[{\"path\":[\"mesh\"],\"params\":{\"mesh\":{\"type\":15},\"position\":{\"type\":8,\"value\":[0,0,0]},\"rotation\":{\"type\":14},\"mass\":{\"type\":1,\"value\":3},\"friction\":{\"type\":1,\"value\":1},\"bodyType\":{\"type\":1,\"value\":1},\"continousCollisionDetection\":{\"type\":4,\"value\":false}}}],\"params\":{\"color\":{\"type\":10,\"value\":\"#13599a\"}}}},{\"id\":\"33849494-8730-443f-88f8-20fc54e06426\",\"name\":\"box\",\"position\":[-11.02193407197442,2.0670823981256436,-59.91823194776853],\"scale\":[1.9322910727263993,1.932291072726399,1.9322910727263993],\"rotation\":[3.1415926535897922,-1.5303332612640266,3.1415926535897922,\"XYZ\"],\"type\":\"actor\",\"actor\":{\"type\":\"box\",\"innerParams\":[{\"path\":[\"mesh\"],\"params\":{\"mesh\":{\"type\":15},\"position\":{\"type\":8,\"value\":[0,0,0]},\"rotation\":{\"type\":14},\"mass\":{\"type\":1,\"value\":3},\"friction\":{\"type\":1,\"value\":1},\"bodyType\":{\"type\":1,\"value\":1},\"continousCollisionDetection\":{\"type\":4,\"value\":false}}}],\"params\":{\"color\":{\"type\":10,\"value\":\"#13599a\"}}}},{\"id\":\"75fb4c16-1480-4d4c-b839-ddeb56b60a3e\",\"name\":\"box\",\"position\":[-8.735978719533035,2.0670823981256436,-59.918231947768525],\"scale\":[1.9322910727263993,1.932291072726399,1.9322910727263993],\"rotation\":[3.1415926535897922,-1.5303332612640266,3.1415926535897922,\"XYZ\"],\"type\":\"actor\",\"actor\":{\"type\":\"box\",\"innerParams\":[{\"path\":[\"mesh\"],\"params\":{\"mesh\":{\"type\":15},\"position\":{\"type\":8,\"value\":[0,0,0]},\"rotation\":{\"type\":14},\"mass\":{\"type\":1,\"value\":3},\"friction\":{\"type\":1,\"value\":1},\"bodyType\":{\"type\":1,\"value\":1},\"continousCollisionDetection\":{\"type\":4,\"value\":false}}}],\"params\":{\"color\":{\"type\":10,\"value\":\"#13599a\"}}}},{\"id\":\"c999b5df-9833-4ee6-b229-7bae72896c8d\",\"name\":\"box\",\"position\":[-6.358673254273751,2.0670823981256436,-59.918231947768525],\"scale\":[1.9322910727263993,1.932291072726399,1.9322910727263993],\"rotation\":[3.1415926535897922,-1.5303332612640266,3.1415926535897922,\"XYZ\"],\"type\":\"actor\",\"actor\":{\"type\":\"box\",\"innerParams\":[{\"path\":[\"mesh\"],\"params\":{\"mesh\":{\"type\":15},\"position\":{\"type\":8,\"value\":[0,0,0]},\"rotation\":{\"type\":14},\"mass\":{\"type\":1,\"value\":3},\"friction\":{\"type\":1,\"value\":1},\"bodyType\":{\"type\":1,\"value\":1},\"continousCollisionDetection\":{\"type\":4,\"value\":false}}}],\"params\":{\"color\":{\"type\":10,\"value\":\"#13599a\"}}}},{\"id\":\"5e0ae833-b839-4701-8452-064283f8fdd7\",\"name\":\"box\",\"position\":[-4.021693883468537,2.0670823981256436,-59.91823194776852],\"scale\":[1.9322910727263993,1.932291072726399,1.9322910727263993],\"rotation\":[3.1415926535897922,-1.5303332612640266,3.1415926535897922,\"XYZ\"],\"type\":\"actor\",\"actor\":{\"type\":\"box\",\"innerParams\":[{\"path\":[\"mesh\"],\"params\":{\"mesh\":{\"type\":15},\"position\":{\"type\":8,\"value\":[0,0,0]},\"rotation\":{\"type\":14},\"mass\":{\"type\":1,\"value\":3},\"friction\":{\"type\":1,\"value\":1},\"bodyType\":{\"type\":1,\"value\":1},\"continousCollisionDetection\":{\"type\":4,\"value\":false}}}],\"params\":{\"color\":{\"type\":10,\"value\":\"#13599a\"}}}},{\"id\":\"8684e881-1e00-4d0a-ab9b-32080cfceed4\",\"name\":\"box\",\"position\":[-1.6356560782274894,2.0670823981256436,-59.91823194776852],\"scale\":[1.9322910727263993,1.932291072726399,1.9322910727263993],\"rotation\":[3.1415926535897922,-1.5303332612640266,3.1415926535897922,\"XYZ\"],\"type\":\"actor\",\"actor\":{\"type\":\"box\",\"innerParams\":[{\"path\":[\"mesh\"],\"params\":{\"mesh\":{\"type\":15},\"position\":{\"type\":8,\"value\":[0,0,0]},\"rotation\":{\"type\":14},\"mass\":{\"type\":1,\"value\":3},\"friction\":{\"type\":1,\"value\":1},\"bodyType\":{\"type\":1,\"value\":1},\"continousCollisionDetection\":{\"type\":4,\"value\":false}}}],\"params\":{\"color\":{\"type\":10,\"value\":\"#13599a\"}}}},{\"id\":\"3dca0d2b-8859-4790-92ae-35d07485bf0f\",\"name\":\"box\",\"position\":[0.7221445990468469,2.0670823981256436,-59.91823194776851],\"scale\":[1.9322910727263993,1.932291072726399,1.9322910727263993],\"rotation\":[3.1415926535897922,-1.5303332612640266,3.1415926535897922,\"XYZ\"],\"type\":\"actor\",\"actor\":{\"type\":\"box\",\"innerParams\":[{\"path\":[\"mesh\"],\"params\":{\"mesh\":{\"type\":15},\"position\":{\"type\":8,\"value\":[0,0,0]},\"rotation\":{\"type\":14},\"mass\":{\"type\":1,\"value\":3},\"friction\":{\"type\":1,\"value\":1},\"bodyType\":{\"type\":1,\"value\":1},\"continousCollisionDetection\":{\"type\":4,\"value\":false}}}],\"params\":{\"color\":{\"type\":10,\"value\":\"#13599a\"}}}},{\"id\":\"6c27a5fa-7db6-495d-9935-1f1c6effe370\",\"name\":\"box\",\"position\":[-12.33201719793357,4.131967424773372,-59.91823194776853],\"scale\":[1.9322910727263993,1.932291072726399,1.9322910727263993],\"rotation\":[3.1415926535897922,-1.5303332612640266,3.1415926535897922,\"XYZ\"],\"type\":\"actor\",\"actor\":{\"type\":\"box\",\"innerParams\":[{\"path\":[\"mesh\"],\"params\":{\"mesh\":{\"type\":15},\"position\":{\"type\":8,\"value\":[0,0,0]},\"rotation\":{\"type\":14},\"mass\":{\"type\":1,\"value\":3},\"friction\":{\"type\":1,\"value\":1},\"bodyType\":{\"type\":1,\"value\":1},\"continousCollisionDetection\":{\"type\":4,\"value\":false}}}],\"params\":{\"color\":{\"type\":10,\"value\":\"#13599a\"}}}},{\"id\":\"066c96b5-a434-4915-a06f-0fd60b3886e2\",\"name\":\"box\",\"position\":[-10.027248985714252,4.131967424773372,-59.91823194776853],\"scale\":[1.9322910727263993,1.932291072726399,1.9322910727263993],\"rotation\":[3.1415926535897922,-1.5303332612640266,3.1415926535897922,\"XYZ\"],\"type\":\"actor\",\"actor\":{\"type\":\"box\",\"innerParams\":[{\"path\":[\"mesh\"],\"params\":{\"mesh\":{\"type\":15},\"position\":{\"type\":8,\"value\":[0,0,0]},\"rotation\":{\"type\":14},\"mass\":{\"type\":1,\"value\":3},\"friction\":{\"type\":1,\"value\":1},\"bodyType\":{\"type\":1,\"value\":1},\"continousCollisionDetection\":{\"type\":4,\"value\":false}}}],\"params\":{\"color\":{\"type\":10,\"value\":\"#13599a\"}}}},{\"id\":\"b6b62790-dd05-4330-89f6-7ee6008d9874\",\"name\":\"box\",\"position\":[-7.741293633272868,4.131967424773372,-59.918231947768525],\"scale\":[1.9322910727263993,1.932291072726399,1.9322910727263993],\"rotation\":[3.1415926535897922,-1.5303332612640266,3.1415926535897922,\"XYZ\"],\"type\":\"actor\",\"actor\":{\"type\":\"box\",\"innerParams\":[{\"path\":[\"mesh\"],\"params\":{\"mesh\":{\"type\":15},\"position\":{\"type\":8,\"value\":[0,0,0]},\"rotation\":{\"type\":14},\"mass\":{\"type\":1,\"value\":3},\"friction\":{\"type\":1,\"value\":1},\"bodyType\":{\"type\":1,\"value\":1},\"continousCollisionDetection\":{\"type\":4,\"value\":false}}}],\"params\":{\"color\":{\"type\":10,\"value\":\"#13599a\"}}}},{\"id\":\"d10acb76-43b3-4c59-817e-9ce3cb9a620a\",\"name\":\"box\",\"position\":[-5.3639881680135835,4.131967424773372,-59.918231947768525],\"scale\":[1.9322910727263993,1.932291072726399,1.9322910727263993],\"rotation\":[3.1415926535897922,-1.5303332612640266,3.1415926535897922,\"XYZ\"],\"type\":\"actor\",\"actor\":{\"type\":\"box\",\"innerParams\":[{\"path\":[\"mesh\"],\"params\":{\"mesh\":{\"type\":15},\"position\":{\"type\":8,\"value\":[0,0,0]},\"rotation\":{\"type\":14},\"mass\":{\"type\":1,\"value\":3},\"friction\":{\"type\":1,\"value\":1},\"bodyType\":{\"type\":1,\"value\":1},\"continousCollisionDetection\":{\"type\":4,\"value\":false}}}],\"params\":{\"color\":{\"type\":10,\"value\":\"#13599a\"}}}},{\"id\":\"277152d3-f6e1-4159-a9be-425d86e63545\",\"name\":\"box\",\"position\":[-3.02700879720837,4.131967424773372,-59.91823194776852],\"scale\":[1.9322910727263993,1.932291072726399,1.9322910727263993],\"rotation\":[3.1415926535897922,-1.5303332612640266,3.1415926535897922,\"XYZ\"],\"type\":\"actor\",\"actor\":{\"type\":\"box\",\"innerParams\":[{\"path\":[\"mesh\"],\"params\":{\"mesh\":{\"type\":15},\"position\":{\"type\":8,\"value\":[0,0,0]},\"rotation\":{\"type\":14},\"mass\":{\"type\":1,\"value\":3},\"friction\":{\"type\":1,\"value\":1},\"bodyType\":{\"type\":1,\"value\":1},\"continousCollisionDetection\":{\"type\":4,\"value\":false}}}],\"params\":{\"color\":{\"type\":10,\"value\":\"#13599a\"}}}},{\"id\":\"5d6b84e1-8e68-425e-8b55-b97c34eb3610\",\"name\":\"box\",\"position\":[-0.6409709919673219,4.131967424773372,-59.91823194776852],\"scale\":[1.9322910727263993,1.932291072726399,1.9322910727263993],\"rotation\":[3.1415926535897922,-1.5303332612640266,3.1415926535897922,\"XYZ\"],\"type\":\"actor\",\"actor\":{\"type\":\"box\",\"innerParams\":[{\"path\":[\"mesh\"],\"params\":{\"mesh\":{\"type\":15},\"position\":{\"type\":8,\"value\":[0,0,0]},\"rotation\":{\"type\":14},\"mass\":{\"type\":1,\"value\":3},\"friction\":{\"type\":1,\"value\":1},\"bodyType\":{\"type\":1,\"value\":1},\"continousCollisionDetection\":{\"type\":4,\"value\":false}}}],\"params\":{\"color\":{\"type\":10,\"value\":\"#13599a\"}}}},{\"id\":\"febb5aab-aef1-41bd-9107-5cd56e4b79c8\",\"name\":\"box\",\"position\":[-11.143977619259818,6.156883600771149,-59.91823194776853],\"scale\":[1.9322910727263993,1.932291072726399,1.9322910727263993],\"rotation\":[3.1415926535897922,-1.5303332612640266,3.1415926535897922,\"XYZ\"],\"type\":\"actor\",\"actor\":{\"type\":\"box\",\"innerParams\":[{\"path\":[\"mesh\"],\"params\":{\"mesh\":{\"type\":15},\"position\":{\"type\":8,\"value\":[0,0,0]},\"rotation\":{\"type\":14},\"mass\":{\"type\":1,\"value\":3},\"friction\":{\"type\":1,\"value\":1},\"bodyType\":{\"type\":1,\"value\":1},\"continousCollisionDetection\":{\"type\":4,\"value\":false}}}],\"params\":{\"color\":{\"type\":10,\"value\":\"#13599a\"}}}},{\"id\":\"fd116f98-f94d-4757-810a-1309fe069bc8\",\"name\":\"box\",\"position\":[-8.8392094070405,6.156883600771149,-59.91823194776853],\"scale\":[1.9322910727263993,1.932291072726399,1.9322910727263993],\"rotation\":[3.1415926535897922,-1.5303332612640266,3.1415926535897922,\"XYZ\"],\"type\":\"actor\",\"actor\":{\"type\":\"box\",\"innerParams\":[{\"path\":[\"mesh\"],\"params\":{\"mesh\":{\"type\":15},\"position\":{\"type\":8,\"value\":[0,0,0]},\"rotation\":{\"type\":14},\"mass\":{\"type\":1,\"value\":3},\"friction\":{\"type\":1,\"value\":1},\"bodyType\":{\"type\":1,\"value\":1},\"continousCollisionDetection\":{\"type\":4,\"value\":false}}}],\"params\":{\"color\":{\"type\":10,\"value\":\"#13599a\"}}}},{\"id\":\"47dc5d22-f109-4bfe-a6a9-491486aaccaf\",\"name\":\"box\",\"position\":[-6.553254054599116,6.156883600771149,-59.918231947768525],\"scale\":[1.9322910727263993,1.932291072726399,1.9322910727263993],\"rotation\":[3.1415926535897922,-1.5303332612640266,3.1415926535897922,\"XYZ\"],\"type\":\"actor\",\"actor\":{\"type\":\"box\",\"innerParams\":[{\"path\":[\"mesh\"],\"params\":{\"mesh\":{\"type\":15},\"position\":{\"type\":8,\"value\":[0,0,0]},\"rotation\":{\"type\":14},\"mass\":{\"type\":1,\"value\":3},\"friction\":{\"type\":1,\"value\":1},\"bodyType\":{\"type\":1,\"value\":1},\"continousCollisionDetection\":{\"type\":4,\"value\":false}}}],\"params\":{\"color\":{\"type\":10,\"value\":\"#13599a\"}}}},{\"id\":\"a14c8d33-e9a2-4414-bc31-d44acf2aa707\",\"name\":\"box\",\"position\":[-4.175948589339832,6.156883600771149,-59.918231947768525],\"scale\":[1.9322910727263993,1.932291072726399,1.9322910727263993],\"rotation\":[3.1415926535897922,-1.5303332612640266,3.1415926535897922,\"XYZ\"],\"type\":\"actor\",\"actor\":{\"type\":\"box\",\"innerParams\":[{\"path\":[\"mesh\"],\"params\":{\"mesh\":{\"type\":15},\"position\":{\"type\":8,\"value\":[0,0,0]},\"rotation\":{\"type\":14},\"mass\":{\"type\":1,\"value\":3},\"friction\":{\"type\":1,\"value\":1},\"bodyType\":{\"type\":1,\"value\":1},\"continousCollisionDetection\":{\"type\":4,\"value\":false}}}],\"params\":{\"color\":{\"type\":10,\"value\":\"#13599a\"}}}},{\"id\":\"e95b09f4-f51f-4350-97fc-bafd28d04614\",\"name\":\"box\",\"position\":[-1.8389692185346185,6.156883600771149,-59.91823194776852],\"scale\":[1.9322910727263993,1.932291072726399,1.9322910727263993],\"rotation\":[3.1415926535897922,-1.5303332612640266,3.1415926535897922,\"XYZ\"],\"type\":\"actor\",\"actor\":{\"type\":\"box\",\"innerParams\":[{\"path\":[\"mesh\"],\"params\":{\"mesh\":{\"type\":15},\"position\":{\"type\":8,\"value\":[0,0,0]},\"rotation\":{\"type\":14},\"mass\":{\"type\":1,\"value\":3},\"friction\":{\"type\":1,\"value\":1},\"bodyType\":{\"type\":1,\"value\":1},\"continousCollisionDetection\":{\"type\":4,\"value\":false}}}],\"params\":{\"color\":{\"type\":10,\"value\":\"#13599a\"}}}},{\"id\":\"9999b7c9-7d56-4418-8b56-8d449f5cf476\",\"name\":\"box\",\"position\":[-9.97640635193875,8.18830734432764,-59.91823194776853],\"scale\":[1.9322910727263993,1.932291072726399,1.9322910727263993],\"rotation\":[3.1415926535897922,-1.5303332612640266,3.1415926535897922,\"XYZ\"],\"type\":\"actor\",\"actor\":{\"type\":\"box\",\"innerParams\":[{\"path\":[\"mesh\"],\"params\":{\"mesh\":{\"type\":15},\"position\":{\"type\":8,\"value\":[0,0,0]},\"rotation\":{\"type\":14},\"mass\":{\"type\":1,\"value\":3},\"friction\":{\"type\":1,\"value\":1},\"bodyType\":{\"type\":1,\"value\":1},\"continousCollisionDetection\":{\"type\":4,\"value\":false}}}],\"params\":{\"color\":{\"type\":10,\"value\":\"#13599a\"}}}},{\"id\":\"d4490f84-bd0c-4756-9f5f-c7ff4171fe03\",\"name\":\"box\",\"position\":[-7.671638139719431,8.18830734432764,-59.91823194776853],\"scale\":[1.9322910727263993,1.932291072726399,1.9322910727263993],\"rotation\":[3.1415926535897922,-1.5303332612640266,3.1415926535897922,\"XYZ\"],\"type\":\"actor\",\"actor\":{\"type\":\"box\",\"innerParams\":[{\"path\":[\"mesh\"],\"params\":{\"mesh\":{\"type\":15},\"position\":{\"type\":8,\"value\":[0,0,0]},\"rotation\":{\"type\":14},\"mass\":{\"type\":1,\"value\":3},\"friction\":{\"type\":1,\"value\":1},\"bodyType\":{\"type\":1,\"value\":1},\"continousCollisionDetection\":{\"type\":4,\"value\":false}}}],\"params\":{\"color\":{\"type\":10,\"value\":\"#13599a\"}}}},{\"id\":\"40676da4-03d5-46b8-95a1-0ed9b46617d1\",\"name\":\"box\",\"position\":[-5.385682787278048,8.18830734432764,-59.918231947768525],\"scale\":[1.9322910727263993,1.932291072726399,1.9322910727263993],\"rotation\":[3.1415926535897922,-1.5303332612640266,3.1415926535897922,\"XYZ\"],\"type\":\"actor\",\"actor\":{\"type\":\"box\",\"innerParams\":[{\"path\":[\"mesh\"],\"params\":{\"mesh\":{\"type\":15},\"position\":{\"type\":8,\"value\":[0,0,0]},\"rotation\":{\"type\":14},\"mass\":{\"type\":1,\"value\":3},\"friction\":{\"type\":1,\"value\":1},\"bodyType\":{\"type\":1,\"value\":1},\"continousCollisionDetection\":{\"type\":4,\"value\":false}}}],\"params\":{\"color\":{\"type\":10,\"value\":\"#13599a\"}}}},{\"id\":\"193b523c-1311-433d-8b49-7b67a0d43a4c\",\"name\":\"box\",\"position\":[-3.008377322018764,8.18830734432764,-59.918231947768525],\"scale\":[1.9322910727263993,1.932291072726399,1.9322910727263993],\"rotation\":[3.1415926535897922,-1.5303332612640266,3.1415926535897922,\"XYZ\"],\"type\":\"actor\",\"actor\":{\"type\":\"box\",\"innerParams\":[{\"path\":[\"mesh\"],\"params\":{\"mesh\":{\"type\":15},\"position\":{\"type\":8,\"value\":[0,0,0]},\"rotation\":{\"type\":14},\"mass\":{\"type\":1,\"value\":3},\"friction\":{\"type\":1,\"value\":1},\"bodyType\":{\"type\":1,\"value\":1},\"continousCollisionDetection\":{\"type\":4,\"value\":false}}}],\"params\":{\"color\":{\"type\":10,\"value\":\"#13599a\"}}}},{\"id\":\"auto-sky\",\"name\":\"Sky\",\"type\":\"sky\",\"position\":[0,0,0],\"scale\":[1,1,1],\"rotation\":[0,0,0],\"collisionDetection\":false,\"sky\":{\"materialId\":null}}]"
+  "data": [
+    {
+      "id": "066c96b5-a434-4915-a06f-0fd60b3886e2",
+      "name": "box",
+      "position": [
+        -10.027248985714252,
+        4.131967424773372,
+        -59.91823194776853
+      ],
+      "scale": [
+        1.9322910727263993,
+        1.932291072726399,
+        1.9322910727263993
+      ],
+      "rotation": [
+        3.1415926535897922,
+        -1.5303332612640266,
+        3.1415926535897922,
+        "XYZ"
+      ],
+      "type": "actor",
+      "actor": {
+        "type": "box",
+        "innerParams": [
+          {
+            "path": [
+              "mesh"
+            ],
+            "params": {
+              "mesh": {
+                "type": 15
+              },
+              "position": {
+                "type": 8,
+                "value": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "rotation": {
+                "type": 14
+              },
+              "mass": {
+                "type": 1,
+                "value": 3
+              },
+              "friction": {
+                "type": 1,
+                "value": 1
+              },
+              "bodyType": {
+                "type": 1,
+                "value": 1
+              },
+              "continousCollisionDetection": {
+                "type": 4,
+                "value": false
+              }
+            }
+          }
+        ],
+        "params": {
+          "color": {
+            "type": 10,
+            "value": "#13599a"
+          }
+        }
+      }
+    },
+    {
+      "id": "10ce52ae-3964-468b-a98a-c6eee4698f5a",
+      "name": "box",
+      "position": [
+        2.105871522775338,
+        -3.552713678800501e-15,
+        -59.918231947768504
+      ],
+      "scale": [
+        1.932291072726399,
+        1.9322910727263987,
+        1.932291072726399
+      ],
+      "rotation": [
+        3.1415926535897922,
+        -1.5303332612640295,
+        3.1415926535897922,
+        "XYZ"
+      ],
+      "type": "actor",
+      "actor": {
+        "type": "box",
+        "innerParams": [
+          {
+            "path": [
+              "mesh"
+            ],
+            "params": {
+              "mesh": {
+                "type": 15
+              },
+              "position": {
+                "type": 8,
+                "value": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "rotation": {
+                "type": 14
+              },
+              "mass": {
+                "type": 1,
+                "value": 3
+              },
+              "friction": {
+                "type": 1,
+                "value": 1
+              },
+              "bodyType": {
+                "type": 1,
+                "value": 1
+              },
+              "continousCollisionDetection": {
+                "type": 4,
+                "value": false
+              }
+            }
+          }
+        ],
+        "params": {
+          "color": {
+            "type": 10,
+            "value": "#13599a"
+          }
+        }
+      }
+    },
+    {
+      "id": "14e20a4b-00ad-4dc3-a32e-00d6f0abfd3e",
+      "name": "box",
+      "position": [
+        -11.945835502442689,
+        -3.552713678800502e-15,
+        -59.91823194776853
+      ],
+      "scale": [
+        1.9322910727263993,
+        1.932291072726399,
+        1.9322910727263993
+      ],
+      "rotation": [
+        3.1415926535897922,
+        -1.5303332612640266,
+        3.1415926535897922,
+        "XYZ"
+      ],
+      "type": "actor",
+      "actor": {
+        "type": "box",
+        "innerParams": [
+          {
+            "path": [
+              "mesh"
+            ],
+            "params": {
+              "mesh": {
+                "type": 15
+              },
+              "position": {
+                "type": 8,
+                "value": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "rotation": {
+                "type": 14
+              },
+              "mass": {
+                "type": 1,
+                "value": 3
+              },
+              "friction": {
+                "type": 1,
+                "value": 1
+              },
+              "bodyType": {
+                "type": 1,
+                "value": 1
+              },
+              "continousCollisionDetection": {
+                "type": 4,
+                "value": false
+              }
+            }
+          }
+        ],
+        "params": {
+          "color": {
+            "type": 10,
+            "value": "#13599a"
+          }
+        }
+      }
+    },
+    {
+      "id": "193b523c-1311-433d-8b49-7b67a0d43a4c",
+      "name": "box",
+      "position": [
+        -3.008377322018764,
+        8.18830734432764,
+        -59.918231947768525
+      ],
+      "scale": [
+        1.9322910727263993,
+        1.932291072726399,
+        1.9322910727263993
+      ],
+      "rotation": [
+        3.1415926535897922,
+        -1.5303332612640266,
+        3.1415926535897922,
+        "XYZ"
+      ],
+      "type": "actor",
+      "actor": {
+        "type": "box",
+        "innerParams": [
+          {
+            "path": [
+              "mesh"
+            ],
+            "params": {
+              "mesh": {
+                "type": 15
+              },
+              "position": {
+                "type": 8,
+                "value": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "rotation": {
+                "type": 14
+              },
+              "mass": {
+                "type": 1,
+                "value": 3
+              },
+              "friction": {
+                "type": 1,
+                "value": 1
+              },
+              "bodyType": {
+                "type": 1,
+                "value": 1
+              },
+              "continousCollisionDetection": {
+                "type": 4,
+                "value": false
+              }
+            }
+          }
+        ],
+        "params": {
+          "color": {
+            "type": 10,
+            "value": "#13599a"
+          }
+        }
+      }
+    },
+    {
+      "id": "1e3c5550-0e69-4c35-9950-2d3127e89591",
+      "name": "box",
+      "position": [
+        -0.20175683142142287,
+        -3.552713678800502e-15,
+        -59.91823194776851
+      ],
+      "scale": [
+        1.9322910727263993,
+        1.932291072726399,
+        1.9322910727263993
+      ],
+      "rotation": [
+        3.1415926535897922,
+        -1.5303332612640266,
+        3.1415926535897922,
+        "XYZ"
+      ],
+      "type": "actor",
+      "actor": {
+        "type": "box",
+        "innerParams": [
+          {
+            "path": [
+              "mesh"
+            ],
+            "params": {
+              "mesh": {
+                "type": 15
+              },
+              "position": {
+                "type": 8,
+                "value": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "rotation": {
+                "type": 14
+              },
+              "mass": {
+                "type": 1,
+                "value": 3
+              },
+              "friction": {
+                "type": 1,
+                "value": 1
+              },
+              "bodyType": {
+                "type": 1,
+                "value": 1
+              },
+              "continousCollisionDetection": {
+                "type": 4,
+                "value": false
+              }
+            }
+          }
+        ],
+        "params": {
+          "color": {
+            "type": 10,
+            "value": "#13599a"
+          }
+        }
+      }
+    },
+    {
+      "id": "277152d3-f6e1-4159-a9be-425d86e63545",
+      "name": "box",
+      "position": [
+        -3.02700879720837,
+        4.131967424773372,
+        -59.91823194776852
+      ],
+      "scale": [
+        1.9322910727263993,
+        1.932291072726399,
+        1.9322910727263993
+      ],
+      "rotation": [
+        3.1415926535897922,
+        -1.5303332612640266,
+        3.1415926535897922,
+        "XYZ"
+      ],
+      "type": "actor",
+      "actor": {
+        "type": "box",
+        "innerParams": [
+          {
+            "path": [
+              "mesh"
+            ],
+            "params": {
+              "mesh": {
+                "type": 15
+              },
+              "position": {
+                "type": 8,
+                "value": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "rotation": {
+                "type": 14
+              },
+              "mass": {
+                "type": 1,
+                "value": 3
+              },
+              "friction": {
+                "type": 1,
+                "value": 1
+              },
+              "bodyType": {
+                "type": 1,
+                "value": 1
+              },
+              "continousCollisionDetection": {
+                "type": 4,
+                "value": false
+              }
+            }
+          }
+        ],
+        "params": {
+          "color": {
+            "type": 10,
+            "value": "#13599a"
+          }
+        }
+      }
+    },
+    {
+      "id": "277e861d-d7ff-45c5-8022-16da27e89a01",
+      "name": "box",
+      "position": [
+        6.283550214308844,
+        1.9070056939549924,
+        -82.63569318091167
+      ],
+      "scale": [
+        1.9322910727263989,
+        1.9322910727263982,
+        1.9322910727263989
+      ],
+      "rotation": [
+        0,
+        -0.6119717114948191,
+        0,
+        "XYZ"
+      ],
+      "type": "actor",
+      "actor": {
+        "type": "box",
+        "innerParams": [
+          {
+            "path": [
+              "mesh"
+            ],
+            "params": {
+              "mesh": {
+                "type": 15
+              },
+              "position": {
+                "type": 8,
+                "value": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "rotation": {
+                "type": 14
+              },
+              "mass": {
+                "type": 1,
+                "value": 3
+              },
+              "friction": {
+                "type": 1,
+                "value": 1
+              },
+              "bodyType": {
+                "type": 1,
+                "value": 1
+              },
+              "continousCollisionDetection": {
+                "type": 4,
+                "value": false
+              }
+            }
+          }
+        ],
+        "params": {
+          "color": {
+            "type": 10,
+            "value": "#13599a"
+          }
+        }
+      }
+    },
+    {
+      "id": "2893b1cb-fc2b-42de-8f10-8c8f25946815",
+      "name": "box",
+      "position": [
+        -13.326702284193738,
+        2.0670823981256436,
+        -59.91823194776853
+      ],
+      "scale": [
+        1.9322910727263993,
+        1.932291072726399,
+        1.9322910727263993
+      ],
+      "rotation": [
+        3.1415926535897922,
+        -1.5303332612640266,
+        3.1415926535897922,
+        "XYZ"
+      ],
+      "type": "actor",
+      "actor": {
+        "type": "box",
+        "innerParams": [
+          {
+            "path": [
+              "mesh"
+            ],
+            "params": {
+              "mesh": {
+                "type": 15
+              },
+              "position": {
+                "type": 8,
+                "value": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "rotation": {
+                "type": 14
+              },
+              "mass": {
+                "type": 1,
+                "value": 3
+              },
+              "friction": {
+                "type": 1,
+                "value": 1
+              },
+              "bodyType": {
+                "type": 1,
+                "value": 1
+              },
+              "continousCollisionDetection": {
+                "type": 4,
+                "value": false
+              }
+            }
+          }
+        ],
+        "params": {
+          "color": {
+            "type": 10,
+            "value": "#13599a"
+          }
+        }
+      }
+    },
+    {
+      "id": "33849494-8730-443f-88f8-20fc54e06426",
+      "name": "box",
+      "position": [
+        -11.02193407197442,
+        2.0670823981256436,
+        -59.91823194776853
+      ],
+      "scale": [
+        1.9322910727263993,
+        1.932291072726399,
+        1.9322910727263993
+      ],
+      "rotation": [
+        3.1415926535897922,
+        -1.5303332612640266,
+        3.1415926535897922,
+        "XYZ"
+      ],
+      "type": "actor",
+      "actor": {
+        "type": "box",
+        "innerParams": [
+          {
+            "path": [
+              "mesh"
+            ],
+            "params": {
+              "mesh": {
+                "type": 15
+              },
+              "position": {
+                "type": 8,
+                "value": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "rotation": {
+                "type": 14
+              },
+              "mass": {
+                "type": 1,
+                "value": 3
+              },
+              "friction": {
+                "type": 1,
+                "value": 1
+              },
+              "bodyType": {
+                "type": 1,
+                "value": 1
+              },
+              "continousCollisionDetection": {
+                "type": 4,
+                "value": false
+              }
+            }
+          }
+        ],
+        "params": {
+          "color": {
+            "type": 10,
+            "value": "#13599a"
+          }
+        }
+      }
+    },
+    {
+      "id": "38550339-3224-4312-838b-18d71e2051d4",
+      "name": "box",
+      "position": [
+        6.97673048166993,
+        0,
+        -83.81929530885596
+      ],
+      "scale": [
+        1.9322910727263993,
+        1.9322910727263989,
+        1.9322910727263993
+      ],
+      "rotation": [
+        0,
+        -0.8357469425219028,
+        0,
+        "XYZ"
+      ],
+      "type": "actor",
+      "actor": {
+        "type": "box",
+        "innerParams": [
+          {
+            "path": [
+              "mesh"
+            ],
+            "params": {
+              "mesh": {
+                "type": 15
+              },
+              "position": {
+                "type": 8,
+                "value": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "rotation": {
+                "type": 14
+              },
+              "mass": {
+                "type": 1,
+                "value": 3
+              },
+              "friction": {
+                "type": 1,
+                "value": 1
+              },
+              "bodyType": {
+                "type": 1,
+                "value": 1
+              },
+              "continousCollisionDetection": {
+                "type": 4,
+                "value": false
+              }
+            }
+          }
+        ],
+        "params": {
+          "color": {
+            "type": 10,
+            "value": "#13599a"
+          }
+        }
+      }
+    },
+    {
+      "id": "3dca0d2b-8859-4790-92ae-35d07485bf0f",
+      "name": "box",
+      "position": [
+        0.7221445990468469,
+        2.0670823981256436,
+        -59.91823194776851
+      ],
+      "scale": [
+        1.9322910727263993,
+        1.932291072726399,
+        1.9322910727263993
+      ],
+      "rotation": [
+        3.1415926535897922,
+        -1.5303332612640266,
+        3.1415926535897922,
+        "XYZ"
+      ],
+      "type": "actor",
+      "actor": {
+        "type": "box",
+        "innerParams": [
+          {
+            "path": [
+              "mesh"
+            ],
+            "params": {
+              "mesh": {
+                "type": 15
+              },
+              "position": {
+                "type": 8,
+                "value": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "rotation": {
+                "type": 14
+              },
+              "mass": {
+                "type": 1,
+                "value": 3
+              },
+              "friction": {
+                "type": 1,
+                "value": 1
+              },
+              "bodyType": {
+                "type": 1,
+                "value": 1
+              },
+              "continousCollisionDetection": {
+                "type": 4,
+                "value": false
+              }
+            }
+          }
+        ],
+        "params": {
+          "color": {
+            "type": 10,
+            "value": "#13599a"
+          }
+        }
+      }
+    },
+    {
+      "id": "40676da4-03d5-46b8-95a1-0ed9b46617d1",
+      "name": "box",
+      "position": [
+        -5.385682787278048,
+        8.18830734432764,
+        -59.918231947768525
+      ],
+      "scale": [
+        1.9322910727263993,
+        1.932291072726399,
+        1.9322910727263993
+      ],
+      "rotation": [
+        3.1415926535897922,
+        -1.5303332612640266,
+        3.1415926535897922,
+        "XYZ"
+      ],
+      "type": "actor",
+      "actor": {
+        "type": "box",
+        "innerParams": [
+          {
+            "path": [
+              "mesh"
+            ],
+            "params": {
+              "mesh": {
+                "type": 15
+              },
+              "position": {
+                "type": 8,
+                "value": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "rotation": {
+                "type": 14
+              },
+              "mass": {
+                "type": 1,
+                "value": 3
+              },
+              "friction": {
+                "type": 1,
+                "value": 1
+              },
+              "bodyType": {
+                "type": 1,
+                "value": 1
+              },
+              "continousCollisionDetection": {
+                "type": 4,
+                "value": false
+              }
+            }
+          }
+        ],
+        "params": {
+          "color": {
+            "type": 10,
+            "value": "#13599a"
+          }
+        }
+      }
+    },
+    {
+      "id": "416f7476-ab5b-480e-830d-7f3823a5a457",
+      "name": "box",
+      "position": [
+        -2.559557508695759,
+        -3.552713678800502e-15,
+        -59.91823194776852
+      ],
+      "scale": [
+        1.9322910727263993,
+        1.932291072726399,
+        1.9322910727263993
+      ],
+      "rotation": [
+        3.1415926535897922,
+        -1.5303332612640266,
+        3.1415926535897922,
+        "XYZ"
+      ],
+      "type": "actor",
+      "actor": {
+        "type": "box",
+        "innerParams": [
+          {
+            "path": [
+              "mesh"
+            ],
+            "params": {
+              "mesh": {
+                "type": 15
+              },
+              "position": {
+                "type": 8,
+                "value": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "rotation": {
+                "type": 14
+              },
+              "mass": {
+                "type": 1,
+                "value": 3
+              },
+              "friction": {
+                "type": 1,
+                "value": 1
+              },
+              "bodyType": {
+                "type": 1,
+                "value": 1
+              },
+              "continousCollisionDetection": {
+                "type": 4,
+                "value": false
+              }
+            }
+          }
+        ],
+        "params": {
+          "color": {
+            "type": 10,
+            "value": "#13599a"
+          }
+        }
+      }
+    },
+    {
+      "id": "431d8234-5c70-419e-82ec-cd11ca2117b1",
+      "name": "box",
+      "position": [
+        4.427558706593529,
+        -1.7763568394002505e-15,
+        -102.49470722505617
+      ],
+      "scale": [
+        1.9322910727263987,
+        1.9322910727263989,
+        1.9322910727263987
+      ],
+      "rotation": [
+        -1.0012222192812957e-17,
+        1.0024877798293883,
+        2.532491739212563e-16,
+        "XYZ"
+      ],
+      "type": "actor",
+      "actor": {
+        "type": "box",
+        "innerParams": [
+          {
+            "path": [
+              "mesh"
+            ],
+            "params": {
+              "mesh": {
+                "type": 15
+              },
+              "position": {
+                "type": 8,
+                "value": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "rotation": {
+                "type": 14
+              },
+              "mass": {
+                "type": 1,
+                "value": 3
+              },
+              "friction": {
+                "type": 1,
+                "value": 1
+              },
+              "bodyType": {
+                "type": 1,
+                "value": 1
+              },
+              "continousCollisionDetection": {
+                "type": 4,
+                "value": false
+              }
+            }
+          }
+        ],
+        "params": {
+          "color": {
+            "type": 10,
+            "value": "#13599a"
+          }
+        }
+      }
+    },
+    {
+      "id": "47dc5d22-f109-4bfe-a6a9-491486aaccaf",
+      "name": "box",
+      "position": [
+        -6.553254054599116,
+        6.156883600771149,
+        -59.918231947768525
+      ],
+      "scale": [
+        1.9322910727263993,
+        1.932291072726399,
+        1.9322910727263993
+      ],
+      "rotation": [
+        3.1415926535897922,
+        -1.5303332612640266,
+        3.1415926535897922,
+        "XYZ"
+      ],
+      "type": "actor",
+      "actor": {
+        "type": "box",
+        "innerParams": [
+          {
+            "path": [
+              "mesh"
+            ],
+            "params": {
+              "mesh": {
+                "type": 15
+              },
+              "position": {
+                "type": 8,
+                "value": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "rotation": {
+                "type": 14
+              },
+              "mass": {
+                "type": 1,
+                "value": 3
+              },
+              "friction": {
+                "type": 1,
+                "value": 1
+              },
+              "bodyType": {
+                "type": 1,
+                "value": 1
+              },
+              "continousCollisionDetection": {
+                "type": 4,
+                "value": false
+              }
+            }
+          }
+        ],
+        "params": {
+          "color": {
+            "type": 10,
+            "value": "#13599a"
+          }
+        }
+      }
+    },
+    {
+      "id": "5be86226-6f9d-4768-ba4d-64dfddd01a45",
+      "name": "box",
+      "position": [
+        -13.820950564333982,
+        -1.7763568394002505e-15,
+        -106.56706432012606
+      ],
+      "scale": [
+        1.9322910727263987,
+        1.9322910727263989,
+        1.9322910727263987
+      ],
+      "rotation": [
+        -3.141592653589793,
+        0.7254207440788136,
+        -3.141592653589793,
+        "XYZ"
+      ],
+      "type": "actor",
+      "actor": {
+        "type": "box",
+        "innerParams": [
+          {
+            "path": [
+              "mesh"
+            ],
+            "params": {
+              "mesh": {
+                "type": 15
+              },
+              "position": {
+                "type": 8,
+                "value": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "rotation": {
+                "type": 14
+              },
+              "mass": {
+                "type": 1,
+                "value": 3
+              },
+              "friction": {
+                "type": 1,
+                "value": 1
+              },
+              "bodyType": {
+                "type": 1,
+                "value": 1
+              },
+              "continousCollisionDetection": {
+                "type": 4,
+                "value": false
+              }
+            }
+          }
+        ],
+        "params": {
+          "color": {
+            "type": 10,
+            "value": "#13599a"
+          }
+        }
+      }
+    },
+    {
+      "id": "5c6b7ab6-29e8-4568-8411-1cb56f86be8f",
+      "name": "box",
+      "position": [
+        -7.282574684742021,
+        -3.552713678800502e-15,
+        -59.918231947768525
+      ],
+      "scale": [
+        1.9322910727263993,
+        1.932291072726399,
+        1.9322910727263993
+      ],
+      "rotation": [
+        3.1415926535897922,
+        -1.5303332612640266,
+        3.1415926535897922,
+        "XYZ"
+      ],
+      "type": "actor",
+      "actor": {
+        "type": "box",
+        "innerParams": [
+          {
+            "path": [
+              "mesh"
+            ],
+            "params": {
+              "mesh": {
+                "type": 15
+              },
+              "position": {
+                "type": 8,
+                "value": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "rotation": {
+                "type": 14
+              },
+              "mass": {
+                "type": 1,
+                "value": 3
+              },
+              "friction": {
+                "type": 1,
+                "value": 1
+              },
+              "bodyType": {
+                "type": 1,
+                "value": 1
+              },
+              "continousCollisionDetection": {
+                "type": 4,
+                "value": false
+              }
+            }
+          }
+        ],
+        "params": {
+          "color": {
+            "type": 10,
+            "value": "#13599a"
+          }
+        }
+      }
+    },
+    {
+      "id": "5d6b84e1-8e68-425e-8b55-b97c34eb3610",
+      "name": "box",
+      "position": [
+        -0.6409709919673219,
+        4.131967424773372,
+        -59.91823194776852
+      ],
+      "scale": [
+        1.9322910727263993,
+        1.932291072726399,
+        1.9322910727263993
+      ],
+      "rotation": [
+        3.1415926535897922,
+        -1.5303332612640266,
+        3.1415926535897922,
+        "XYZ"
+      ],
+      "type": "actor",
+      "actor": {
+        "type": "box",
+        "innerParams": [
+          {
+            "path": [
+              "mesh"
+            ],
+            "params": {
+              "mesh": {
+                "type": 15
+              },
+              "position": {
+                "type": 8,
+                "value": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "rotation": {
+                "type": 14
+              },
+              "mass": {
+                "type": 1,
+                "value": 3
+              },
+              "friction": {
+                "type": 1,
+                "value": 1
+              },
+              "bodyType": {
+                "type": 1,
+                "value": 1
+              },
+              "continousCollisionDetection": {
+                "type": 4,
+                "value": false
+              }
+            }
+          }
+        ],
+        "params": {
+          "color": {
+            "type": 10,
+            "value": "#13599a"
+          }
+        }
+      }
+    },
+    {
+      "id": "5e0ae833-b839-4701-8452-064283f8fdd7",
+      "name": "box",
+      "position": [
+        -4.021693883468537,
+        2.0670823981256436,
+        -59.91823194776852
+      ],
+      "scale": [
+        1.9322910727263993,
+        1.932291072726399,
+        1.9322910727263993
+      ],
+      "rotation": [
+        3.1415926535897922,
+        -1.5303332612640266,
+        3.1415926535897922,
+        "XYZ"
+      ],
+      "type": "actor",
+      "actor": {
+        "type": "box",
+        "innerParams": [
+          {
+            "path": [
+              "mesh"
+            ],
+            "params": {
+              "mesh": {
+                "type": 15
+              },
+              "position": {
+                "type": 8,
+                "value": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "rotation": {
+                "type": 14
+              },
+              "mass": {
+                "type": 1,
+                "value": 3
+              },
+              "friction": {
+                "type": 1,
+                "value": 1
+              },
+              "bodyType": {
+                "type": 1,
+                "value": 1
+              },
+              "continousCollisionDetection": {
+                "type": 4,
+                "value": false
+              }
+            }
+          }
+        ],
+        "params": {
+          "color": {
+            "type": 10,
+            "value": "#13599a"
+          }
+        }
+      }
+    },
+    {
+      "id": "6263cf90-4a13-4d18-bbaf-db6cb9da02e2",
+      "name": "landscape",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ],
+      "type": "shape_mesh",
+      "collisionDetection": true,
+      "shape": "landscape",
+      "landscape": {
+        "options": {
+          "sectionSize": 100,
+          "sections": {
+            "x": 4,
+            "y": 4
+          },
+          "density": 40
+        },
+        "heightMaps": [
+          {
+            "x": 2,
+            "y": 2,
+            "points": [
+              {
+                "i": 37,
+                "y": 3.5692214299133345
+              },
+              {
+                "i": 38,
+                "y": 3.6192162977900684
+              },
+              {
+                "i": 78,
+                "y": 1.8297294177195265
+              },
+              {
+                "i": 39,
+                "y": 2.8049136745614307
+              },
+              {
+                "i": 79,
+                "y": 1.0822379635660535
+              },
+              {
+                "i": 118,
+                "y": 0.7097925494788776
+              },
+              {
+                "i": 119,
+                "y": 0.5423885912688612
+              },
+              {
+                "i": 158,
+                "y": 1.1087195109697372
+              },
+              {
+                "i": 159,
+                "y": 0.5327546415043655
+              },
+              {
+                "i": 197,
+                "y": 0.9827707558692222
+              },
+              {
+                "i": 198,
+                "y": 0.8505368481008625
+              },
+              {
+                "i": 199,
+                "y": 0.6664893072815945
+              },
+              {
+                "i": 193,
+                "y": 0.5633650448654801
+              },
+              {
+                "i": 236,
+                "y": 0.7306207862565142
+              },
+              {
+                "i": 237,
+                "y": 0.7266339667783122
+              },
+              {
+                "i": 238,
+                "y": 0.6871842107195226
+              },
+              {
+                "i": 192,
+                "y": 0.3951830453152061
+              },
+              {
+                "i": 234,
+                "y": 0.3995268102385247
+              },
+              {
+                "i": 235,
+                "y": 0.42844736570817976
+              },
+              {
+                "i": 239,
+                "y": 0.5308261501962243
+              },
+              {
+                "i": 277,
+                "y": 0.3982392467292195
+              },
+              {
+                "i": 278,
+                "y": 0.3975529431174135
+              },
+              {
+                "i": 276,
+                "y": 0.2636454166036879
+              },
+              {
+                "i": 279,
+                "y": 0.26287684994074806
+              },
+              {
+                "i": 200,
+                "y": 0.13194763349158317
+              },
+              {
+                "i": 240,
+                "y": 0.13166382554641193
+              },
+              {
+                "i": 80,
+                "y": 0.2650601420117692
+              },
+              {
+                "i": 120,
+                "y": 0.13474155486773146
+              },
+              {
+                "i": 121,
+                "y": 0.1309858206457464
+              },
+              {
+                "i": 160,
+                "y": 0.13148841376956036
+              },
+              {
+                "i": 40,
+                "y": 1.9806950122466211
+              },
+              {
+                "i": 32,
+                "y": 2.671644119372671
+              },
+              {
+                "i": 33,
+                "y": 3.067515366779434
+              },
+              {
+                "i": 34,
+                "y": 3.6537506224925806
+              },
+              {
+                "i": 35,
+                "y": 3.6705488988506416
+              },
+              {
+                "i": 36,
+                "y": 3.544455063910689
+              },
+              {
+                "i": 75,
+                "y": 2.7267066741595913
+              },
+              {
+                "i": 30,
+                "y": 1.8859396355554565
+              },
+              {
+                "i": 31,
+                "y": 2.353171251457298
+              },
+              {
+                "i": 72,
+                "y": 2.4038980318732026
+              },
+              {
+                "i": 73,
+                "y": 2.727347992684986
+              },
+              {
+                "i": 74,
+                "y": 2.8362110657409225
+              },
+              {
+                "i": 76,
+                "y": 2.6925523948843613
+              },
+              {
+                "i": 77,
+                "y": 2.117807954729291
+              },
+              {
+                "i": 114,
+                "y": 2.543828032790882
+              },
+              {
+                "i": 115,
+                "y": 2.376952635626527
+              },
+              {
+                "i": 116,
+                "y": 2.2847070979694672
+              },
+              {
+                "i": 117,
+                "y": 1.864452856921334
+              },
+              {
+                "i": 71,
+                "y": 1.9028531243621218
+              },
+              {
+                "i": 113,
+                "y": 2.1728844412866026
+              },
+              {
+                "i": 29,
+                "y": 1.131230626686713
+              },
+              {
+                "i": 70,
+                "y": 1.1552160026944265
+              },
+              {
+                "i": 111,
+                "y": 1.1598471860611816
+              },
+              {
+                "i": 112,
+                "y": 1.7744716565535255
+              },
+              {
+                "i": 153,
+                "y": 1.508744743222531
+              },
+              {
+                "i": 154,
+                "y": 1.8124022970233606
+              },
+              {
+                "i": 155,
+                "y": 1.8966481616215787
+              },
+              {
+                "i": 156,
+                "y": 1.91188648032755
+              },
+              {
+                "i": 157,
+                "y": 1.6327971146268747
+              },
+              {
+                "i": 28,
+                "y": 0.3109164637785187
+              },
+              {
+                "i": 69,
+                "y": 0.705158387905668
+              },
+              {
+                "i": 110,
+                "y": 0.6044143048555587
+              },
+              {
+                "i": 152,
+                "y": 0.9259662413347463
+              },
+              {
+                "i": 151,
+                "y": 0.5011619922791347
+              },
+              {
+                "i": 194,
+                "y": 0.9340957373127524
+              },
+              {
+                "i": 195,
+                "y": 1.1612577229262375
+              },
+              {
+                "i": 196,
+                "y": 1.3100792292974093
+              }
+            ]
+          },
+          {
+            "x": 2,
+            "y": 1,
+            "points": [
+              {
+                "i": 1310,
+                "y": 3.3465159251965457
+              },
+              {
+                "i": 1311,
+                "y": 3.321108647475743
+              },
+              {
+                "i": 1351,
+                "y": 8.478478616040544
+              },
+              {
+                "i": 1352,
+                "y": 8.248319936302229
+              },
+              {
+                "i": 1392,
+                "y": 9.755127635379822
+              },
+              {
+                "i": 1393,
+                "y": 9.63790616143807
+              },
+              {
+                "i": 1433,
+                "y": 10.132498485911773
+              },
+              {
+                "i": 1434,
+                "y": 9.852547128305353
+              },
+              {
+                "i": 1474,
+                "y": 10.186679101546432
+              },
+              {
+                "i": 1475,
+                "y": 9.923369351216289
+              },
+              {
+                "i": 1515,
+                "y": 10.113898591190502
+              },
+              {
+                "i": 1516,
+                "y": 9.918953837070426
+              },
+              {
+                "i": 1556,
+                "y": 10.034894945202106
+              },
+              {
+                "i": 1557,
+                "y": 9.803021736972214
+              },
+              {
+                "i": 1597,
+                "y": 9.65543654910775
+              },
+              {
+                "i": 1598,
+                "y": 9.672162797474124
+              },
+              {
+                "i": 1596,
+                "y": 9.564894165912786
+              },
+              {
+                "i": 1638,
+                "y": 7.989191645355247
+              },
+              {
+                "i": 1637,
+                "y": 7.728385559892079
+              },
+              {
+                "i": 1639,
+                "y": 7.407177550163581
+              },
+              {
+                "i": 1677,
+                "y": 3.5692214299133345
+              },
+              {
+                "i": 1678,
+                "y": 3.6192162977900684
+              },
+              {
+                "i": 1679,
+                "y": 2.8049136745614307
+              },
+              {
+                "i": 1680,
+                "y": 1.9806950122466211
+              },
+              {
+                "i": 1104,
+                "y": 0.2641002427926493
+              },
+              {
+                "i": 1105,
+                "y": 0.2620818833822436
+              },
+              {
+                "i": 1146,
+                "y": 0.2778701573355884
+              },
+              {
+                "i": 1147,
+                "y": 0.26412001833310306
+              },
+              {
+                "i": 1187,
+                "y": 0.34986152365184386
+              },
+              {
+                "i": 1188,
+                "y": 0.27851660659526467
+              },
+              {
+                "i": 1228,
+                "y": 0.43543612002243287
+              },
+              {
+                "i": 1229,
+                "y": 0.3032083183602693
+              },
+              {
+                "i": 1269,
+                "y": 1.5135976985805215
+              },
+              {
+                "i": 1270,
+                "y": 1.3712919648083801
+              },
+              {
+                "i": 1258,
+                "y": 0.10078282887493507
+              },
+              {
+                "i": 1259,
+                "y": 0.2035747763249119
+              },
+              {
+                "i": 1260,
+                "y": 0.5195999417147832
+              },
+              {
+                "i": 1261,
+                "y": 2.007453590057157
+              },
+              {
+                "i": 1262,
+                "y": 2.6388262072905726
+              },
+              {
+                "i": 1298,
+                "y": 0.10084674470801619
+              },
+              {
+                "i": 1299,
+                "y": 0.7102371805792272
+              },
+              {
+                "i": 1300,
+                "y": 0.7387014979667148
+              },
+              {
+                "i": 1301,
+                "y": 2.094024469153209
+              },
+              {
+                "i": 1302,
+                "y": 3.1932190131584375
+              },
+              {
+                "i": 1303,
+                "y": 4.298553110725991
+              },
+              {
+                "i": 1304,
+                "y": 4.343201733987371
+              },
+              {
+                "i": 1339,
+                "y": 0.20358982338854248
+              },
+              {
+                "i": 1340,
+                "y": 0.7484592091093643
+              },
+              {
+                "i": 1341,
+                "y": 1.709826591202354
+              },
+              {
+                "i": 1342,
+                "y": 3.4628073890747926
+              },
+              {
+                "i": 1343,
+                "y": 3.961536439608095
+              },
+              {
+                "i": 1344,
+                "y": 4.50029624440532
+              },
+              {
+                "i": 1345,
+                "y": 4.9070475467404
+              },
+              {
+                "i": 1380,
+                "y": 0.714133544418624
+              },
+              {
+                "i": 1381,
+                "y": 1.2304048966785268
+              },
+              {
+                "i": 1382,
+                "y": 3.0300511241244408
+              },
+              {
+                "i": 1383,
+                "y": 3.9380182257140164
+              },
+              {
+                "i": 1384,
+                "y": 4.624291696287746
+              },
+              {
+                "i": 1385,
+                "y": 5.293747108071927
+              },
+              {
+                "i": 1386,
+                "y": 4.941760631225762
+              },
+              {
+                "i": 1387,
+                "y": 4.661535304798887
+              },
+              {
+                "i": 1421,
+                "y": 0.7170537554055667
+              },
+              {
+                "i": 1422,
+                "y": 1.6776717122822657
+              },
+              {
+                "i": 1423,
+                "y": 3.226642619919701
+              },
+              {
+                "i": 1424,
+                "y": 4.229940833716436
+              },
+              {
+                "i": 1425,
+                "y": 5.149513632174184
+              },
+              {
+                "i": 1426,
+                "y": 5.7260800453927265
+              },
+              {
+                "i": 1427,
+                "y": 5.382129972922435
+              },
+              {
+                "i": 1428,
+                "y": 4.8274210275283576
+              },
+              {
+                "i": 1462,
+                "y": 0.7108598411461263
+              },
+              {
+                "i": 1463,
+                "y": 1.6179300610896752
+              },
+              {
+                "i": 1464,
+                "y": 2.6145686947089346
+              },
+              {
+                "i": 1465,
+                "y": 4.113226033271157
+              },
+              {
+                "i": 1466,
+                "y": 4.955480045269317
+              },
+              {
+                "i": 1467,
+                "y": 5.297369089549164
+              },
+              {
+                "i": 1468,
+                "y": 5.187292573997292
+              },
+              {
+                "i": 1504,
+                "y": 1.5400670052307828
+              },
+              {
+                "i": 1505,
+                "y": 2.2464544372887105
+              },
+              {
+                "i": 1506,
+                "y": 3.4135508278516866
+              },
+              {
+                "i": 1507,
+                "y": 4.414278723085907
+              },
+              {
+                "i": 1508,
+                "y": 4.656424229364555
+              },
+              {
+                "i": 1509,
+                "y": 5.327741524762588
+              },
+              {
+                "i": 1546,
+                "y": 2.0492384725223363
+              },
+              {
+                "i": 1547,
+                "y": 2.9934134080816572
+              },
+              {
+                "i": 1548,
+                "y": 3.444903438351805
+              },
+              {
+                "i": 1469,
+                "y": 5.958070561836505
+              },
+              {
+                "i": 1545,
+                "y": 0.7055854663089336
+              },
+              {
+                "i": 1549,
+                "y": 4.255634126055199
+              },
+              {
+                "i": 1510,
+                "y": 6.017343604622708
+              },
+              {
+                "i": 1550,
+                "y": 5.376412082152832
+              },
+              {
+                "i": 1346,
+                "y": 4.495670315775418
+              },
+              {
+                "i": 1429,
+                "y": 5.764240580157546
+              },
+              {
+                "i": 1470,
+                "y": 6.57639630846961
+              },
+              {
+                "i": 1551,
+                "y": 5.450629616976285
+              },
+              {
+                "i": 1588,
+                "y": 2.1278557341241635
+              },
+              {
+                "i": 1589,
+                "y": 2.545498451777168
+              },
+              {
+                "i": 1590,
+                "y": 3.1865253299789087
+              },
+              {
+                "i": 1591,
+                "y": 4.410893384237427
+              },
+              {
+                "i": 1388,
+                "y": 3.6404906609080476
+              },
+              {
+                "i": 1511,
+                "y": 7.150933472596445
+              },
+              {
+                "i": 1552,
+                "y": 6.559229256776385
+              },
+              {
+                "i": 1592,
+                "y": 4.091373866371421
+              },
+              {
+                "i": 1631,
+                "y": 2.7781123950762274
+              },
+              {
+                "i": 1430,
+                "y": 7.762253690600639
+              },
+              {
+                "i": 1471,
+                "y": 8.79612532869046
+              },
+              {
+                "i": 1512,
+                "y": 8.547483115844411
+              },
+              {
+                "i": 1305,
+                "y": 3.4992976806070817
+              },
+              {
+                "i": 1347,
+                "y": 3.218498189783139
+              },
+              {
+                "i": 1389,
+                "y": 6.140207770304501
+              },
+              {
+                "i": 1306,
+                "y": 3.2689261049604585
+              },
+              {
+                "i": 1348,
+                "y": 3.663617410298689
+              },
+              {
+                "i": 1263,
+                "y": 3.0069699106578405
+              },
+              {
+                "i": 1264,
+                "y": 3.614754604000256
+              },
+              {
+                "i": 1265,
+                "y": 2.9855662229225195
+              },
+              {
+                "i": 1307,
+                "y": 3.169046206508917
+              },
+              {
+                "i": 1222,
+                "y": 2.608060989894177
+              },
+              {
+                "i": 1223,
+                "y": 3.0473819946407725
+              },
+              {
+                "i": 1180,
+                "y": 1.7770993477054469
+              },
+              {
+                "i": 1181,
+                "y": 2.3243818699771497
+              },
+              {
+                "i": 1182,
+                "y": 2.7230516194074696
+              },
+              {
+                "i": 1183,
+                "y": 2.638568369736045
+              },
+              {
+                "i": 1220,
+                "y": 1.4307649088206504
+              },
+              {
+                "i": 1221,
+                "y": 1.873274249629036
+              },
+              {
+                "i": 1224,
+                "y": 2.8521054388137186
+              },
+              {
+                "i": 1225,
+                "y": 2.569564884791648
+              },
+              {
+                "i": 1266,
+                "y": 2.536584877832627
+              },
+              {
+                "i": 1308,
+                "y": 3.1151812746256065
+              },
+              {
+                "i": 1349,
+                "y": 5.2089581060419015
+              },
+              {
+                "i": 1097,
+                "y": 0.41400638946806445
+              },
+              {
+                "i": 1098,
+                "y": 1.081904005856298
+              },
+              {
+                "i": 1099,
+                "y": 1.308741357042891
+              },
+              {
+                "i": 1100,
+                "y": 1.3819961014641788
+              },
+              {
+                "i": 1137,
+                "y": 0.4063309888056922
+              },
+              {
+                "i": 1138,
+                "y": 1.0597734226438127
+              },
+              {
+                "i": 1139,
+                "y": 1.3774982982245898
+              },
+              {
+                "i": 1140,
+                "y": 1.812491723754427
+              },
+              {
+                "i": 1141,
+                "y": 1.9748528422879383
+              },
+              {
+                "i": 1142,
+                "y": 2.2236241946289312
+              },
+              {
+                "i": 1177,
+                "y": 0.10080352124056047
+              },
+              {
+                "i": 1178,
+                "y": 0.4135954917882132
+              },
+              {
+                "i": 1179,
+                "y": 1.2192664691979898
+              },
+              {
+                "i": 1184,
+                "y": 2.2101425602171236
+              },
+              {
+                "i": 1218,
+                "y": 0.10136280193984294
+              },
+              {
+                "i": 1219,
+                "y": 0.4185228555029957
+              },
+              {
+                "i": 1056,
+                "y": 0.20191067302764026
+              },
+              {
+                "i": 1057,
+                "y": 0.3090536577553913
+              },
+              {
+                "i": 1058,
+                "y": 0.8275781783664895
+              },
+              {
+                "i": 1059,
+                "y": 0.9357803199087669
+              },
+              {
+                "i": 1060,
+                "y": 0.9238453406434147
+              },
+              {
+                "i": 1096,
+                "y": 0.10083319203963952
+              },
+              {
+                "i": 1101,
+                "y": 1.1952875625234807
+              },
+              {
+                "i": 1102,
+                "y": 1.3285814609803297
+              },
+              {
+                "i": 1143,
+                "y": 1.663353185160332
+              },
+              {
+                "i": 1144,
+                "y": 1.4546867847514
+              },
+              {
+                "i": 1185,
+                "y": 1.7527273485078285
+              },
+              {
+                "i": 1226,
+                "y": 1.9439690708525978
+              },
+              {
+                "i": 1017,
+                "y": 0.10077915078898622
+              },
+              {
+                "i": 1018,
+                "y": 0.10083332877237705
+              },
+              {
+                "i": 1061,
+                "y": 0.6070811303142907
+              },
+              {
+                "i": 1103,
+                "y": 1.0761899819457592
+              },
+              {
+                "i": 1267,
+                "y": 2.2489878039192366
+              },
+              {
+                "i": 1186,
+                "y": 1.249190452516705
+              },
+              {
+                "i": 1227,
+                "y": 1.4204208309669202
+              },
+              {
+                "i": 1145,
+                "y": 0.7054175996772585
+              },
+              {
+                "i": 1268,
+                "y": 2.285003209918249
+              },
+              {
+                "i": 1309,
+                "y": 3.562449656213878
+              },
+              {
+                "i": 1390,
+                "y": 6.682207461166517
+              },
+              {
+                "i": 1350,
+                "y": 6.33778442715928
+              },
+              {
+                "i": 1391,
+                "y": 9.560566845988788
+              },
+              {
+                "i": 1431,
+                "y": 9.650807395352361
+              },
+              {
+                "i": 1432,
+                "y": 10.395712736540005
+              },
+              {
+                "i": 1472,
+                "y": 10.421785692016563
+              },
+              {
+                "i": 1473,
+                "y": 10.37858861715833
+              },
+              {
+                "i": 1513,
+                "y": 10.696606783192863
+              },
+              {
+                "i": 1514,
+                "y": 10.351324475152595
+              },
+              {
+                "i": 1553,
+                "y": 8.4458114301122
+              },
+              {
+                "i": 1554,
+                "y": 9.952439185220618
+              },
+              {
+                "i": 1555,
+                "y": 10.206348533408274
+              },
+              {
+                "i": 1593,
+                "y": 5.464883182799182
+              },
+              {
+                "i": 1594,
+                "y": 7.419687002550782
+              },
+              {
+                "i": 1595,
+                "y": 9.07287425746036
+              },
+              {
+                "i": 1633,
+                "y": 3.5187603671016228
+              },
+              {
+                "i": 1634,
+                "y": 4.497485659675989
+              },
+              {
+                "i": 1630,
+                "y": 2.2573042798974994
+              },
+              {
+                "i": 1632,
+                "y": 3.5302820189693738
+              },
+              {
+                "i": 1635,
+                "y": 5.815494048006606
+              },
+              {
+                "i": 1636,
+                "y": 6.988971411763827
+              },
+              {
+                "i": 1672,
+                "y": 2.671644119372671
+              },
+              {
+                "i": 1673,
+                "y": 3.067515366779434
+              },
+              {
+                "i": 1674,
+                "y": 3.6537506224925806
+              },
+              {
+                "i": 1675,
+                "y": 3.6705488988506416
+              },
+              {
+                "i": 1676,
+                "y": 3.544455063910689
+              },
+              {
+                "i": 1629,
+                "y": 1.6109928385123706
+              },
+              {
+                "i": 1670,
+                "y": 1.8859396355554565
+              },
+              {
+                "i": 1671,
+                "y": 2.353171251457298
+              },
+              {
+                "i": 1628,
+                "y": 0.7887807705622787
+              },
+              {
+                "i": 1587,
+                "y": 0.5158022030803479
+              },
+              {
+                "i": 1669,
+                "y": 1.131230626686713
+              },
+              {
+                "i": 1586,
+                "y": 0.20164725129611777
+              },
+              {
+                "i": 1627,
+                "y": 0.30618587672595643
+              },
+              {
+                "i": 1668,
+                "y": 0.3109164637785187
+              }
+            ]
+          },
+          {
+            "x": 3,
+            "y": 2,
+            "points": [
+              {
+                "i": 44,
+                "y": 3.04369483145497
+              },
+              {
+                "i": 45,
+                "y": 3.11057020069717
+              },
+              {
+                "i": 46,
+                "y": 2.804670658610017
+              },
+              {
+                "i": 85,
+                "y": 2.1520006039812722
+              },
+              {
+                "i": 86,
+                "y": 2.159898352812949
+              },
+              {
+                "i": 47,
+                "y": 2.017676187317306
+              },
+              {
+                "i": 84,
+                "y": 1.8493416750204283
+              },
+              {
+                "i": 83,
+                "y": 0.13100363861745654
+              },
+              {
+                "i": 87,
+                "y": 1.8592201373777564
+              },
+              {
+                "i": 88,
+                "y": 0.6572706177530365
+              },
+              {
+                "i": 48,
+                "y": 0.5254544086896419
+              },
+              {
+                "i": 7,
+                "y": 1.1939020510863845
+              },
+              {
+                "i": 0,
+                "y": 1.9806950122466211
+              },
+              {
+                "i": 1,
+                "y": 3.0512703862960007
+              },
+              {
+                "i": 2,
+                "y": 3.734039608168131
+              },
+              {
+                "i": 3,
+                "y": 4.6925208814665496
+              },
+              {
+                "i": 42,
+                "y": 1.992388896463936
+              },
+              {
+                "i": 43,
+                "y": 2.7093006988696753
+              },
+              {
+                "i": 5,
+                "y": 4.667460436831311
+              },
+              {
+                "i": 4,
+                "y": 5.1073167219923965
+              },
+              {
+                "i": 6,
+                "y": 3.611380470249112
+              }
+            ]
+          },
+          {
+            "x": 3,
+            "y": 1,
+            "points": [
+              {
+                "i": 1607,
+                "y": 0.13092757119345755
+              },
+              {
+                "i": 1647,
+                "y": 1.1939020510863845
+              },
+              {
+                "i": 1271,
+                "y": 3.321108647475743
+              },
+              {
+                "i": 1272,
+                "y": 3.2424194137293476
+              },
+              {
+                "i": 1273,
+                "y": 2.3947183929110074
+              },
+              {
+                "i": 1312,
+                "y": 8.248319936302229
+              },
+              {
+                "i": 1313,
+                "y": 7.5417794027928915
+              },
+              {
+                "i": 1314,
+                "y": 7.4711671939613655
+              },
+              {
+                "i": 1353,
+                "y": 9.63790616143807
+              },
+              {
+                "i": 1354,
+                "y": 9.288217422284418
+              },
+              {
+                "i": 1355,
+                "y": 9.172157313104908
+              },
+              {
+                "i": 1356,
+                "y": 7.805350971218524
+              },
+              {
+                "i": 1394,
+                "y": 9.852547128305353
+              },
+              {
+                "i": 1395,
+                "y": 9.739604142646892
+              },
+              {
+                "i": 1396,
+                "y": 9.55592047476563
+              },
+              {
+                "i": 1397,
+                "y": 9.34212899960971
+              },
+              {
+                "i": 1435,
+                "y": 9.923369351216289
+              },
+              {
+                "i": 1436,
+                "y": 9.742188414088758
+              },
+              {
+                "i": 1437,
+                "y": 9.68086569251431
+              },
+              {
+                "i": 1438,
+                "y": 9.578581823414462
+              },
+              {
+                "i": 1476,
+                "y": 9.918953837070426
+              },
+              {
+                "i": 1477,
+                "y": 9.688927475712804
+              },
+              {
+                "i": 1478,
+                "y": 9.735743257383561
+              },
+              {
+                "i": 1517,
+                "y": 9.803021736972214
+              },
+              {
+                "i": 1518,
+                "y": 9.683459058547088
+              },
+              {
+                "i": 1519,
+                "y": 9.74179323954282
+              },
+              {
+                "i": 1479,
+                "y": 9.791094967627092
+              },
+              {
+                "i": 1558,
+                "y": 9.672162797474124
+              },
+              {
+                "i": 1559,
+                "y": 9.54790803438806
+              },
+              {
+                "i": 1599,
+                "y": 7.407177550163581
+              },
+              {
+                "i": 1600,
+                "y": 6.985358020341547
+              },
+              {
+                "i": 1640,
+                "y": 1.9806950122466211
+              },
+              {
+                "i": 1107,
+                "y": 0.26412001833310306
+              },
+              {
+                "i": 1148,
+                "y": 0.27851660659526467
+              },
+              {
+                "i": 1149,
+                "y": 0.262208738201129
+              },
+              {
+                "i": 1189,
+                "y": 0.3032083183602693
+              },
+              {
+                "i": 1190,
+                "y": 0.2645006535520108
+              },
+              {
+                "i": 1230,
+                "y": 1.3712919648083801
+              },
+              {
+                "i": 1231,
+                "y": 0.7907168675563498
+              },
+              {
+                "i": 1315,
+                "y": 3.2587694004253605
+              },
+              {
+                "i": 1560,
+                "y": 9.119908281631103
+              },
+              {
+                "i": 1601,
+                "y": 7.039230866073414
+              },
+              {
+                "i": 1641,
+                "y": 3.0512703862960007
+              },
+              {
+                "i": 1520,
+                "y": 9.491889673964858
+              },
+              {
+                "i": 1561,
+                "y": 9.241212799823037
+              },
+              {
+                "i": 1602,
+                "y": 7.958100107843312
+              },
+              {
+                "i": 1642,
+                "y": 3.734039608168131
+              },
+              {
+                "i": 1480,
+                "y": 9.743087151315178
+              },
+              {
+                "i": 1521,
+                "y": 9.57959196533368
+              },
+              {
+                "i": 1562,
+                "y": 8.91475904420945
+              },
+              {
+                "i": 1603,
+                "y": 7.99666215068857
+              },
+              {
+                "i": 1643,
+                "y": 4.6925208814665496
+              },
+              {
+                "i": 1316,
+                "y": 3.453328970779381
+              },
+              {
+                "i": 1357,
+                "y": 7.059091599619986
+              },
+              {
+                "i": 1358,
+                "y": 5.247937424661725
+              },
+              {
+                "i": 1398,
+                "y": 8.440962588572125
+              },
+              {
+                "i": 1399,
+                "y": 6.604000100307827
+              },
+              {
+                "i": 1400,
+                "y": 5.56860997300894
+              },
+              {
+                "i": 1439,
+                "y": 9.023575375154964
+              },
+              {
+                "i": 1440,
+                "y": 7.674952156234708
+              },
+              {
+                "i": 1441,
+                "y": 6.356719227321288
+              },
+              {
+                "i": 1481,
+                "y": 9.458967836068519
+              },
+              {
+                "i": 1482,
+                "y": 7.3208278345015545
+              },
+              {
+                "i": 1522,
+                "y": 9.134022672156384
+              },
+              {
+                "i": 1523,
+                "y": 8.144235293267476
+              },
+              {
+                "i": 1563,
+                "y": 8.292543216039878
+              },
+              {
+                "i": 1233,
+                "y": 0.7901649942764999
+              },
+              {
+                "i": 1234,
+                "y": 1.1870775192323013
+              },
+              {
+                "i": 1274,
+                "y": 1.6847792314900114
+              },
+              {
+                "i": 1275,
+                "y": 1.8719144435496677
+              },
+              {
+                "i": 1276,
+                "y": 1.8140486623503898
+              },
+              {
+                "i": 1277,
+                "y": 1.470254373712606
+              },
+              {
+                "i": 1317,
+                "y": 3.2430455841161034
+              },
+              {
+                "i": 1318,
+                "y": 2.7100789001606254
+              },
+              {
+                "i": 1319,
+                "y": 1.7275151917104596
+              },
+              {
+                "i": 1359,
+                "y": 4.292696839198508
+              },
+              {
+                "i": 1360,
+                "y": 3.061061075862147
+              },
+              {
+                "i": 1401,
+                "y": 4.258352156022186
+              },
+              {
+                "i": 1442,
+                "y": 4.514129191312391
+              },
+              {
+                "i": 1232,
+                "y": 0.13135935192727283
+              },
+              {
+                "i": 1235,
+                "y": 0.9202731473257202
+              },
+              {
+                "i": 1236,
+                "y": 0.13107178854077006
+              },
+              {
+                "i": 1278,
+                "y": 0.2621771296916025
+              },
+              {
+                "i": 1483,
+                "y": 4.571603210138872
+              },
+              {
+                "i": 1361,
+                "y": 0.5241742825183541
+              },
+              {
+                "i": 1402,
+                "y": 2.0783047670060917
+              },
+              {
+                "i": 1443,
+                "y": 2.889263558979463
+              },
+              {
+                "i": 1524,
+                "y": 4.698159359792536
+              },
+              {
+                "i": 1564,
+                "y": 6.412116091342016
+              },
+              {
+                "i": 1484,
+                "y": 2.5229192963858393
+              },
+              {
+                "i": 1565,
+                "y": 4.7723005025772265
+              },
+              {
+                "i": 1604,
+                "y": 7.178075191075841
+              },
+              {
+                "i": 1605,
+                "y": 5.0858508003510545
+              },
+              {
+                "i": 1525,
+                "y": 1.7903466617928046
+              },
+              {
+                "i": 1566,
+                "y": 1.5838257273423182
+              },
+              {
+                "i": 1606,
+                "y": 3.88730779208094
+              },
+              {
+                "i": 1645,
+                "y": 4.667460436831311
+              },
+              {
+                "i": 1644,
+                "y": 5.1073167219923965
+              },
+              {
+                "i": 1646,
+                "y": 3.611380470249112
+              }
+            ]
+          }
+        ]
+      },
+      "grass": {
+        "layers": []
+      },
+      "physics": {
+        "type": 2,
+        "friction": 0.5,
+        "density": 1,
+        "restitution": 0.5,
+        "mass": 1
+      }
+    },
+    {
+      "id": "6bc1a357-c2dc-4b78-8e7a-1744fb6cd91d",
+      "name": "box",
+      "position": [
+        -14.830340308042105,
+        1.9070056939549906,
+        -106.20506753155301
+      ],
+      "scale": [
+        1.9322910727263996,
+        1.9322910727263982,
+        1.9322910727263996
+      ],
+      "rotation": [
+        -3.141592653589793,
+        0.7571838877587822,
+        -3.141592653589793,
+        "XYZ"
+      ],
+      "type": "actor",
+      "actor": {
+        "type": "box",
+        "innerParams": [
+          {
+            "path": [
+              "mesh"
+            ],
+            "params": {
+              "mesh": {
+                "type": 15
+              },
+              "position": {
+                "type": 8,
+                "value": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "rotation": {
+                "type": 14
+              },
+              "mass": {
+                "type": 1,
+                "value": 3
+              },
+              "friction": {
+                "type": 1,
+                "value": 1
+              },
+              "bodyType": {
+                "type": 1,
+                "value": 1
+              },
+              "continousCollisionDetection": {
+                "type": 4,
+                "value": false
+              }
+            }
+          }
+        ],
+        "params": {
+          "color": {
+            "type": 10,
+            "value": "#13599a"
+          }
+        }
+      }
+    },
+    {
+      "id": "6c27a5fa-7db6-495d-9935-1f1c6effe370",
+      "name": "box",
+      "position": [
+        -12.33201719793357,
+        4.131967424773372,
+        -59.91823194776853
+      ],
+      "scale": [
+        1.9322910727263993,
+        1.932291072726399,
+        1.9322910727263993
+      ],
+      "rotation": [
+        3.1415926535897922,
+        -1.5303332612640266,
+        3.1415926535897922,
+        "XYZ"
+      ],
+      "type": "actor",
+      "actor": {
+        "type": "box",
+        "innerParams": [
+          {
+            "path": [
+              "mesh"
+            ],
+            "params": {
+              "mesh": {
+                "type": 15
+              },
+              "position": {
+                "type": 8,
+                "value": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "rotation": {
+                "type": 14
+              },
+              "mass": {
+                "type": 1,
+                "value": 3
+              },
+              "friction": {
+                "type": 1,
+                "value": 1
+              },
+              "bodyType": {
+                "type": 1,
+                "value": 1
+              },
+              "continousCollisionDetection": {
+                "type": 4,
+                "value": false
+              }
+            }
+          }
+        ],
+        "params": {
+          "color": {
+            "type": 10,
+            "value": "#13599a"
+          }
+        }
+      }
+    },
+    {
+      "id": "75fb4c16-1480-4d4c-b839-ddeb56b60a3e",
+      "name": "box",
+      "position": [
+        -8.735978719533035,
+        2.0670823981256436,
+        -59.918231947768525
+      ],
+      "scale": [
+        1.9322910727263993,
+        1.932291072726399,
+        1.9322910727263993
+      ],
+      "rotation": [
+        3.1415926535897922,
+        -1.5303332612640266,
+        3.1415926535897922,
+        "XYZ"
+      ],
+      "type": "actor",
+      "actor": {
+        "type": "box",
+        "innerParams": [
+          {
+            "path": [
+              "mesh"
+            ],
+            "params": {
+              "mesh": {
+                "type": 15
+              },
+              "position": {
+                "type": 8,
+                "value": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "rotation": {
+                "type": 14
+              },
+              "mass": {
+                "type": 1,
+                "value": 3
+              },
+              "friction": {
+                "type": 1,
+                "value": 1
+              },
+              "bodyType": {
+                "type": 1,
+                "value": 1
+              },
+              "continousCollisionDetection": {
+                "type": 4,
+                "value": false
+              }
+            }
+          }
+        ],
+        "params": {
+          "color": {
+            "type": 10,
+            "value": "#13599a"
+          }
+        }
+      }
+    },
+    {
+      "id": "8684e881-1e00-4d0a-ab9b-32080cfceed4",
+      "name": "box",
+      "position": [
+        -1.6356560782274894,
+        2.0670823981256436,
+        -59.91823194776852
+      ],
+      "scale": [
+        1.9322910727263993,
+        1.932291072726399,
+        1.9322910727263993
+      ],
+      "rotation": [
+        3.1415926535897922,
+        -1.5303332612640266,
+        3.1415926535897922,
+        "XYZ"
+      ],
+      "type": "actor",
+      "actor": {
+        "type": "box",
+        "innerParams": [
+          {
+            "path": [
+              "mesh"
+            ],
+            "params": {
+              "mesh": {
+                "type": 15
+              },
+              "position": {
+                "type": 8,
+                "value": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "rotation": {
+                "type": 14
+              },
+              "mass": {
+                "type": 1,
+                "value": 3
+              },
+              "friction": {
+                "type": 1,
+                "value": 1
+              },
+              "bodyType": {
+                "type": 1,
+                "value": 1
+              },
+              "continousCollisionDetection": {
+                "type": 4,
+                "value": false
+              }
+            }
+          }
+        ],
+        "params": {
+          "color": {
+            "type": 10,
+            "value": "#13599a"
+          }
+        }
+      }
+    },
+    {
+      "id": "8bacbb1d-a231-478b-ab4c-d9be7e23581a",
+      "name": "box",
+      "position": [
+        3.912084733451512,
+        1.9070056939549906,
+        -103.43502414644679
+      ],
+      "scale": [
+        1.9322910727263996,
+        1.9322910727263982,
+        1.9322910727263996
+      ],
+      "rotation": [
+        -2.657137852770258e-18,
+        0.9707246361494194,
+        2.4711309009646233e-16,
+        "XYZ"
+      ],
+      "type": "actor",
+      "actor": {
+        "type": "box",
+        "innerParams": [
+          {
+            "path": [
+              "mesh"
+            ],
+            "params": {
+              "mesh": {
+                "type": 15
+              },
+              "position": {
+                "type": 8,
+                "value": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "rotation": {
+                "type": 14
+              },
+              "mass": {
+                "type": 1,
+                "value": 3
+              },
+              "friction": {
+                "type": 1,
+                "value": 1
+              },
+              "bodyType": {
+                "type": 1,
+                "value": 1
+              },
+              "continousCollisionDetection": {
+                "type": 4,
+                "value": false
+              }
+            }
+          }
+        ],
+        "params": {
+          "color": {
+            "type": 10,
+            "value": "#13599a"
+          }
+        }
+      }
+    },
+    {
+      "id": "9999b7c9-7d56-4418-8b56-8d449f5cf476",
+      "name": "box",
+      "position": [
+        -9.97640635193875,
+        8.18830734432764,
+        -59.91823194776853
+      ],
+      "scale": [
+        1.9322910727263993,
+        1.932291072726399,
+        1.9322910727263993
+      ],
+      "rotation": [
+        3.1415926535897922,
+        -1.5303332612640266,
+        3.1415926535897922,
+        "XYZ"
+      ],
+      "type": "actor",
+      "actor": {
+        "type": "box",
+        "innerParams": [
+          {
+            "path": [
+              "mesh"
+            ],
+            "params": {
+              "mesh": {
+                "type": 15
+              },
+              "position": {
+                "type": 8,
+                "value": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "rotation": {
+                "type": 14
+              },
+              "mass": {
+                "type": 1,
+                "value": 3
+              },
+              "friction": {
+                "type": 1,
+                "value": 1
+              },
+              "bodyType": {
+                "type": 1,
+                "value": 1
+              },
+              "continousCollisionDetection": {
+                "type": 4,
+                "value": false
+              }
+            }
+          }
+        ],
+        "params": {
+          "color": {
+            "type": 10,
+            "value": "#13599a"
+          }
+        }
+      }
+    },
+    {
+      "id": "a14c8d33-e9a2-4414-bc31-d44acf2aa707",
+      "name": "box",
+      "position": [
+        -4.175948589339832,
+        6.156883600771149,
+        -59.918231947768525
+      ],
+      "scale": [
+        1.9322910727263993,
+        1.932291072726399,
+        1.9322910727263993
+      ],
+      "rotation": [
+        3.1415926535897922,
+        -1.5303332612640266,
+        3.1415926535897922,
+        "XYZ"
+      ],
+      "type": "actor",
+      "actor": {
+        "type": "box",
+        "innerParams": [
+          {
+            "path": [
+              "mesh"
+            ],
+            "params": {
+              "mesh": {
+                "type": 15
+              },
+              "position": {
+                "type": 8,
+                "value": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "rotation": {
+                "type": 14
+              },
+              "mass": {
+                "type": 1,
+                "value": 3
+              },
+              "friction": {
+                "type": 1,
+                "value": 1
+              },
+              "bodyType": {
+                "type": 1,
+                "value": 1
+              },
+              "continousCollisionDetection": {
+                "type": 4,
+                "value": false
+              }
+            }
+          }
+        ],
+        "params": {
+          "color": {
+            "type": 10,
+            "value": "#13599a"
+          }
+        }
+      }
+    },
+    {
+      "id": "a520acd9-e825-4674-8135-9726eb3ca36e",
+      "name": "box",
+      "position": [
+        -15.687495049862177,
+        -1.7763568394002505e-15,
+        -105.13422738059285
+      ],
+      "scale": [
+        1.9322910727264,
+        1.9322910727263989,
+        1.9322910727264
+      ],
+      "rotation": [
+        -3.141592653589793,
+        0.9809591187858682,
+        -3.141592653589793,
+        "XYZ"
+      ],
+      "type": "actor",
+      "actor": {
+        "type": "box",
+        "innerParams": [
+          {
+            "path": [
+              "mesh"
+            ],
+            "params": {
+              "mesh": {
+                "type": 15
+              },
+              "position": {
+                "type": 8,
+                "value": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "rotation": {
+                "type": 14
+              },
+              "mass": {
+                "type": 1,
+                "value": 3
+              },
+              "friction": {
+                "type": 1,
+                "value": 1
+              },
+              "bodyType": {
+                "type": 1,
+                "value": 1
+              },
+              "continousCollisionDetection": {
+                "type": 4,
+                "value": false
+              }
+            }
+          }
+        ],
+        "params": {
+          "color": {
+            "type": 10,
+            "value": "#13599a"
+          }
+        }
+      }
+    },
+    {
+      "id": "abcb60fc-8978-4533-a026-91a91a12d7b8",
+      "name": "SpawnPoint",
+      "position": [
+        -5.791362376577393,
+        0.08766495279468689,
+        -92.71897053788558
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ],
+      "type": "actor",
+      "actor": {
+        "type": "SpawnPoint",
+        "innerParams": [
+          {
+            "path": [
+              "mesh"
+            ],
+            "params": {}
+          }
+        ],
+        "params": {}
+      }
+    },
+    {
+      "id": "auto-global-fog",
+      "name": "Global fog",
+      "type": "global_fog",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "collisionDetection": false,
+      "fog": {
+        "type": "density",
+        "color": "#b8f8ff",
+        "density": 0.005,
+        "near": 100,
+        "far": 1000
+      }
+    },
+    {
+      "id": "auto-sky",
+      "name": "Sky",
+      "type": "sky",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "collisionDetection": false,
+      "sky": {
+        "materialId": null
+      }
+    },
+    {
+      "id": "b6b62790-dd05-4330-89f6-7ee6008d9874",
+      "name": "box",
+      "position": [
+        -7.741293633272868,
+        4.131967424773372,
+        -59.918231947768525
+      ],
+      "scale": [
+        1.9322910727263993,
+        1.932291072726399,
+        1.9322910727263993
+      ],
+      "rotation": [
+        3.1415926535897922,
+        -1.5303332612640266,
+        3.1415926535897922,
+        "XYZ"
+      ],
+      "type": "actor",
+      "actor": {
+        "type": "box",
+        "innerParams": [
+          {
+            "path": [
+              "mesh"
+            ],
+            "params": {
+              "mesh": {
+                "type": 15
+              },
+              "position": {
+                "type": 8,
+                "value": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "rotation": {
+                "type": 14
+              },
+              "mass": {
+                "type": 1,
+                "value": 3
+              },
+              "friction": {
+                "type": 1,
+                "value": 1
+              },
+              "bodyType": {
+                "type": 1,
+                "value": 1
+              },
+              "continousCollisionDetection": {
+                "type": 4,
+                "value": false
+              }
+            }
+          }
+        ],
+        "params": {
+          "color": {
+            "type": 10,
+            "value": "#13599a"
+          }
+        }
+      }
+    },
+    {
+      "id": "bbc3861e-9519-4928-9ee4-fb3caf04ec2c",
+      "name": "box",
+      "position": [
+        -9.659880150001305,
+        -3.552713678800502e-15,
+        -59.918231947768525
+      ],
+      "scale": [
+        1.9322910727263993,
+        1.932291072726399,
+        1.9322910727263993
+      ],
+      "rotation": [
+        3.1415926535897922,
+        -1.5303332612640266,
+        3.1415926535897922,
+        "XYZ"
+      ],
+      "type": "actor",
+      "actor": {
+        "type": "box",
+        "innerParams": [
+          {
+            "path": [
+              "mesh"
+            ],
+            "params": {
+              "mesh": {
+                "type": 15
+              },
+              "position": {
+                "type": 8,
+                "value": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "rotation": {
+                "type": 14
+              },
+              "mass": {
+                "type": 1,
+                "value": 3
+              },
+              "friction": {
+                "type": 1,
+                "value": 1
+              },
+              "bodyType": {
+                "type": 1,
+                "value": 1
+              },
+              "continousCollisionDetection": {
+                "type": 4,
+                "value": false
+              }
+            }
+          }
+        ],
+        "params": {
+          "color": {
+            "type": 10,
+            "value": "#13599a"
+          }
+        }
+      }
+    },
+    {
+      "id": "bc22a9cd-846e-478e-8c87-19590ec1e192",
+      "name": "box",
+      "position": [
+        -4.945595313936807,
+        -3.552713678800502e-15,
+        -59.91823194776852
+      ],
+      "scale": [
+        1.9322910727263993,
+        1.932291072726399,
+        1.9322910727263993
+      ],
+      "rotation": [
+        3.1415926535897922,
+        -1.5303332612640266,
+        3.1415926535897922,
+        "XYZ"
+      ],
+      "type": "actor",
+      "actor": {
+        "type": "box",
+        "innerParams": [
+          {
+            "path": [
+              "mesh"
+            ],
+            "params": {
+              "mesh": {
+                "type": 15
+              },
+              "position": {
+                "type": 8,
+                "value": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "rotation": {
+                "type": 14
+              },
+              "mass": {
+                "type": 1,
+                "value": 3
+              },
+              "friction": {
+                "type": 1,
+                "value": 1
+              },
+              "bodyType": {
+                "type": 1,
+                "value": 1
+              },
+              "continousCollisionDetection": {
+                "type": 4,
+                "value": false
+              }
+            }
+          }
+        ],
+        "params": {
+          "color": {
+            "type": 10,
+            "value": "#13599a"
+          }
+        }
+      }
+    },
+    {
+      "id": "bde11fc4-7aa2-43ab-9f99-2a51ca2893e4",
+      "name": "box",
+      "position": [
+        -12.355391130849501,
+        -8.881784197001252e-16,
+        -79.80860806245772
+      ],
+      "scale": [
+        1.9322910727264004,
+        1.9322910727263989,
+        1.9322910727264004
+      ],
+      "rotation": [
+        -3.141592653589793,
+        -0.9186106810140315,
+        -3.141592653589793,
+        "XYZ"
+      ],
+      "type": "actor",
+      "actor": {
+        "type": "box",
+        "innerParams": [
+          {
+            "path": [
+              "mesh"
+            ],
+            "params": {
+              "mesh": {
+                "type": 15
+              },
+              "position": {
+                "type": 8,
+                "value": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "rotation": {
+                "type": 14
+              },
+              "mass": {
+                "type": 1,
+                "value": 3
+              },
+              "friction": {
+                "type": 1,
+                "value": 1
+              },
+              "bodyType": {
+                "type": 1,
+                "value": 1
+              },
+              "continousCollisionDetection": {
+                "type": 4,
+                "value": false
+              }
+            }
+          }
+        ],
+        "params": {
+          "color": {
+            "type": 10,
+            "value": "#13599a"
+          }
+        }
+      }
+    },
+    {
+      "id": "c1da2cea-6c55-45e9-bb15-28cb7ecc1d5c",
+      "name": "box",
+      "position": [
+        2.7203177448127676,
+        -1.7763568394002505e-15,
+        -104.11407077601208
+      ],
+      "scale": [
+        1.9322910727264,
+        1.9322910727263989,
+        1.9322910727264
+      ],
+      "rotation": [
+        0,
+        0.746949405122333,
+        0,
+        "XYZ"
+      ],
+      "type": "actor",
+      "actor": {
+        "type": "box",
+        "innerParams": [
+          {
+            "path": [
+              "mesh"
+            ],
+            "params": {
+              "mesh": {
+                "type": 15
+              },
+              "position": {
+                "type": 8,
+                "value": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "rotation": {
+                "type": 14
+              },
+              "mass": {
+                "type": 1,
+                "value": 3
+              },
+              "friction": {
+                "type": 1,
+                "value": 1
+              },
+              "bodyType": {
+                "type": 1,
+                "value": 1
+              },
+              "continousCollisionDetection": {
+                "type": 4,
+                "value": false
+              }
+            }
+          }
+        ],
+        "params": {
+          "color": {
+            "type": 10,
+            "value": "#13599a"
+          }
+        }
+      }
+    },
+    {
+      "id": "c33a6977-7f65-48ef-91ef-2565658e7d11",
+      "name": "box",
+      "position": [
+        5.337165865253423,
+        0,
+        -82.13144523247426
+      ],
+      "scale": [
+        1.932291072726399,
+        1.9322910727263989,
+        1.932291072726399
+      ],
+      "rotation": [
+        0,
+        -0.5802085678148503,
+        0,
+        "XYZ"
+      ],
+      "type": "actor",
+      "actor": {
+        "type": "box",
+        "innerParams": [
+          {
+            "path": [
+              "mesh"
+            ],
+            "params": {
+              "mesh": {
+                "type": 15
+              },
+              "position": {
+                "type": 8,
+                "value": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "rotation": {
+                "type": 14
+              },
+              "mass": {
+                "type": 1,
+                "value": 3
+              },
+              "friction": {
+                "type": 1,
+                "value": 1
+              },
+              "bodyType": {
+                "type": 1,
+                "value": 1
+              },
+              "continousCollisionDetection": {
+                "type": 4,
+                "value": false
+              }
+            }
+          }
+        ],
+        "params": {
+          "color": {
+            "type": 10,
+            "value": "#13599a"
+          }
+        }
+      }
+    },
+    {
+      "id": "c380ccda-ac33-4546-b671-baf1ceebaa51",
+      "name": "box",
+      "position": [
+        -14.314158439769413,
+        -8.881784197001252e-16,
+        -81.11254082194088
+      ],
+      "scale": [
+        1.9322910727263989,
+        1.9322910727263989,
+        1.9322910727263989
+      ],
+      "rotation": [
+        3.141592653589793,
+        -1.1741490557211076,
+        3.141592653589793,
+        "XYZ"
+      ],
+      "type": "actor",
+      "actor": {
+        "type": "box",
+        "innerParams": [
+          {
+            "path": [
+              "mesh"
+            ],
+            "params": {
+              "mesh": {
+                "type": 15
+              },
+              "position": {
+                "type": 8,
+                "value": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "rotation": {
+                "type": 14
+              },
+              "mass": {
+                "type": 1,
+                "value": 3
+              },
+              "friction": {
+                "type": 1,
+                "value": 1
+              },
+              "bodyType": {
+                "type": 1,
+                "value": 1
+              },
+              "continousCollisionDetection": {
+                "type": 4,
+                "value": false
+              }
+            }
+          }
+        ],
+        "params": {
+          "color": {
+            "type": 10,
+            "value": "#13599a"
+          }
+        }
+      }
+    },
+    {
+      "id": "c999b5df-9833-4ee6-b229-7bae72896c8d",
+      "name": "box",
+      "position": [
+        -6.358673254273751,
+        2.0670823981256436,
+        -59.918231947768525
+      ],
+      "scale": [
+        1.9322910727263993,
+        1.932291072726399,
+        1.9322910727263993
+      ],
+      "rotation": [
+        3.1415926535897922,
+        -1.5303332612640266,
+        3.1415926535897922,
+        "XYZ"
+      ],
+      "type": "actor",
+      "actor": {
+        "type": "box",
+        "innerParams": [
+          {
+            "path": [
+              "mesh"
+            ],
+            "params": {
+              "mesh": {
+                "type": 15
+              },
+              "position": {
+                "type": 8,
+                "value": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "rotation": {
+                "type": 14
+              },
+              "mass": {
+                "type": 1,
+                "value": 3
+              },
+              "friction": {
+                "type": 1,
+                "value": 1
+              },
+              "bodyType": {
+                "type": 1,
+                "value": 1
+              },
+              "continousCollisionDetection": {
+                "type": 4,
+                "value": false
+              }
+            }
+          }
+        ],
+        "params": {
+          "color": {
+            "type": 10,
+            "value": "#13599a"
+          }
+        }
+      }
+    },
+    {
+      "id": "d10acb76-43b3-4c59-817e-9ce3cb9a620a",
+      "name": "box",
+      "position": [
+        -5.3639881680135835,
+        4.131967424773372,
+        -59.918231947768525
+      ],
+      "scale": [
+        1.9322910727263993,
+        1.932291072726399,
+        1.9322910727263993
+      ],
+      "rotation": [
+        3.1415926535897922,
+        -1.5303332612640266,
+        3.1415926535897922,
+        "XYZ"
+      ],
+      "type": "actor",
+      "actor": {
+        "type": "box",
+        "innerParams": [
+          {
+            "path": [
+              "mesh"
+            ],
+            "params": {
+              "mesh": {
+                "type": 15
+              },
+              "position": {
+                "type": 8,
+                "value": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "rotation": {
+                "type": 14
+              },
+              "mass": {
+                "type": 1,
+                "value": 3
+              },
+              "friction": {
+                "type": 1,
+                "value": 1
+              },
+              "bodyType": {
+                "type": 1,
+                "value": 1
+              },
+              "continousCollisionDetection": {
+                "type": 4,
+                "value": false
+              }
+            }
+          }
+        ],
+        "params": {
+          "color": {
+            "type": 10,
+            "value": "#13599a"
+          }
+        }
+      }
+    },
+    {
+      "id": "d4490f84-bd0c-4756-9f5f-c7ff4171fe03",
+      "name": "box",
+      "position": [
+        -7.671638139719431,
+        8.18830734432764,
+        -59.91823194776853
+      ],
+      "scale": [
+        1.9322910727263993,
+        1.932291072726399,
+        1.9322910727263993
+      ],
+      "rotation": [
+        3.1415926535897922,
+        -1.5303332612640266,
+        3.1415926535897922,
+        "XYZ"
+      ],
+      "type": "actor",
+      "actor": {
+        "type": "box",
+        "innerParams": [
+          {
+            "path": [
+              "mesh"
+            ],
+            "params": {
+              "mesh": {
+                "type": 15
+              },
+              "position": {
+                "type": 8,
+                "value": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "rotation": {
+                "type": 14
+              },
+              "mass": {
+                "type": 1,
+                "value": 3
+              },
+              "friction": {
+                "type": 1,
+                "value": 1
+              },
+              "bodyType": {
+                "type": 1,
+                "value": 1
+              },
+              "continousCollisionDetection": {
+                "type": 4,
+                "value": false
+              }
+            }
+          }
+        ],
+        "params": {
+          "color": {
+            "type": 10,
+            "value": "#13599a"
+          }
+        }
+      }
+    },
+    {
+      "id": "e7db0c75-9766-41e1-9c06-d9557cb8a382",
+      "name": "box",
+      "position": [
+        -13.645636310645598,
+        1.9070056939549915,
+        -80.27409732801172
+      ],
+      "scale": [
+        1.932291072726399,
+        1.9322910727263982,
+        1.932291072726399
+      ],
+      "rotation": [
+        3.141592653589793,
+        -1.1423859120411362,
+        3.141592653589793,
+        "XYZ"
+      ],
+      "type": "actor",
+      "actor": {
+        "type": "box",
+        "innerParams": [
+          {
+            "path": [
+              "mesh"
+            ],
+            "params": {
+              "mesh": {
+                "type": 15
+              },
+              "position": {
+                "type": 8,
+                "value": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "rotation": {
+                "type": 14
+              },
+              "mass": {
+                "type": 1,
+                "value": 3
+              },
+              "friction": {
+                "type": 1,
+                "value": 1
+              },
+              "bodyType": {
+                "type": 1,
+                "value": 1
+              },
+              "continousCollisionDetection": {
+                "type": 4,
+                "value": false
+              }
+            }
+          }
+        ],
+        "params": {
+          "color": {
+            "type": 10,
+            "value": "#13599a"
+          }
+        }
+      }
+    },
+    {
+      "id": "e95b09f4-f51f-4350-97fc-bafd28d04614",
+      "name": "box",
+      "position": [
+        -1.8389692185346185,
+        6.156883600771149,
+        -59.91823194776852
+      ],
+      "scale": [
+        1.9322910727263993,
+        1.932291072726399,
+        1.9322910727263993
+      ],
+      "rotation": [
+        3.1415926535897922,
+        -1.5303332612640266,
+        3.1415926535897922,
+        "XYZ"
+      ],
+      "type": "actor",
+      "actor": {
+        "type": "box",
+        "innerParams": [
+          {
+            "path": [
+              "mesh"
+            ],
+            "params": {
+              "mesh": {
+                "type": 15
+              },
+              "position": {
+                "type": 8,
+                "value": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "rotation": {
+                "type": 14
+              },
+              "mass": {
+                "type": 1,
+                "value": 3
+              },
+              "friction": {
+                "type": 1,
+                "value": 1
+              },
+              "bodyType": {
+                "type": 1,
+                "value": 1
+              },
+              "continousCollisionDetection": {
+                "type": 4,
+                "value": false
+              }
+            }
+          }
+        ],
+        "params": {
+          "color": {
+            "type": 10,
+            "value": "#13599a"
+          }
+        }
+      }
+    },
+    {
+      "id": "f2bb9f29-68bf-4510-be2c-fe8d43cf6b81",
+      "name": "box",
+      "position": [
+        -14.250603714662008,
+        -3.552713678800502e-15,
+        -59.91823194776853
+      ],
+      "scale": [
+        1.9322910727263993,
+        1.932291072726399,
+        1.9322910727263993
+      ],
+      "rotation": [
+        3.1415926535897922,
+        -1.5303332612640266,
+        3.1415926535897922,
+        "XYZ"
+      ],
+      "type": "actor",
+      "actor": {
+        "type": "box",
+        "innerParams": [
+          {
+            "path": [
+              "mesh"
+            ],
+            "params": {
+              "mesh": {
+                "type": 15
+              },
+              "position": {
+                "type": 8,
+                "value": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "rotation": {
+                "type": 14
+              },
+              "mass": {
+                "type": 1,
+                "value": 3
+              },
+              "friction": {
+                "type": 1,
+                "value": 1
+              },
+              "bodyType": {
+                "type": 1,
+                "value": 1
+              },
+              "continousCollisionDetection": {
+                "type": 4,
+                "value": false
+              }
+            }
+          }
+        ],
+        "params": {
+          "color": {
+            "type": 10,
+            "value": "#13599a"
+          }
+        }
+      }
+    },
+    {
+      "id": "fd116f98-f94d-4757-810a-1309fe069bc8",
+      "name": "box",
+      "position": [
+        -8.8392094070405,
+        6.156883600771149,
+        -59.91823194776853
+      ],
+      "scale": [
+        1.9322910727263993,
+        1.932291072726399,
+        1.9322910727263993
+      ],
+      "rotation": [
+        3.1415926535897922,
+        -1.5303332612640266,
+        3.1415926535897922,
+        "XYZ"
+      ],
+      "type": "actor",
+      "actor": {
+        "type": "box",
+        "innerParams": [
+          {
+            "path": [
+              "mesh"
+            ],
+            "params": {
+              "mesh": {
+                "type": 15
+              },
+              "position": {
+                "type": 8,
+                "value": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "rotation": {
+                "type": 14
+              },
+              "mass": {
+                "type": 1,
+                "value": 3
+              },
+              "friction": {
+                "type": 1,
+                "value": 1
+              },
+              "bodyType": {
+                "type": 1,
+                "value": 1
+              },
+              "continousCollisionDetection": {
+                "type": 4,
+                "value": false
+              }
+            }
+          }
+        ],
+        "params": {
+          "color": {
+            "type": 10,
+            "value": "#13599a"
+          }
+        }
+      }
+    },
+    {
+      "id": "febb5aab-aef1-41bd-9107-5cd56e4b79c8",
+      "name": "box",
+      "position": [
+        -11.143977619259818,
+        6.156883600771149,
+        -59.91823194776853
+      ],
+      "scale": [
+        1.9322910727263993,
+        1.932291072726399,
+        1.9322910727263993
+      ],
+      "rotation": [
+        3.1415926535897922,
+        -1.5303332612640266,
+        3.1415926535897922,
+        "XYZ"
+      ],
+      "type": "actor",
+      "actor": {
+        "type": "box",
+        "innerParams": [
+          {
+            "path": [
+              "mesh"
+            ],
+            "params": {
+              "mesh": {
+                "type": 15
+              },
+              "position": {
+                "type": 8,
+                "value": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "rotation": {
+                "type": 14
+              },
+              "mass": {
+                "type": 1,
+                "value": 3
+              },
+              "friction": {
+                "type": 1,
+                "value": 1
+              },
+              "bodyType": {
+                "type": 1,
+                "value": 1
+              },
+              "continousCollisionDetection": {
+                "type": 4,
+                "value": false
+              }
+            }
+          }
+        ],
+        "params": {
+          "color": {
+            "type": 10,
+            "value": "#13599a"
+          }
+        }
+      }
+    }
+  ]
 }

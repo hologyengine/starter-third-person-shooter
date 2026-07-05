@@ -29,12 +29,17 @@ class CharacterActor extends BaseActor {
   private animation = attach(CharacterAnimationComponent)
   public movement = attach(CharacterMovementComponent, {
     maxSpeed: 6,
-    maxSpeedSprint: 14,
+    maxSpeedSprint: 18,
     maxSpeedBackwards: 4,
     snapToGround: 0.3,
     autoStepMaxHeight: 0.7,
     fallingReorientation: true,
-    fallingMovementControl: 0.2
+    fallingMovementControl: 0.2,
+    allowSliding: true,
+    slideEnabled: true,
+    slideSteeringRate: 0.5,
+    slideDeceleration: 3,
+    gravityOverride: -15,
   })
   public thirdPersonCamera: ThirdPersonCameraComponent = attach(ThirdPersonCameraComponent, {
     autoActivate: false,
@@ -108,7 +113,7 @@ class CharacterActor extends BaseActor {
       // Because we are also scaling our mesh, we need to factor this in. 
       this.animation.movementSpeed = this.movement.horizontalSpeed / this.characterMesh.scale.x
 
-      if (this.movement.mode !== CharacterMovementMode.falling) {
+      if (this.movement.mode === CharacterMovementMode.walking) {
         // Rotate one spine bone so the character looks in the direction the player is aiming at
         
         if (this.netRole === NetRole.autonomousProxy) {
@@ -220,6 +225,7 @@ class CharacterActor extends BaseActor {
       strafeRight: 'assets/strafe.fbx',
       reload: 'assets/reload.fbx',
       land: 'assets/hard landing.fbx',
+      slide: 'assets/Running Slide.fbx'
     })
 
     const rootBone = characterMesh.children.find(c => c instanceof Bone) as Bone
@@ -228,6 +234,13 @@ class CharacterActor extends BaseActor {
     }
 
     const grounded = new AnimationState(clips.idle)
+    const slideClip = adjustAnimationClip(clips.slide, {
+      endTimeRatio: 0.5,
+      rootPositionTrack: 'mixamorigHips.position',
+      removeHorizontalDisplacement: true,
+    })
+    const slideState = grounded.createChild(slideClip, () => this.movement.isSliding)
+    slideState.options.loop = false
     const groundMovement = grounded.createChild(null, () => this.movement.horizontalSpeed > movementSpeedDeadZone && this.movement.mode == CharacterMovementMode.walking)
     const [sprint, walk] = groundMovement.split(() => this.movement.horizontalSpeed > this.movement.maxSpeed + movementSpeedDeadZone)      
 
@@ -293,6 +306,37 @@ const localMovementDirection = new Vector3()
 const movementWorldRotation = new THREE.Quaternion()
 const visualSmoothingLocalOffset = new Vector3()
 const visualSmoothingWorldRotation = new THREE.Quaternion()
+
+type AnimationClipAdjustment = {
+  endTimeRatio?: number
+  rootPositionTrack?: string
+  removeHorizontalDisplacement?: boolean
+}
+
+function adjustAnimationClip(clip: AnimationClip, adjustment: AnimationClipAdjustment): AnimationClip {
+  const adjusted = clip.clone()
+  const endTimeRatio = THREE.MathUtils.clamp(adjustment.endTimeRatio ?? 1, 0.01, 1)
+  const endTime = adjusted.duration * endTimeRatio
+
+  if (adjustment.removeHorizontalDisplacement && adjustment.rootPositionTrack != null) {
+    const rootPositionTrack = adjusted.tracks.find(track => track.name === adjustment.rootPositionTrack)
+    if (rootPositionTrack != null && rootPositionTrack.getValueSize() >= 3) {
+      const initialX = rootPositionTrack.values[0]
+      const initialZ = rootPositionTrack.values[2]
+      const stride = rootPositionTrack.getValueSize()
+      for (let offset = 0; offset < rootPositionTrack.values.length; offset += stride) {
+        rootPositionTrack.values[offset] = initialX
+        rootPositionTrack.values[offset + 2] = initialZ
+      }
+    }
+  }
+
+  for (const track of adjusted.tracks) {
+    track.trim(0, endTime)
+  }
+  adjusted.duration = endTime
+  return adjusted
+}
 
 async function getClip(file: string, loader: Loader, name?: string) {
   const group = await loader.loadAsync(file)
