@@ -76,7 +76,7 @@ function createSession(): AppSession {
   const urlParams = new URLSearchParams(window.location.search);
   const sessionId = urlParams.get('sessionId') ?? 'test1'
   const localId = Number.parseInt(urlParams.get('localId') ?? (Math.round(Math.random() * 9999)).toString())
-  const mode = Number.parseInt(urlParams.get('mode') ?? '1') as NetMode
+  const mode = Number.parseInt(urlParams.get('mode') ?? urlParams.get('role') ?? '1') as NetMode
   const simulation = readBrowserSimulation(urlParams);
 
   /*
