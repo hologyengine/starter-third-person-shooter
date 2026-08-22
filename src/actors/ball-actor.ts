@@ -15,14 +15,15 @@ import { MeshStandardMaterial, SphereGeometry, Vector3 } from "three"
 class BallActor extends BaseActor {
   private physicsSystem = inject(PhysicsSystem)
 
-  @Parameter()
-  public radius: number = 0.3
-
   private mesh: MeshComponent = attach(MeshComponent, {
     mass: 1,
     bodyType: PhysicsBodyType.dynamic,
     continousCollisionDetection: true,
   })
+
+  private static radius = 0.3
+  private static geometry = new SphereGeometry(BallActor.radius, 20, 10)
+  private static material = new MeshStandardMaterial({ color: 0xeff542, roughness: 0.3 })
 
   onInit(): void | Promise<void> {
     // Because the size of the ball is based on a property with the @Parameter()
@@ -30,9 +31,9 @@ class BallActor extends BaseActor {
     // here in the init phase so that we can use parameter values.
     this.mesh.setObject(
       new PhysicalShapeMesh(
-        new SphereGeometry(this.radius, 20, 10),
-        new MeshStandardMaterial({ color: 0xeff542, roughness: 0.3 }),
-        new SphereCollisionShape(this.radius)
+        BallActor.geometry,
+        BallActor.material,
+        new SphereCollisionShape(BallActor.radius)
       )
     )
   }
