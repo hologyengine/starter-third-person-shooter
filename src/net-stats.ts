@@ -1,5 +1,5 @@
 import type { Observable } from 'rxjs';
-import type { NetConnection, NetReceivedMessage, NetSession } from '@hology/core/gameplay';
+import type { NetConnection, NetPlayerInfo, NetReceivedMessage, NetSession } from '@hology/core/gameplay';
 import { NetMode } from '@hology/core/gameplay';
 
 export type NetQualityStats = {
@@ -55,6 +55,10 @@ export class NetStatsSession implements NetSession {
 
   get mode(): NetMode {
     return this.session.mode;
+  }
+
+  get localPlayer(): NetPlayerInfo | undefined {
+    return this.session.localPlayer;
   }
 
   get clients(): NetConnection[] {
