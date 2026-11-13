@@ -19,7 +19,16 @@
     "strict": false,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "paths": {
+      "_@hology/core/secondary-motion/data": ["../hology/packages/core/dist/secondary-motion/data.d.ts"],
+      "_@hology/core/secondary-motion/runtime": ["../hology/packages/core/dist/secondary-motion/runtime.d.ts"],
+      "@hology/core/secondary-motion/generation": ["../hology/packages/core/dist/secondary-motion/generation.d.ts"],
+      "@hology/core": ["../hology/packages/core/src"], "@hology/core/*": ["../hology/packages/core/src/*"],
+      "@hology/react": ["../hology/packages/react/src"], "@hology/react/*": ["../hology/packages/react/src/*"],
+      "@hology/webgpu-renderer": ["../hology/packages/webgpu-renderer/src"], "@hology/webgpu-renderer/*": ["../hology/packages/webgpu-renderer/src/*"],
+      "@hology/webgpu-ui": ["../hology/packages/webgpu-ui/src"], "@hology/webgpu-ui/*": ["../hology/packages/webgpu-ui/src/*"]
+    }
   },
   "include": ["src"]
 }
