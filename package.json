@@ -9,9 +9,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@hology/core": "^0.0.251",
-    "@hology/react": "^0.0.20",
-    "@hology/webgpu-renderer": "^0.1.14",
+    "@hology/core": "^0.0.283",
+    "@hology/react": "^0.0.26",
+    "@hology/webgpu-renderer": "^0.1.28",
     "@preact/signals-react": "^2.1.0",
     "@types/three": "^0.169.0",
     "react": "^18.3.1",
@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-decorators": "^7.24.7",
-    "@hology/vite-plugin": "0.0.12",
+    "@hology/vite-plugin": "0.0.29",
     "@preact/signals-react-transform": "^0.3.2",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
