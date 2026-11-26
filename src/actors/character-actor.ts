@@ -93,7 +93,6 @@ class CharacterActor extends BaseActor {
     const meshRescaleFactor = 1/50
     this.characterMesh.scale.multiplyScalar(meshRescaleFactor)
     this.object.add(this.characterMesh)
-    this.setCameraMode('third')
   }
 
   override onLateUpdate(deltaTime: number) {
@@ -134,6 +133,13 @@ class CharacterActor extends BaseActor {
     }
 
     this.cameraMode = mode
+  }
+
+  public releaseCamera() {
+    this.firstPersonCamera.restoreHiddenObjects()
+    this.firstPersonCamera.deactivate()
+    this.thirdPersonCamera.deactivate()
+    this.cameraMode = null
   }
 
   public rotateActiveCameraPitch(delta: number) {
